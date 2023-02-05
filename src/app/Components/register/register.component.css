@@ -2,9 +2,15 @@ input[type=text] {
   height: 45px;
   width: 350px;
 }
+input[type=button] {
+  height: 40px;
+  width: 100px;
+  margin: 0 auto;
+}
 
 form, h2 {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }/*# sourceMappingURL=register.component.css.map */

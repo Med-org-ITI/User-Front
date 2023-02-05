@@ -1,13 +1,24 @@
 $inpHeight: 45px;
 $inpWidth: 350px;
 
-input[type= text] {
+$btnHeight: 40px;
+$btnWidth: 100px;
+
+input {
+    &[type= text] {
     height: $inpHeight;
     width: $inpWidth;
+    }
+    &[type= button] {
+        height: $btnHeight;
+        width: $btnWidth;
+        margin: 0 auto;
+        }
 }
 
 form, h2 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
