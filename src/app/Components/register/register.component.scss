@@ -1,0 +1,13 @@
+$inpHeight: 45px;
+$inpWidth: 350px;
+
+input[type= text] {
+    height: $inpHeight;
+    width: $inpWidth;
+}
+
+form, h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

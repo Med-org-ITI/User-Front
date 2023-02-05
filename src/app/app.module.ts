@@ -5,14 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SignUpComponent } from './Components/sign-up/sign-up.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { RegisterComponent } from './Components/register/register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SignUpComponent,
     HeaderComponent,
     RegisterComponent,
   ],
