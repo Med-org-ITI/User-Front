@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "mayar",
+            "secondName": "mohamed",
+            "city": "ismailia",
+            "email": "mayar@yahoo.com",
+            "password": "mayar103"
+        },
+        {
+            "id": 2,
+            "firstName": "moaaz",
+            "secondName": "mohamed",
+            "city": "ismailia",
+            "email": "moaaz@yahoo.com",
+            "password": "moaaz"
+        },
+        {
+            "id": 3,
+            "firstName": "mohab",
+            "secondName": "mohamed",
+            "city": "ismailia",
+            "email": "mohab@yahoo.com",
+            "password": "mohab"
+        },
+        {
+            "id": 4,
+            "firstName": "mahetab",
+            "secondName": "mohamed",
+            "city": "ismailia",
+            "email": "mahetab@yahoo.com",
+            "password": "mahetab"
+        }
+    ]
+}
