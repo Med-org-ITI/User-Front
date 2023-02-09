@@ -17,13 +17,6 @@ export class RegisterComponent {
 
   constructor(public myService: REQService) { }
 
-
-  // Add(firstName: any, secondName: any, city: any, email: any, password: any){
-  //   let user= {firstName, secondName, city, email, password};
-
-  //   this.myService.AddUser(user).subscribe();
-  // }
-
   myRegisterationForm = new FormGroup({
     firstName: new FormControl("", [Validators.required, Validators.minLength(4)]),
     secondName: new FormControl("", [Validators.required, Validators.minLength(4)]),
@@ -63,6 +56,7 @@ export class RegisterComponent {
 
     if (this.fNameValid && this.lNameValid && this.cityValid && this.emailValid && this.passwordValid) {
       this.myService.AddUser(user).subscribe();
+      // console.log(this.myRegisterationForm.value);
     }
 
   }

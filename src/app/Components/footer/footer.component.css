@@ -1,34 +1,103 @@
 .footer-section {
   background-color: #171B2A;
-  margin-top: 80px;
+  margin-top: 150px;
+  color: white;
+  font-family: sans-serif;
+  position: relative;
+  height: 450px;
+}
+.footer-section .panner {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #0A9A73;
+  width: 950px;
+  height: 190px;
+  position: absolute;
+  left: 18.5%;
+  top: -100px;
+  font-family: sans-serif;
+}
+.footer-section .panner .head h1 {
+  display: inline-block;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  width: 480px;
+}
+.footer-section .panner .btn1 input {
+  background-color: white;
+  border: none;
+  height: 60px;
+  width: 180px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.footer-section .panner .btn1 input:hover {
+  background-color: black;
   color: white;
 }
 .footer-section .container {
   display: flex;
-  justify-content: space-evenly;
   align-items: center;
+  justify-content: space-evenly;
   padding: 70px;
 }
-.footer-section .container p {
-  margin: 0 0;
-  width: 300px;
+.footer-section .container .site-logo {
+  margin: 80px 0 25px;
   line-height: 1.5rem;
+  width: 300px;
 }
-.footer-section .container .list li {
-  list-style: none;
+.footer-section .container .category h4 {
+  margin: 80px 0 0;
+  margin-bottom: 25px;
+  font-weight: bold;
 }
-.footer-section .container .list li a {
-  margin-bottom: 50px;
-  color: white;
-  text-decoration: none;
-}
-.footer-section .container .list li a:hover {
-  color: #0A9A73;
-}
+.footer-section .container .list li,
 .footer-section .container .list1 li {
   list-style: none;
 }
+.footer-section .container .list li a,
 .footer-section .container .list1 li a {
   color: white;
   text-decoration: none;
+}
+.footer-section .container .list li a:hover,
+.footer-section .container .list1 li a:hover {
+  color: #0A9A73;
+}
+.footer-section .container .list li {
+  margin-top: 5px;
+}
+.footer-section .container .list .icon {
+  display: flex;
+}
+.footer-section .container .list .icon span {
+  margin-right: 15px;
+}
+.footer-section .container .list1 li {
+  margin-top: 20px;
+}
+
+.footer1-section .footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 75px;
+  background-color: #282b38;
+  color: white;
+  font-family: sans-serif;
+}
+.footer1-section .footer .terms li {
+  display: inline;
+  margin: 1rem;
+  color: white;
+  list-style: none;
+}
+.footer1-section .footer .terms li a {
+  text-decoration: none;
+  color: white;
+}
+.footer1-section .footer .terms li a:hover {
+  color: #0A9A73;
 }/*# sourceMappingURL=footer.component.css.map */

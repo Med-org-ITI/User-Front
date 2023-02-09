@@ -19,3 +19,8 @@
 @mixin border {
     border: 1px solid $border-color;
 }
+
+@mixin placeholder {
+    font-size: 15px;
+    padding: 15px;
+}

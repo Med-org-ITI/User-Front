@@ -28,36 +28,40 @@
 
 <section class="contact-section">
     <h2>Get in touch</h2>
-    <form method="post">
+    <form method="post" [formGroup]="myContactForm">
         <div class="container1">
             <div>
-                <input formControlName="name" type="text" placeholder="Enter your name" class="form-control"
-                    [(ngModel)]="name">
-                <div *ngIf="!nameValid && name" style="color: red;">
+                <input formControlName="fName" type="text" placeholder="Enter your name" class="form-control"
+                    [(ngModel)]="fName">
+                <div *ngIf="!fNameValid && fName" style="color: red;">
                     First name must be more than or equal 4 letters
                 </div>
                 <br>
-                <input formControlName="email" type="text" placeholder="Enter email address" class="form-control"
-                    [(ngModel)]="email">
-                <div *ngIf="!emailValid && email" style="color: red;">
-                    First name must be more than or equal 4 letters
+                <input formControlName="lName" type="text" placeholder="Enter email address" class="form-control"
+                    [(ngModel)]="lName">
+                <div *ngIf="!lNameValid && lName" style="color: red;">
+                    Last name must be more than or equal 4 letters
                 </div>
                 <br>
             </div>
             <div>
-                <input formControlName="phone" type="text" placeholder="Enter phone number" class="form-control"
-                    [(ngModel)]="phone">
-                <div *ngIf="!phoneValid && phone" style="color: red;">
-                    First name must be 11 numbers
+                <input formControlName="email" type="text" placeholder="Enter email address" class="form-control"
+                    [(ngModel)]="email">
+                <div *ngIf="!emailValid && email" style="color: red;">
+                    Email must be written in email form
                 </div>
                 <br>
                 <input formControlName="city" type="text" placeholder="Enter your city" class="form-control"
                     [(ngModel)]="city">
+                <div *ngIf="!cityValid && city" style="color: red;">
+                    city must be more than or equal 4 letters
+                </div>
+                <br>
             </div>
-            <div>
-                <input formControlName="message" type="text" placeholder="Enter your message" class="form-control"
-                    [(ngModel)]="message">
-            </div>
+        </div>
+        <div class="message">
+            <input formControlName="message" type="text" placeholder="Enter your message" class="form-control"
+                [(ngModel)]="message">
         </div>
     </form>
     <div class="check">
@@ -66,7 +70,7 @@
     </div>
 
     <div class="btn">
-        <input type="button" value="Get a Free Service" (click)="AddCon()" (click)= "reset()">
+        <input type="submit" value="Get a Free Service" (click)="AddCon()">
     </div>
 </section>
 

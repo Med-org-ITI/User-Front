@@ -1,28 +1,124 @@
 @import '../../../sass/abstract/variables';
+@import '../../../sass/abstract/mixins';
+
+
+// .buy-section {
+//     @include ver-centering;
+//     background-color: $primary-color;
+//     width: 950px;
+//     height: 190px;
+//     position: absolute;
+//     font-family: $font;
+//     // top: 20px;
+
+//     .panner {
+//         display: flex;
+//         justify-content: space-between;
+
+//         .head {
+//             h1 {
+//                 display: inline-block;
+//                 color: $white-color;
+//                 font-weight: $font-weight;
+//                 font-size: 30px;
+//                 width: 440px;
+//             }
+//         }
+
+//         .btn1 {
+//             input {
+//                 background-color: $white-color;
+//                 border: none;
+//                 height: $btnHeight;
+//                 width: $btnWidth;
+//                 font-weight: $font-weight;
+//                 font-family: $font;
+
+//                 &:hover {
+//                     background-color: $black-color;
+//                     color: $white-color;
+//                 }
+
+//             }
+//         }
+//     }
+// }
 
 .footer-section {
     background-color: #171B2A;
-    margin-top: 80px;
+    margin-top: 150px;
     color: $white-color;
+    font-family: $font;
+    position: relative;
+    height: 450px;
 
-    .container {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 70px;
+    .panner {
 
-        p {
-            margin: 0 0;
-            width: 300px;
-            line-height: 1.5rem;
+        @include ver-centering;
+        justify-content: space-around;
+        background-color: $primary-color;
+        width: 950px;
+        height: 190px;
+        position: absolute;
+        left: 18.5%;
+        top: -100px;
+        font-family: $font;
+
+        .head {
+            h1 {
+                display: inline-block;
+                color: $white-color;
+                font-weight: $font-weight;
+                font-size: 30px;
+                width: 480px;
+            }
         }
 
-        .list {
+        .btn1 {
+            input {
+                background-color: $white-color;
+                border: none;
+                height: $btnHeight;
+                width: $btnWidth;
+                font-weight: $font-weight;
+                font-family: $font;
+
+                &:hover {
+                    background-color: $black-color;
+                    color: $white-color;
+                }
+
+            }
+        }
+    }
+
+    .container {
+
+        @include ver-centering;
+        justify-content: space-evenly;
+        padding: 70px;
+
+        .site-logo {
+            margin: 80px 0 25px;
+            line-height: 1.5rem;
+            width: 300px;
+        }
+
+        .category {
+
+            h4 {
+                margin: 80px 0 0;
+                margin-bottom: 25px;
+                font-weight: $font-weight;
+            }
+        }
+
+        .list,
+        .list1 {
             li {
                 list-style: $list-style;
 
                 a {
-                    margin-bottom: 50px;
                     color: $white-color;
                     text-decoration: $text-decoration;
 
@@ -33,13 +129,52 @@
             }
         }
 
+        .list {
+            li {
+                margin-top: 5px;
+            }
+
+            .icon {
+                display: flex;
+
+                span {
+                    margin-right: 15px;
+                }
+            }
+        }
+
         .list1 {
             li {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+.footer1-section {
+
+    .footer {
+        @include ver-centering;
+        justify-content: space-around;
+        height: 75px;
+        background-color: #282b38;
+        color: $white-color;
+        font-family: $font;
+
+        .terms {
+            li {
+                display: inline;
+                margin: 1rem;
+                color: $white-color;
                 list-style: $list-style;
-                
+
                 a {
-                    color: $white-color;
                     text-decoration: $text-decoration;
+                    color: $white-color;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
                 }
             }
         }

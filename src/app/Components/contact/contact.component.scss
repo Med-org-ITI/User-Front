@@ -26,7 +26,7 @@
     @include border;
     @include hor-centering;
     flex-direction: column;
-    width: 800px;
+    width: 900px;
     padding: 30px;
     margin: 0 auto;
 
@@ -41,7 +41,14 @@
 
         .container1 {
             @include hor-centering;
-            flex-direction: column;
+            flex-direction: row;
+        }
+
+        .message {
+            input {
+                width: 860px;
+                height: 120px;
+            }
         }
     }
 
@@ -54,10 +61,8 @@
             margin: 10px 10px;
 
         }
-
-        .message {
-            width: 1000px;
-            height: 900px;
+        &::placeholder {
+            @include placeholder;
         }
     }
 
@@ -69,7 +74,7 @@
 
     .btn {
         input {
-            &[type=button] {
+            &[type=submit] {
                 height: $btnHeight;
                 width: $btnWidth;
                 margin-top: 20px;
@@ -89,6 +94,7 @@
             &:active {
                 border: 1px solid $primary-color;
             }
+
         }
     }
 }

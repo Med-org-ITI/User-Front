@@ -33,8 +33,7 @@
                 }
 
                 &::placeholder {
-                    font-size: 15px;
-                    padding: 15px;
+                    @include placeholder;
                 }
             }
         }
@@ -76,7 +75,7 @@
     .terms-con {
         @include ver-centering;
         flex-direction: column;
-        
+
         p {
             margin-bottom: 20px;
         }

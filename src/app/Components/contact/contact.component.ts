@@ -10,32 +10,32 @@ import { REQService } from 'src/app/Services/req.service';
 })
 export class ContactComponent {
 
-  name= '';
+  fName= '';
   email:any;
-  phone= '01234567890';
+  lName= '';
   city:any;
   message:any;
 
   constructor(public myService: REQService) { }
 
   myContactForm = new FormGroup ({
-    name: new FormControl ("", [Validators.required, Validators.minLength(4)]),
+    fName: new FormControl ("", [Validators.required, Validators.minLength(4)]),
+    lName: new FormControl ("", [Validators.required, Validators.minLength(4)]),
     email: new FormControl("", [ Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
-    phone: new FormControl("", [Validators.required, Validators.pattern("/01[012][0-9]{8}$/g")]),
+    city: new FormControl("", Validators.minLength(4)),
     message: new FormControl("", Validators.minLength(20)),
-    city: new FormControl("", Validators.minLength(20)),
   })
 
-  get nameValid(){
-    return this.myContactForm.controls["name"].valid;
+  get fNameValid(){
+    return this.myContactForm.controls["fName"].valid;
+  }
+
+  get lNameValid(){
+    return this.myContactForm.controls["lName"].valid;
   }
 
   get emailValid(){
     return this.myContactForm.controls["email"].valid;
-  }
-
-  get phoneValid(){
-    return this.myContactForm.controls["phone"].valid;
   }
 
   get cityValid(){
@@ -49,22 +49,25 @@ export class ContactComponent {
 
   AddCon(){
     let contact = {
-      name: this.myContactForm.controls["name"],
+      fName: this.myContactForm.controls["fName"],
+      lName: this.myContactForm.controls["lName"],
       email: this.myContactForm.controls["email"],
-      phone: this.myContactForm.controls["phone"],
       city: this.myContactForm.controls["city"],
       message:this.myContactForm.controls["message"],
      };
 
-    this.myService.AddContact(contact).subscribe();
+     if (this.fName && this.lName && this.email && this.city && this.message) {
+      this.myService.AddContact(contact).subscribe();
+      // console.log(this.myContactForm.value);
+    }
+
   }
 
   reset(){
-    this.name= "";
+    this.fName= "";
+    this.lName= "";
     this.email= "";
-    this.phone= "";
     this.city= "";
     this.message= "";
    }
-
 }
