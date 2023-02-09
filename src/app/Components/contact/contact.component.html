@@ -51,7 +51,11 @@
                     First name must be 11 numbers
                 </div>
                 <br>
-                <input formControlName="message" type="text" placeholder="Enter message" class="form-control"
+                <input formControlName="city" type="text" placeholder="Enter your city" class="form-control"
+                    [(ngModel)]="city">
+            </div>
+            <div>
+                <input formControlName="message" type="text" placeholder="Enter your message" class="form-control"
                     [(ngModel)]="message">
             </div>
         </div>
@@ -62,7 +66,7 @@
     </div>
 
     <div class="btn">
-        <input type="button" value="Get a Free Service" (click)="AddCon()">
+        <input type="button" value="Get a Free Service" (click)="AddCon()" (click)= "reset()">
     </div>
 </section>
 
