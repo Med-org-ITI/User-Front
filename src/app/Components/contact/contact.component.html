@@ -1,0 +1,75 @@
+<section class="card-section">
+    <div class="container">
+        <div class="card">
+            <div>
+                <img src="../../../assets/Images/email.png">
+            </div>
+            <h2>Email Address</h2>
+            <p>website@gmail.com</p>
+        </div>
+
+        <div class="card">
+            <div>
+                <img src="../../../assets/Images/phone.png">
+            </div>
+            <h2>Phone Number</h2>
+            <p>01234567890</p>
+        </div>
+
+        <div class="card">
+            <div>
+                <img src="../../../assets/Images/address.png">
+            </div>
+            <h2>Office Address</h2>
+            <p>Sheikh Zayed, Ismailia</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-section">
+    <h2>Get in touch</h2>
+    <form method="post">
+        <div class="container1">
+            <div>
+                <input formControlName="name" type="text" placeholder="Enter your name" class="form-control"
+                    [(ngModel)]="name">
+                <div *ngIf="!nameValid && name" style="color: red;">
+                    First name must be more than or equal 4 letters
+                </div>
+                <br>
+                <input formControlName="email" type="text" placeholder="Enter email address" class="form-control"
+                    [(ngModel)]="email">
+                <div *ngIf="!emailValid && email" style="color: red;">
+                    First name must be more than or equal 4 letters
+                </div>
+                <br>
+            </div>
+            <div>
+                <input formControlName="phone" type="text" placeholder="Enter phone number" class="form-control"
+                    [(ngModel)]="phone">
+                <div *ngIf="!phoneValid && phone" style="color: red;">
+                    First name must be 11 numbers
+                </div>
+                <br>
+                <input formControlName="message" type="text" placeholder="Enter message" class="form-control"
+                    [(ngModel)]="message">
+            </div>
+        </div>
+    </form>
+    <div class="check">
+        <input type="checkbox">
+        <p> Save my name, email, and website in this browser for the next time I comment.</p>
+    </div>
+
+    <div class="btn">
+        <input type="button" value="Get a Free Service" (click)="AddCon()">
+    </div>
+</section>
+
+<!-- <section class="map-section">
+    <div>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109917.04271769382!2d32.30696601384596!3d30.580154149895247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f85956191e10b9%3A0x3b0933775b0f5b95!2z2KfZhNil2LPZhdin2LnZitmE2YrYqdiMINmF2LHZg9iyINin2YTYp9iz2YXYp9i52YrZhNmK2KnYjCDYp9mE2KXYs9mF2KfYudmK2YTZitip!5e0!3m2!1sar!2seg!4v1675791755216!5m2!1sar!2seg"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+</section> -->

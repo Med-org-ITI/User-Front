@@ -1,0 +1,47 @@
+@import '../../../sass/abstract/variables';
+
+.footer-section {
+    background-color: #171B2A;
+    margin-top: 80px;
+    color: $white-color;
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 70px;
+
+        p {
+            margin: 0 0;
+            width: 300px;
+            line-height: 1.5rem;
+        }
+
+        .list {
+            li {
+                list-style: $list-style;
+
+                a {
+                    margin-bottom: 50px;
+                    color: $white-color;
+                    text-decoration: $text-decoration;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+
+        .list1 {
+            li {
+                list-style: $list-style;
+                
+                a {
+                    color: $white-color;
+                    text-decoration: $text-decoration;
+                }
+            }
+        }
+    }
+}

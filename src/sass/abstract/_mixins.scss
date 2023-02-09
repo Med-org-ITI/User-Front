@@ -1,0 +1,21 @@
+@import "../abstract/variables";
+
+@mixin centring {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin ver-centering {
+    display: flex;
+    align-items: center;
+}
+
+@mixin hor-centering {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin border {
+    border: 1px solid $border-color;
+}

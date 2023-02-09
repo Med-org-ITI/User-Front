@@ -1,24 +1,104 @@
-$inpHeight: 45px;
-$inpWidth: 350px;
+@import "../../../sass/abstract/variables";
+@import "../../../sass/abstract/mixins";
 
-$btnHeight: 40px;
-$btnWidth: 100px;
+.register-section {
 
-input {
-    &[type= text] {
-    height: $inpHeight;
-    width: $inpWidth;
+    margin-top: 80px;
+
+    h2 {
+        margin-bottom: 40px;
     }
-    &[type= button] {
-        height: $btnHeight;
-        width: $btnWidth;
-        margin: 0 auto;
-        }
-}
 
-form, h2 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    form {
+        @include centring;
+        @include border;
+        flex-direction: column;
+        margin-top: 50px;
+        width: 700px;
+        padding: 30px;
+        margin: 0 auto;
+        background-color: $form-color;
+        border-radius: $border-radius;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                margin: 6px;
+
+                &[type=text] {
+                    height: $inpHeight;
+                    width: $inpWidth;
+                }
+
+                &::placeholder {
+                    font-size: 15px;
+                    padding: 15px;
+                }
+            }
+        }
+
+        .check {
+            margin: 30px;
+            @include hor-centering;
+        }
+
+        .btn {
+
+            @include hor-centering;
+
+            input {
+                &[type=button] {
+                    height: $btnHeight;
+                    width: $btnWidth;
+                    background-color: $primary-color;
+                    border: none;
+                    border-radius: $border-radius;
+                    color: $white-color;
+                    font-weight: $font-weight;
+                    text-transform: uppercase;
+                    margin-bottom: 30px;
+
+                    &:hover {
+                        color: $white-color;
+                        background-color: $black-color;
+                    }
+                }
+
+                &:active {
+                    border: 1px solid $primary-color;
+                }
+            }
+        }
+    }
+
+    .terms-con {
+        @include ver-centering;
+        flex-direction: column;
+        
+        p {
+            margin-bottom: 20px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                list-style: $list-style;
+                display: flex;
+
+
+                a {
+                    color: $black-color;
+                    text-decoration: $text-decoration;
+
+                    &:hover {
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }
 }

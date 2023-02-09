@@ -1,1 +1,26 @@
-/*# sourceMappingURL=header.component.css.map */
+.header-section {
+  width: 100%;
+  height: 65px;
+  background-color: #0A9A73;
+}
+.header-section .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-section .container ul {
+  display: flex;
+  align-items: center;
+}
+.header-section .container ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.header-section .container ul li a {
+  text-decoration: none;
+  color: white;
+  margin: 1.2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+}/*# sourceMappingURL=header.component.css.map */

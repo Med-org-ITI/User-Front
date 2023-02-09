@@ -1,0 +1,30 @@
+@import '../../../sass/abstract/variables';
+@import '../../../sass/abstract/mixins';
+
+.header-section {
+    width: 100%;
+    height: 65px;
+    background-color: $primary-color;
+
+    .container {
+        @include ver-centering;
+        justify-content: space-around;
+
+        ul {
+            @include ver-centering;
+
+            li {
+                list-style: $list-style;
+                @include ver-centering;
+
+                a {
+                    text-decoration: $text-decoration;
+                    color: $white-color;
+                    margin: 1.2rem;
+                    font-weight: $font-weight;
+                    font-family: $font;
+                }
+            }
+        }
+    }
+}
