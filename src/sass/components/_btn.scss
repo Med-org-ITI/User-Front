@@ -1,0 +1,16 @@
+@import "../abstract/variables";
+
+.btn {
+  text-transform: uppercase;
+  border-radius: $border-radius-sm;
+  color: #fff;
+  padding: 1.2rem 2.6rem;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: $primary-color;
+  &:hover {
+    background-color: darken($color: $primary-color, $amount: 15);
+  }
+}

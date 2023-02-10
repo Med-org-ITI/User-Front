@@ -4,28 +4,19 @@
 @import "./sass/abstract/variables";
 @import "./sass/abstract/mixins";
 
-
 //vendor
-
-
 
 //base
 @import "./sass/base/reset";
 
-
 //layout
-
-
-
 
 //component
 
-
-
-
 //pages
 
-
-
-
 //themes
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}

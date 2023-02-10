@@ -64,7 +64,7 @@
     right: 0;
     top: -100px;
     font-family: $font;
-
+    border-radius: $border-radius-sm;
     .head {
       h1 {
         display: inline-block;
@@ -83,7 +83,8 @@
         width: $btnWidth;
         font-weight: $font-weight;
         font-family: $font;
-
+        border-radius: $border-radius-sm;
+        cursor: pointer;
         &:hover {
           background-color: $black-color;
           color: $white-color;

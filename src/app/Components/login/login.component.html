@@ -1,45 +1,65 @@
-<form method="post" [formGroup]="loginForm">
+<div class="login">
   <div>
-    <h2>Register Your Account</h2>
-  </div>
-  <div class="form-group">
-    <input
-      formControlName="email"
-      type="text"
-      placeholder="Email"
-      class="form-control"
-      [ngStyle]="{
-        outlineColor:
-          !emailValid && loginForm.controls['email'].value
-            ? '#f87171'
-            : loginForm.controls['email'].value
-            ? '#4ade80'
-            : '',
-        'outline-offset':
-          !emailValid && loginForm.controls['email'].value ? '0px' : '0px'
-      }"
-    />
-    <p
-      *ngIf="!emailValid && loginForm.controls['email'].value"
-      style="color: red"
-    >
-      Email is not valid
+    <h2 class="login__header">
+      Sign In <span class="login__header--sub">To Your Account</span>
+    </h2>
+    <p class="login__header--small">
+      We are happy to have you on the journey with us.
     </p>
-    <br />
-    <input
-      formControlName="password"
-      type="text"
-      placeholder="Password"
-      class="form-control"
-    />
-    <div
-      *ngIf="!passwordValid && loginForm.controls['password'].value"
-      style="color: red"
-    >
-      Password is not valid
+  </div>
+  <div class="login__options">
+    <form method="post" [formGroup]="loginForm" class="login__form">
+      <input
+        formControlName="email"
+        type="text"
+        placeholder="Email"
+        class="input"
+        [ngClass]="
+          !emailValid && loginForm.controls['email'].value
+            ? 'input-invalid'
+            : loginForm.controls['email'].value
+            ? 'input-valid'
+            : ''
+        "
+      />
+      <p
+        *ngIf="!emailValid && loginForm.controls['email'].value"
+        style="color: red"
+      >
+        Email is not valid
+      </p>
+      <br />
+      <input
+        formControlName="password"
+        type="text"
+        placeholder="Password"
+        class="input"
+        [ngClass]="
+          !passwordValid && loginForm.controls['password'].value
+            ? 'input-invalid'
+            : loginForm.controls['password'].value
+            ? 'input-valid'
+            : ''
+        "
+      />
+      <p
+        *ngIf="!passwordValid && loginForm.controls['password'].value"
+        style="color: red"
+      >
+        Password is not valid
+      </p>
+      <div>
+        <button class="btn">Login</button>
+      </div>
+      <a href="#" class="forgot">FORGOTTEN YOUR PASSWORD?</a>
+    </form>
+    <div class="login__create">
+      <h3 class="create__header">DON'T HAVE AN ACCOUNT?</h3>
+      <p class="create__description">
+        Add items to your wishlistget personalised recommendations check out
+        more quickly track your orders register
+      </p>
+      <button class="btn">CREATE ACCOUNT</button>
     </div>
   </div>
-  <div class="btn">
-    <button>Login</button>
-  </div>
-</form>
+</div>
