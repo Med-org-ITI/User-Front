@@ -9,7 +9,8 @@ import { HeaderComponent } from './Components/header/header.component';
 import { RegisterComponent } from './Components/register/register.component';
 import { ContactComponent } from './Components/contact/contact.component';
 import { FooterComponent } from './Components/footer/footer.component';
-
+import { LoginComponent } from './Components/login/login.component';
+import { ErrorComponent } from './Components/error/error.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,15 +18,17 @@ import { FooterComponent } from './Components/footer/footer.component';
     RegisterComponent,
     ContactComponent,
     FooterComponent,
+    LoginComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

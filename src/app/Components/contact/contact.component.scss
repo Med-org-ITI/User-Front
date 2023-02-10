@@ -1,102 +1,100 @@
-@import '../../../sass/abstract/variables';
-@import '../../../sass/abstract/mixins';
+@import "../../../sass/abstract/variables";
+@import "../../../sass/abstract/mixins";
 
 .card-section {
-    margin: 100px 0px;
+  margin: 100px 0px;
 
-    .container {
-        @include hor-centering;
+  .container {
+    @include hor-centering;
 
-        .card {
-            @include ver-centering;
-            @include border;
-            flex-direction: column;
-            padding: 60px;
-            width: 20%;
-            margin: 1rem;
+    .card {
+      @include ver-centering;
+      @include border;
+      flex-direction: column;
+      padding: 60px;
+      width: 20%;
+      margin: 1rem;
 
-            h2 {
-                margin: 25px 0;
-            }
-        }
+      h2 {
+        margin: 25px 0;
+      }
     }
+  }
 }
 
 .contact-section {
-    @include border;
-    @include hor-centering;
+  @include border;
+  @include hor-centering;
+  flex-direction: column;
+  width: 900px;
+  padding: 30px;
+  margin: 0 auto;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    @include ver-centering;
     flex-direction: column;
-    width: 900px;
-    padding: 30px;
-    margin: 0 auto;
+    justify-content: space-evenly;
 
-    h2 {
-        margin-bottom: 20px;
+    .container1 {
+      @include hor-centering;
+      flex-direction: row;
     }
 
-    form {
-        @include ver-centering;
-        flex-direction: column;
-        justify-content: space-evenly;
-
-        .container1 {
-            @include hor-centering;
-            flex-direction: row;
-        }
-
-        .message {
-            input {
-                width: 860px;
-                height: 120px;
-            }
-        }
+    .message {
+      input {
+        width: 860px;
+        height: 120px;
+      }
     }
+  }
 
+  input {
+    @include border;
+
+    &[type="text"] {
+      height: $inpHeight;
+      width: $inpWidth;
+      margin: 10px 10px;
+    }
+    &::placeholder {
+      @include placeholder;
+    }
+  }
+
+  .check {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+  }
+
+  .btn {
     input {
-        @include border;
-
-        &[type=text] {
-            height: $inpHeight;
-            width: $inpWidth;
-            margin: 10px 10px;
-
-        }
-        &::placeholder {
-            @include placeholder;
-        }
-    }
-
-    .check {
-        display: flex;
-        justify-content: start;
+      &[type="submit"] {
+        height: $btnHeight;
+        width: $btnWidth;
         margin-top: 20px;
-    }
+        background-color: $primary-color;
+        border: none;
+        border-radius: $border-radius;
+        color: $white-color;
+        font-weight: $font-weight;
+        text-transform: uppercase;
 
-    .btn {
-        input {
-            &[type=submit] {
-                height: $btnHeight;
-                width: $btnWidth;
-                margin-top: 20px;
-                background-color: $primary-color;
-                border: none;
-                border-radius: $border-radius;
-                color: $white-color;
-                font-weight: $font-weight;
-                text-transform: uppercase;
-
-                &:hover {
-                    color: $white-color;
-                    background-color: $black-color;
-                }
-            }
-
-            &:active {
-                border: 1px solid $primary-color;
-            }
-
+        &:hover {
+          color: $white-color;
+          background-color: $black-color;
         }
+      }
+
+      &:active {
+        border: 1px solid $primary-color;
+      }
     }
+  }
 }
 
 // .map-section {

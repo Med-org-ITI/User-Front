@@ -1,5 +1,5 @@
 .footer-section {
-  background-color: #171B2A;
+  background-color: #171b2a;
   margin-top: 150px;
   color: white;
   font-family: sans-serif;
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #0A9A73;
+  background-color: #0a9a73;
   width: 950px;
   height: 190px;
   position: absolute;
@@ -64,7 +64,7 @@
 }
 .footer-section .container .list li a:hover,
 .footer-section .container .list1 li a:hover {
-  color: #0A9A73;
+  color: #0a9a73;
 }
 .footer-section .container .list li {
   margin-top: 5px;
@@ -99,5 +99,5 @@
   color: white;
 }
 .footer1-section .footer .terms li a:hover {
-  color: #0A9A73;
-}/*# sourceMappingURL=footer.component.css.map */
+  color: #0a9a73;
+} /*# sourceMappingURL=footer.component.css.map */
