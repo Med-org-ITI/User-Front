@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { REQService } from 'src/app/Services/req.service';
+import { HelperService } from 'src/app/Services/helper.service';
 
 
 @Component({
@@ -16,7 +16,7 @@ export class ContactComponent {
   city:any;
   message:any;
 
-  constructor(public myService: REQService) { }
+  constructor(public myService: HelperService) { }
 
   myContactForm = new FormGroup ({
     fName: new FormControl ("", [Validators.required, Validators.minLength(4)]),
@@ -56,9 +56,9 @@ export class ContactComponent {
       message:this.myContactForm.controls["message"],
      };
 
-     if (this.fName && this.lName && this.email && this.city && this.message) {
-      this.myService.AddContact(contact).subscribe();
-      // console.log(this.myContactForm.value);
+     if (this.fNameValid && this.lNameValid && this.emailValid && this.cityValid && this.messageValid) {
+      // this.myService.AddContact(contact).subscribe();
+      console.log(this.myContactForm.value);
     }
 
   }

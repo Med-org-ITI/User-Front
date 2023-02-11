@@ -14,7 +14,10 @@
   width: 950px;
   height: 190px;
   position: absolute;
-  left: 18.5%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
   top: -100px;
   font-family: sans-serif;
 }
@@ -32,6 +35,7 @@
   width: 180px;
   font-weight: bold;
   font-family: sans-serif;
+  cursor: pointer;
 }
 .footer-section .panner .btn1 input:hover {
   background-color: black;

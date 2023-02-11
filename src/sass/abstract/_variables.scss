@@ -3,11 +3,13 @@
 $primary-color:  #0A9A73;
 $white-color: white;
 $black-color: black;
+$light-color: #5c727d;
 $border-color: rgb(220, 220, 220);
 $form-color: rgb(244, 244, 244);
 
 //text
 $text-decoration: none;
+$faq-size: 20px;
 
 //list
 $list-style: none;
@@ -19,6 +21,7 @@ $inpWidth: 420px;
 //buttons
 $btnHeight: 60px;
 $btnWidth: 180px;
+$cursor: pointer;
 
 //border 
 $border-radius: 8px;
@@ -26,3 +29,7 @@ $border-radius: 8px;
 //font 
 $font: sans-serif;
 $font-weight: bold;
+$faq-weight: 200px;
+
+//box-sadow
+$box-shadow: 0 2px 2px $border-color;

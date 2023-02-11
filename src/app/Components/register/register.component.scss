@@ -10,7 +10,7 @@
     }
 
     form {
-        @include centring;
+        @include centering;
         @include border;
         flex-direction: column;
         margin-top: 50px;
@@ -30,6 +30,9 @@
                 &[type=text] {
                     height: $inpHeight;
                     width: $inpWidth;
+                    border-radius: $border-radius;
+                    border: 1px solid $border-color;
+                    box-shadow: $box-shadow;
                 }
 
                 &::placeholder {
@@ -57,7 +60,8 @@
                     color: $white-color;
                     font-weight: $font-weight;
                     text-transform: uppercase;
-                    margin-bottom: 30px;
+                    margin: 30px 0;
+                    cursor: $cursor;
 
                     &:hover {
                         color: $white-color;

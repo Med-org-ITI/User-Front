@@ -1,0 +1,114 @@
+@import '../../../sass/abstract/variables';
+@import '../../../sass/abstract/mixins';
+
+.faq-section {
+    font-family: $font;
+    margin: 80px 0;
+
+    .faq-container {
+        display: flex;
+        justify-content: space-evenly;
+
+        .container-faq {
+            display: flex;
+            flex-direction: column;
+
+            .faq-contact {
+                margin-top: 80px;
+                @include centering;
+                flex-direction: column;
+
+                input {
+                    background-color: $primary-color;
+                    color: $white-color;
+                    border: none;
+                    height: $btnHeight;
+                    width: $btnWidth;
+                    margin-top: 25px;
+                    font-size: $faq-size;
+                    cursor: $cursor;
+                }
+            }
+
+            .faq-q {
+                border: solid $border-color;
+                border-radius: $border-radius;
+                width: 600px;
+
+                details {
+                    color: $black-color;
+                    font-size: 1.5rem;
+                    @include ver-centering;
+
+                    summary {
+                        padding: .5em 1.3rem;
+                        display: flex;
+                        justify-content: space-between;
+                        transition: height 2s ease;
+                        cursor: $cursor;
+
+                        &::after {
+                            content: "\002B";
+                        }
+
+                        &::-webkit-details-marker {
+                            display: none;
+                        }
+                    }
+
+                    &[open] {
+                        summary {
+                            &::after {
+                                content: "\002D";
+                            }
+                        }
+
+                        div {
+                            padding: .5em 1em;
+                            color: $light-color;
+                            font-size: $faq-size;
+                            font-weight: $faq-weight;
+                            line-height: 25px;
+                        }
+                    }
+                }
+
+            }
+
+            hr {
+                margin: 20px 0;
+                border: 1px solid $border-color;
+            }
+        }
+    }
+}
+
+.reviews-section {
+    font-family: sans-serif;
+
+    .reviews-container {
+        background-color: $border-color;
+        height: 370px;
+        @include ver-centering;
+        justify-content: space-evenly;
+
+        div {
+            span {
+                font-size: 75px;
+                color: $primary-color;
+                margin: 15px 18px;
+            }
+
+            h2 {
+                font-size: 30px;
+                text-align: center;
+            }
+
+            p {
+                font-size: 18px;
+                text-align: center;
+                color: $light-color;
+            }
+        }
+    }
+}

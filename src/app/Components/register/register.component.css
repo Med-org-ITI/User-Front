@@ -55,6 +55,7 @@
   font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .register-section form .btn input[type=button]:hover {
   color: white;

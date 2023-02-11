@@ -59,7 +59,8 @@
             height: $inpHeight;
             width: $inpWidth;
             margin: 10px 10px;
-
+            box-shadow: $box-shadow;
+            border-radius: $border-radius;
         }
         &::placeholder {
             @include placeholder;
@@ -68,7 +69,7 @@
 
     .check {
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         margin-top: 20px;
     }
 
@@ -84,6 +85,7 @@
                 color: $white-color;
                 font-weight: $font-weight;
                 text-transform: uppercase;
+                cursor: $cursor;
 
                 &:hover {
                     color: $white-color;
@@ -94,7 +96,6 @@
             &:active {
                 border: 1px solid $primary-color;
             }
-
         }
     }
 }

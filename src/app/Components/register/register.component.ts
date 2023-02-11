@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { REQService } from 'src/app/Services/req.service';
+import { USERService } from 'src/app/Services/req.service';
 
 @Component({
   selector: 'app-register',
@@ -15,14 +15,14 @@ export class RegisterComponent {
   email: any;
   password: any;
 
-  constructor(public myService: REQService) { }
+  constructor(public myService: USERService) { }
 
   myRegisterationForm = new FormGroup({
     firstName: new FormControl("", [Validators.required, Validators.minLength(4)]),
     secondName: new FormControl("", [Validators.required, Validators.minLength(4)]),
     city: new FormControl("", [Validators.required, Validators.minLength(4)]),
     email: new FormControl("", [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$")]),
-    password: new FormControl("", [Validators.required, Validators.max(15), Validators.min(10)]),
+    password: new FormControl("", [Validators.required, Validators.maxLength(16), Validators.minLength(6)]),
   })
 
   get fNameValid() {
@@ -55,8 +55,8 @@ export class RegisterComponent {
     };
 
     if (this.fNameValid && this.lNameValid && this.cityValid && this.emailValid && this.passwordValid) {
-      this.myService.AddUser(user).subscribe();
-      // console.log(this.myRegisterationForm.value);
+      // this.myService.AddUser(user).subscribe();
+      console.log(this.myRegisterationForm.value);
     }
 
   }

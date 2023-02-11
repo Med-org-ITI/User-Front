@@ -63,7 +63,7 @@
 }
 .contact-section .check {
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   margin-top: 20px;
 }
 .contact-section .btn input[type=submit] {
@@ -76,6 +76,7 @@
   color: white;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
 }
 .contact-section .btn input[type=submit]:hover {
   color: white;

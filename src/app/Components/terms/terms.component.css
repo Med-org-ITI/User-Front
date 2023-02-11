@@ -1,0 +1,73 @@
+@charset "UTF-8";
+.faq-container {
+  display: flex;
+  justify-content: center;
+  /* Style the buttons that are used to open and close the faq-page body */
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+  /* Style the faq-page panel. Note: hidden by default */
+}
+.faq-container .faq-one {
+  width: 1000px;
+}
+.faq-container body {
+  font-family: "Work Sans", sans-serif;
+}
+.faq-container .faq-heading {
+  border-bottom: #777;
+  padding: 20px 60px;
+}
+.faq-container .hr-line {
+  width: 60%;
+  margin: auto;
+}
+.faq-container .faq-page {
+  /* background-color: #eee; */
+  color: #444;
+  cursor: pointer;
+  padding: 30px 20px;
+  width: 60%;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  margin: auto;
+}
+.faq-container .form {
+  margin: auto;
+  /* text-align: center; */
+  width: 50%;
+  padding: auto;
+}
+.faq-container .active,
+.faq-container .faq-page:hover {
+  background-color: #F9F9F9;
+}
+.faq-container .faq-body {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+.faq-container .faq-page:after {
+  content: "➕";
+  /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+.faq-container .active:after {
+  content: "➖";
+  /* Unicode character for "minus" sign (-) */
+}
+
+.reviews-section .reviews {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: lightgray;
+  height: 400px;
+}
+.reviews-section .reviews span {
+  color: #0A9A73;
+  font-size: 80px;
+}/*# sourceMappingURL=terms.component.css.map */
