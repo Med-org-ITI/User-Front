@@ -2,102 +2,99 @@
 @import "../../../sass/abstract/mixins";
 
 .register-section {
+  margin-top: 80px;
 
-    margin-top: 80px;
+  h2 {
+    margin-bottom: 40px;
+  }
 
-    h2 {
-        margin-bottom: 40px;
+  form {
+    @include centering;
+    @include border;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 700px;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: $form-color;
+    border-radius: $border-radius;
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin: 6px;
+
+        &[type="text"] {
+          height: $inpHeight;
+          width: $inpWidth;
+        }
+
+        &::placeholder {
+          @include placeholder;
+        }
+      }
     }
 
-    form {
-        @include centring;
-        @include border;
-        flex-direction: column;
-        margin-top: 50px;
-        width: 700px;
-        padding: 30px;
-        margin: 0 auto;
-        background-color: $form-color;
-        border-radius: $border-radius;
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-
-            input {
-                margin: 6px;
-
-                &[type=text] {
-                    height: $inpHeight;
-                    width: $inpWidth;
-                }
-
-                &::placeholder {
-                    @include placeholder;
-                }
-            }
-        }
-
-        .check {
-            margin: 30px;
-            @include hor-centering;
-        }
-
-        .btn {
-
-            @include hor-centering;
-
-            input {
-                &[type=button] {
-                    height: $btnHeight;
-                    width: $btnWidth;
-                    background-color: $primary-color;
-                    border: none;
-                    border-radius: $border-radius;
-                    color: $white-color;
-                    font-weight: $font-weight;
-                    text-transform: uppercase;
-                    margin-bottom: 30px;
-
-                    &:hover {
-                        color: $white-color;
-                        background-color: $black-color;
-                    }
-                }
-
-                &:active {
-                    border: 1px solid $primary-color;
-                }
-            }
-        }
+    .check {
+      margin: 30px;
+      @include hor-centering;
     }
 
-    .terms-con {
-        @include ver-centering;
-        flex-direction: column;
+    .btn {
+      @include hor-centering;
 
-        p {
-            margin-bottom: 20px;
+      input {
+        &[type="button"] {
+          height: $btnHeight;
+          width: $btnWidth;
+          background-color: $primary-color;
+          border: none;
+          border-radius: $border-radius;
+          color: $white-color;
+          font-weight: $font-weight;
+          text-transform: uppercase;
+          margin-bottom: 30px;
+
+          &:hover {
+            color: $white-color;
+            background-color: $black-color;
+          }
         }
 
-        ul {
-            display: flex;
-            justify-content: space-around;
-
-            li {
-                list-style: $list-style;
-                display: flex;
-
-
-                a {
-                    color: $black-color;
-                    text-decoration: $text-decoration;
-
-                    &:hover {
-                        color: $primary-color;
-                    }
-                }
-            }
+        &:active {
+          border: 1px solid $primary-color;
         }
+      }
     }
+  }
+
+  .terms-con {
+    @include ver-centering;
+    flex-direction: column;
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        list-style: $list-style;
+        display: flex;
+
+        a {
+          color: $black-color;
+          text-decoration: $text-decoration;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+    }
+  }
 }

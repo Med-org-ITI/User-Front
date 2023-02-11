@@ -1,0 +1,73 @@
+@import "../../../sass/base/util";
+@import "../../../sass/abstract/mixins";
+@import "../../../sass/components/btn";
+.item-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rem;
+}
+
+.item__image-container {
+  width: 360px;
+  min-width: 30%;
+  img {
+    width: 100%;
+  }
+}
+.item-info {
+  width: 33%;
+  margin-top: 2rem;
+  &__details {
+    &-name {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    &-price {
+      color: $primary-color;
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+    &-category {
+      border-top: 1px solid $light-gray-color;
+      border-bottom: 1px solid $light-gray-color;
+      padding: 1.5rem 0;
+      margin-bottom: 2rem;
+      span {
+        color: $dark-gray-color;
+        font-weight: 700;
+        margin-left: 0.5rem;
+      }
+    }
+  }
+  &__expiration {
+    @include ver-centering;
+    gap: 2rem;
+    border-bottom: 1px solid $light-gray-color;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    span {
+      color: $dark-gray-color;
+      font-weight: 700;
+      margin: 0 0.5rem;
+    }
+  }
+}
+
+.item-controls {
+  @include ver-centering;
+  justify-content: space-between;
+  &__quantity {
+    @include centering;
+  }
+  &__cart {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.top-rated {
+  width: 30%;
+  border: 2px solid;
+}

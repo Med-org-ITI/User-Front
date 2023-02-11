@@ -11,6 +11,7 @@ import { ContactComponent } from './Components/contact/contact.component';
 import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ErrorComponent } from './Components/error/error.component';
+import { ItemDetailsComponent } from './Components/item-details/item-details.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +21,7 @@ import { ErrorComponent } from './Components/error/error.component';
     FooterComponent,
     LoginComponent,
     ErrorComponent,
+    ItemDetailsComponent,
   ],
   imports: [
     BrowserModule,
