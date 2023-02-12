@@ -5,12 +5,14 @@
   display: flex;
   justify-content: space-between;
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .item__image-container {
   width: 320px;
   min-width: 30%;
   img {
+    height: 100%;
     width: 100%;
   }
 }
@@ -119,7 +121,9 @@
   &__product {
     display: flex;
     gap: 1rem;
-    margin-bottom: 1rem;
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
     &:not(:first-child) {
       border-top: 1px solid $light-gray-color;
       padding-top: 1rem;
@@ -170,14 +174,14 @@
   }
   &__head {
     position: relative;
-    margin-left: 0.5rem;
+    margin-left: 0.8rem;
     margin-bottom: 2rem;
     font-weight: normal;
     &::before {
       content: "";
       position: absolute;
       top: -4px;
-      left: -0.5rem;
+      left: -0.8rem;
       width: 2px;
       height: 125%;
       background-color: $primary-color;
