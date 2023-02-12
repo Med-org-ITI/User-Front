@@ -7,6 +7,7 @@ import { ItemService } from 'src/app/Services/item.service';
   styleUrls: ['./item-details.component.scss'],
 })
 export class ItemDetailsComponent implements OnInit {
+  quantity = 1;
   item: any;
   ID: string;
   constructor(
@@ -24,5 +25,13 @@ export class ItemDetailsComponent implements OnInit {
         console.log(err);
       },
     });
+  }
+  increase() {
+    this.quantity++;
+  }
+  decrease() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 }
