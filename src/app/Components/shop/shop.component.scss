@@ -1,0 +1,291 @@
+@import '../../../sass/abstract/variables';
+@import '../../../sass/abstract/mixins';
+
+.shop-section {
+    font-family: $font;
+    margin-top: 80px;
+
+    .overlay {
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        left: 0;
+        background-color: $black-color;
+        opacity: 0.7;
+    }
+
+    .div-overlay {
+        @include ver-centering;
+        justify-content: space-evenly;
+        width: 850px;
+        height: 500px;
+        background-color: $white-color;
+        opacity: 1;
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+
+        .img {
+            img {
+                width: 400px;
+            }
+        }
+
+        div {
+            h2 {
+                margin-bottom: 20px;
+            }
+
+            h1 {
+                font-size: 30px;
+                font-weight: $font;
+                color: $primary-color;
+                margin-bottom: 30px;
+            }
+
+            hr {
+                width: 360px;
+                margin-bottom: 30px;
+                border-color: $border-color;
+            }
+
+            p {
+                margin: 30px 0;
+            }
+
+            .order {
+                @include ver-centering;
+
+                ul {
+                    display: flex;
+
+                    li {
+                        margin-right: 1.2rem;
+                        list-style: $list-style;
+                        @include centering;
+                        border: 1px solid $light-color;
+                        font-weight: 700;
+                        color: black;
+                        font-size: 1.2rem;
+
+                        .cart-plus-minus {
+                            @include centering;
+                        }
+
+                        div {
+                            height: $btnHeight;
+                            display: inline-block;
+                            padding: 1.4rem 1rem;
+                            cursor: $cursor;
+
+                            input {
+                                width: 3.5rem;
+                                text-align: center;
+                                border: none;
+                                border: 1px solid $border-color;
+                                padding: 1.3rem 1rem;
+                                outline: $primary-color;
+                            }
+                        }
+
+                        button {
+                            width: $btnWidth;
+                            height: $btnHeight;
+                            background-color: $primary-color;
+                            border: none;
+                            color: $white-color;
+                            font-weight: $font;
+                            text-transform: uppercase;
+                            font-size: $faq-size;
+                            cursor: $cursor;
+
+                            &:hover {
+                                background-color: $black-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .div-cart {
+        @include ver-centering;
+        justify-content: space-evenly;
+        width: 480px;
+        height: 220px;
+        background-color: $white-color;
+        opacity: 1;
+        position: fixed;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: auto;
+        margin-top: auto;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+
+        .img {
+            img {
+                width: 150px;
+            }
+        }
+
+        div {
+
+            h4 {
+                font-size: 20px;
+            }
+
+            .icon {
+                display: flex;
+
+                span {
+                    color: $primary-color;
+                    display: flex;
+                    align-items: center;
+                    margin-right: 5px;
+                }
+
+                p {
+                    margin: 20px 0;
+                    display: inline-block;
+                }
+            }
+
+            div {
+                display: flex;
+                justify-content: space-around;
+
+                button {
+                    color: $white-color;
+                    width: 110px;
+                    border: none;
+                    height: 35px;
+                    border-radius: 2px;
+                    cursor: $cursor;
+                }
+
+                .btn1 {
+                    background-color: $primary-color;
+
+                    &:hover {
+                        color: $primary-color;
+                        background-color: $white-color;
+                        border: 1px solid $black-color;
+                    }
+                }
+
+                .btn2 {
+                    background-color: $black-color;
+
+                    &:hover {
+                        color: $black-color;
+                        background-color: $white-color;
+                        border: 1px solid $primary-color;
+                    }
+                }
+            }
+        }
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+
+        .container--contain {
+            display: flex;
+            flex-direction: column;
+
+            .contain {
+                display: flex;
+                justify-content: space-evenly;
+                text-align: center;
+                margin-bottom: 30px;
+                height: 420px;
+                cursor: $cursor;
+
+                div {
+                    position: relative;
+                    border-radius: $border-radius;
+
+                    img {
+                        width: 270px;
+                        margin: 0 15px 20px;
+                    }
+
+                    h4 {
+                        margin-bottom: 15px;
+                    }
+
+                    p {
+                        color: $light-color;
+
+                        &:hover {
+                            color: $primary-color;
+                        }
+                    }
+
+                    &:hover {
+                        box-shadow: $box-shadow;
+
+                        .product-hover {
+                            @include ver-centering;
+                            justify-content: space-evenly;
+                            opacity: 0.9;
+
+                            &:hover {
+                                box-shadow: 0 0 0 0;
+
+                                span:hover {
+                                    color: $primary-color;
+                                }
+                            }
+                        }
+                    }
+
+                    .product-hover {
+                        height: 50px;
+                        width: 120px;
+                        background-color: $white-color;
+                        position: absolute;
+                        margin-left: auto;
+                        margin-right: auto;
+                        left: 0;
+                        right: 0;
+                        top: 50%;
+                        display: none;
+
+                        ul {
+                            @include centering;
+
+                            li {
+                                margin: 10px;
+                                list-style: $list-style;
+
+                                span {
+                                    font-size: 25px;
+                                }
+
+                                a {
+                                    color: $black-color;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

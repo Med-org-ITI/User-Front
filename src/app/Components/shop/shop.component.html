@@ -1,0 +1,371 @@
+<section class="shop-section">
+
+    <div *ngIf="toggleOverlay">
+        <div class="overlay" (click)="toggleClose()"></div>
+        <div class="div-overlay" *ngIf="toggleProduct">
+            <div class="img">
+                <img src="../../../assets/Images/Shop/shop1.png">
+            </div>
+            <div>
+                <h2>Digital Stethoscope</h2>
+                <h1>$149.00</h1>
+                <hr>
+                <p>Categories: Parts Car Seat Cover</p>
+                <hr>
+                <div class="order">
+                    <ul>
+                        <li>
+                            <div class="cart-plus-minus">
+                                <div>-</div>
+                                <input type="text" value="00" name="qtybutton">
+                                <div>+</div>
+                            </div>
+                        </li>
+                        <li class="order--btn">
+                            <button>Add to Cart</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="div-cart" *ngIf="!toggleProduct">
+            <div class="img">
+                <img src="../../../assets/Images/Shop/shop1.png">
+            </div>
+            <div>
+                <h4>Digital Stethoscope</h4>
+                <div class="icon">
+                    <span class="material-symbols-outlined">
+                        verified
+                    </span>
+                    <p>Successfully added to your Cart</p>
+                </div>
+                <div>
+                    <button class="btn1">View cart</button>
+                    <button class="btn2">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="container--contain">
+            <div class="contain">
+                <div>
+                    <img src="../../../assets/Images/Shop/shop1.png">
+                    <h4>Digital Stethoscope</h4>
+                    <p>$149.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop2.png">
+                    <h4>Thermometer Gun</h4>
+                    <p>$62.00 </p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop3.png">
+                    <h4>Cosmetic Containers</h4>
+                    <p>$75.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain">
+                <div>
+                    <img src="../../../assets/Images/Shop/shop4.png">
+                    <h4>Digital Stethoscope</h4>
+                    <p>$149.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop5.png">
+                    <h4>Thermometer Gun</h4>
+                    <p>$62.00 </p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop6.png">
+                    <h4>Cosmetic Containers</h4>
+                    <p>$75.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain">
+                <div>
+                    <img src="../../../assets/Images/Shop/shop7.png">
+                    <h4>Digital Stethoscope</h4>
+                    <p>$149.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop8.png">
+                    <h4>Thermometer Gun</h4>
+                    <p>$62.00 </p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop9.png">
+                    <h4>Cosmetic Containers</h4>
+                    <p>$75.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain">
+                <div>
+                    <img src="../../../assets/Images/Shop/shop10.png">
+                    <h4>Digital Stethoscope</h4>
+                    <p>$149.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop11.png">
+                    <h4>Thermometer Gun</h4>
+                    <p>$62.00 </p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop12.png">
+                    <h4>Cosmetic Containers</h4>
+                    <p>$75.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contain">
+                <div>
+                    <img src="../../../assets/Images/Shop/shop10.png">
+                    <h4>Digital Stethoscope</h4>
+                    <p>$149.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop11.png">
+                    <h4>Thermometer Gun</h4>
+                    <p>$62.00 </p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <img src="../../../assets/Images/Shop/shop12.png">
+                    <h4>Cosmetic Containers</h4>
+                    <p>$75.00</p>
+                    <div class="product-hover">
+                        <ul>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay(true)">
+                                    visibility
+                                </span>
+                            </li>
+                            <li>
+                                <span class="material-symbols-outlined" (click)="addOverlay()">
+                                    garden_cart
+                                </span>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <img src="../../../assets/Images/mask.jpg">
+        </div>
+    </div>
+</section>

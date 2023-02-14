@@ -52,6 +52,8 @@
   height: 60px;
   width: 420px;
   margin: 10px 10px;
+  box-shadow: 0 2px 2px rgb(220, 220, 220);
+  border-radius: 8px;
 }
 .contact-section input::-moz-placeholder {
   font-size: 15px;

@@ -12,6 +12,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { TermsComponent } from './Components/terms/terms.component';
 import { FAQComponent } from './Components/faq/faq.component';
+import { ShopComponent } from './Components/shop/shop.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FAQComponent } from './Components/faq/faq.component';
     PrivacyComponent,
     TermsComponent,
     FAQComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,

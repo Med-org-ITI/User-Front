@@ -1,0 +1,92 @@
+.faq-section {
+  font-family: sans-serif;
+  margin: 80px 0;
+}
+.faq-section .faq-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.faq-section .faq-container .container-faq {
+  display: flex;
+  flex-direction: column;
+}
+.faq-section .faq-container .container-faq .faq-contact {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.faq-section .faq-container .container-faq .faq-contact input {
+  background-color: #0A9A73;
+  color: white;
+  border: none;
+  height: 60px;
+  width: 180px;
+  margin-top: 25px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.faq-section .faq-container .container-faq .faq-q {
+  border: solid rgb(220, 220, 220);
+  border-radius: 8px;
+  width: 600px;
+}
+.faq-section .faq-container .container-faq .faq-q details {
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.faq-section .faq-container .container-faq .faq-q details summary {
+  padding: 0.5em 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  transition: height 2s ease;
+  cursor: pointer;
+}
+.faq-section .faq-container .container-faq .faq-q details summary::after {
+  content: "+";
+}
+.faq-section .faq-container .container-faq .faq-q details summary::-webkit-details-marker {
+  display: none;
+}
+.faq-section .faq-container .container-faq .faq-q details[open] summary::after {
+  content: "-";
+}
+.faq-section .faq-container .container-faq .faq-q details[open] div {
+  padding: 0.5em 1em;
+  color: #5c727d;
+  font-size: 20px;
+  font-weight: 200px;
+  line-height: 25px;
+}
+.faq-section .faq-container .container-faq hr {
+  margin: 20px 0;
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.reviews-section {
+  font-family: sans-serif;
+}
+.reviews-section .reviews-container {
+  background-color: rgb(220, 220, 220);
+  height: 370px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.reviews-section .reviews-container div span {
+  font-size: 75px;
+  color: #0A9A73;
+  margin: 15px 18px;
+}
+.reviews-section .reviews-container div h2 {
+  font-size: 30px;
+  text-align: center;
+}
+.reviews-section .reviews-container div p {
+  font-size: 18px;
+  text-align: center;
+  color: #5c727d;
+}/*# sourceMappingURL=faq.component.css.map */
