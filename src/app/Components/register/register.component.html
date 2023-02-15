@@ -1,54 +1,137 @@
 <section class="register-section">
-    <form method="post" [formGroup]="myRegisterationForm">
+  <form method="post" [formGroup]="myRegisterationForm">
+    <div>
+      <h2>Register Your Account</h2>
+    </div>
+    <div class="form-group">
+      <input
+        formControlName="email"
+        type="text"
+        placeholder="Enter your email"
+        class="input"
+        [ngClass]="
+          !emailValid && myRegisterationForm.controls['email'].value
+            ? 'input-invalid'
+            : myRegisterationForm.controls['email'].value
+            ? 'input-valid'
+            : ''
+        "
+      />
+      <p
+        *ngIf="!emailValid && myRegisterationForm.controls['email'].value"
+        style="color: red"
+      >
+        Email is not valid
+      </p>
+      <br />
+      <input
+        formControlName="password"
+        type="text"
+        placeholder="Enter your password"
+        class="input"
+        [ngClass]="
+          !passwordValid && myRegisterationForm.controls['password'].value
+            ? 'input-invalid'
+            : myRegisterationForm.controls['password'].value
+            ? 'input-valid'
+            : ''
+        "
+      />
+      <p
+        *ngIf="!passwordValid && myRegisterationForm.controls['password'].value"
+        style="color: red"
+      >
+        6 < Password < 16
+      </p>
+      <br />
+      <div class="form__names">
         <div>
-            <h2>Register Your Account</h2>
+          <input
+            formControlName="firstName"
+            type="text"
+            placeholder="Enter your first name"
+            class="input"
+            [ngClass]="
+              !fNameValid && myRegisterationForm.controls['firstName'].value
+                ? 'input-invalid'
+                : myRegisterationForm.controls['firstName'].value
+                ? 'input-valid'
+                : ''
+            "
+          />
+          <p
+            *ngIf="
+              !fNameValid && myRegisterationForm.controls['firstName'].value
+            "
+            style="color: red"
+          >
+            First name should be more than or equal 4 letters
+          </p>
         </div>
-        <div class="form-group">
-            <input formControlName="firstName" type="text" placeholder="First Name" class="form-control"
-                [(ngModel)]="firstName">
-            <div *ngIf="!fNameValid && firstName" style="color: red;">
-                First name must be more than or equal 4 letters
-            </div>
-            <br>
-            <input formControlName="secondName" type="text" placeholder="Last Name" class="form-control"
-                [(ngModel)]="secondName">
-            <div *ngIf="!lNameValid && secondName" style="color: red;">
-                Last name must be more than or equal 4 letters
-            </div>
-            <br>
-            <input formControlName="city" type="text" placeholder="City" class="form-control" [(ngModel)]="city">
-            <div *ngIf="!cityValid && city" style="color: red;">
-                City must be more than or equal 4 letters
-            </div>
-            <br>
-            <input formControlName="email" type="text" placeholder="Email" class="form-control" [(ngModel)]="email">
-            <div *ngIf="!emailValid && email" style="color: red;">
-                Email is not valid
-            </div>
-            <br>
-            <input formControlName="password" type="text" placeholder="Password" class="form-control"
-                [(ngModel)]="password">
-            <div *ngIf="!passwordValid && password" style="color: red;">
-                Password is not valid
-            </div>
+        <div>
+          <input
+            formControlName="secondName"
+            type="text"
+            placeholder="Enter your second name"
+            class="input"
+            [ngClass]="
+              !lNameValid && myRegisterationForm.controls['secondName'].value
+                ? 'input-invalid'
+                : myRegisterationForm.controls['secondName'].value
+                ? 'input-valid'
+                : ''
+            "
+          />
+          <p
+            *ngIf="
+              !lNameValid && myRegisterationForm.controls['secondName'].value
+            "
+            style="color: red"
+          >
+            Second name should be more than or equal 4 letters
+          </p>
         </div>
+      </div>
 
-        <div class="create">
-            <div class="check">
-                <input type="checkbox">
-                <p>By clicking "create account", I consent to the privacy policy.</p>
-            </div>
+      <br />
+      <input
+        formControlName="city"
+        type="text"
+        placeholder="Enter your city"
+        class="input"
+        [ngClass]="
+          !cityValid && myRegisterationForm.controls['city'].value
+            ? 'input-invalid'
+            : myRegisterationForm.controls['city'].value
+            ? 'input-valid'
+            : ''
+        "
+      />
+      <p
+        *ngIf="!cityValid && myRegisterationForm.controls['city'].value"
+        style="color: red"
+      >
+        City should be more than or equal 4 letters
+      </p>
+      <br />
+    </div>
 
-            <div class="btn">
-                <input type="button" value="Create Account" (click)="Add()" (click)="reset()">
-            </div>
-            <div class="terms-con">
-                <p>By creating an account, you agree to our:</p>
-                <ul>
-                    <li><a routerLink="#">TERMS OF CONDITIONS</a>|</li>
-                    <li><a routerLink="#" class="devide">PRIVACY POLICY</a></li>
-                </ul>
-            </div>
-        </div>
-    </form>
+    <div class="create">
+      <!-- <div class="check">
+        <input type="checkbox" />
+        <p>By clicking "create account", I consent to the privacy policy.</p>
+      </div> -->
+
+      <div class="register-btn-container">
+        <button class="btn">CREATE ACCOUNT</button>
+      </div>
+      <div class="terms-con">
+        <p>By creating an account, you agree to our:</p>
+        <ul>
+          <li><a routerLink="/terms">TERMS OF CONDITIONS</a></li>
+          <li><a routerLink="/privacy" class="devide">| PRIVACY POLICY</a></li>
+        </ul>
+      </div>
+    </div>
+  </form>
 </section>

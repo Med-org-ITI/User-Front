@@ -73,8 +73,8 @@ export class RegisterComponent {
       this.emailValid &&
       this.passwordValid
     ) {
-      this.myService.AddUser(user).subscribe();
-      // console.log(this.myRegisterationForm.value);
+      // this.myService.AddUser(user).subscribe();
+      console.log(this.myRegisterationForm.value);
     }
   }
 

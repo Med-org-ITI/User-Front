@@ -21,6 +21,7 @@ $inpWidth: 42rem;
 //buttons
 $btnHeight: 6rem;
 $btnWidth: 18rem;
+$cursor: pointer;
 
 //border
 $border-radius: 0.8rem;
@@ -28,3 +29,5 @@ $border-radius-sm: 0.2rem;
 //font
 $font: sans-serif;
 $font-weight: bold;
+
+$box-shadow: 0 2px 2px $border-color;
