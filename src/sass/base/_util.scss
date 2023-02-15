@@ -1,10 +1,15 @@
 .container {
-  width: 1280px;
+  width: 128rem;
   margin: 0 auto;
+}
+@media only screen and (max-width: 1580px) {
+  .container {
+    width: 90%;
+  }
 }
 
 section {
-  padding: 3rem 0;
+  padding: 4.8rem 0;
 }
 
 .input-valid {

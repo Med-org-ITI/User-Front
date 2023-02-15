@@ -2,13 +2,21 @@
 @import "../../../sass/components/input";
 @import "../../../sass/components/btn";
 
+.login {
+  margin-bottom: 25rem;
+}
+
+.login-btn {
+  padding: 1.9rem 3.8rem;
+}
+
 .login__header {
-  font-size: 2.6rem;
+  font-size: 4.2rem;
   line-height: 1.3;
   font-weight: 700;
   text-align: center;
-  margin-top: 5rem;
-  margin-bottom: 1rem;
+  margin-top: 8rem;
+  margin-bottom: 1.6rem;
   &--sub {
     display: block;
   }
@@ -16,12 +24,12 @@
 .login__header--small {
   color: $dark-gray-color;
   text-align: center;
-  margin-bottom: 5rem;
+  margin-bottom: 8rem;
 }
 .login__options {
   display: flex;
   justify-content: space-between;
-  width: 57%;
+  width: 62%;
   margin: 0 auto;
 }
 .login__form {
@@ -37,10 +45,10 @@
 
 .forgot {
   display: inline-block;
-  margin: 2rem 0;
+  margin: 3.2rem 0;
   color: $dark-gray-color;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1.4rem;
   font-weight: 400;
   transition: 0.3s color;
   &:hover {
@@ -49,13 +57,30 @@
 }
 
 .create__header {
-  margin-bottom: 1.5rem;
-  font-size: 1.2rem;
+  margin-bottom: 2.4rem;
+  font-size: 1.9rem;
 }
 
 .create__description {
   color: $dark-gray-color;
   line-height: 1.3;
-  margin-bottom: 2rem;
-  padding: 0 2rem;
+  margin-bottom: 3.2rem;
+  padding: 0 3.2rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .login__options {
+    flex-direction: column;
+  }
+  .login__form {
+    margin-bottom: 4.8rem;
+  }
+  .form__login-container {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login__options {
+    width: 85%;
+  }
 }
