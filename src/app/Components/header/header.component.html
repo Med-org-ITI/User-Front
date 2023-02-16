@@ -1,10 +1,58 @@
+<div *ngIf="showOverlay">
+  <div class="overlay" (click)="hideMenu()"></div>
+</div>
+
+<div class="mobile-side-menu" #sideMenu>
+  <div class="mobile-menu-container">
+    <span
+      class="material-symbols-outlined mobile-menu__close-btn"
+      (click)="hideMenu()"
+    >
+      close
+    </span>
+    <div class="side-menu__content">
+      <div class="side-search">
+        <input type="text" class="input" placeholder="Search..." />
+        <div class="search-icon">
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+      </div>
+      <div class="side-menu__list-container">
+        <ul class="side-menu__list">
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/item">Item</a></li>
+          <li><a routerLink="/register">Sign up</a></li>
+          <li><a routerLink="/login">Login</a></li>
+          <li><a routerLink="/contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="side-menu__account-options">
+        <div>
+          <span class="material-symbols-outlined"> person </span>
+          <h4>My Accounr</h4>
+        </div>
+        <div>
+          <span class="material-symbols-outlined"> shopping_cart </span>
+          <h4>Shopping Cart</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <section class="header-section">
   <div class="container">
     <div>
       <img src="../../../assets/Images/logo.png" />
     </div>
     <div>
-      <ul>
+      <span
+        class="material-symbols-outlined mobile-menu-open"
+        (click)="showMenu()"
+      >
+        menu
+      </span>
+      <ul class="nav-list">
         <li><a routerLink="/">Home</a></li>
         <li><a routerLink="/item">Item</a></li>
         <li><a routerLink="/register">Sign up</a></li>
