@@ -148,8 +148,8 @@
 }
 @media only screen and (max-width: 600px) {
   .mobile-side-menu {
-    width: 80vw;
-    transform: translateX(80vw);
+    width: 95vw;
+    transform: translateX(95vw);
     &__active {
       transform: translateX(0);
     }
