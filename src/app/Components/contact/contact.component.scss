@@ -1,22 +1,27 @@
 @import "../../../sass/abstract/variables";
 @import "../../../sass/abstract/mixins";
+@import "../../../sass//components/input";
+@import "../../../sass//components/btn";
+@import "../../../sass/base/util";
 
 .card-section {
-  margin: 100px 0px;
+  margin: 6rem 0;
 
   .container {
     @include hor-centering;
 
+    gap: 3.2rem;
     .card {
       @include ver-centering;
       @include border;
+      border-color: $light-gray-color;
       flex-direction: column;
-      padding: 60px;
-      width: 20%;
-      margin: 1rem;
+      box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      padding: 6rem;
+      width: 25%;
 
       h2 {
-        margin: 25px 0;
+        margin: 2.5rem 0;
       }
     }
   }
@@ -25,41 +30,62 @@
 .contact-section {
   @include border;
   @include hor-centering;
+  border-top: 4px solid lighten($primary-color, 1);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   flex-direction: column;
-  width: 900px;
-  padding: 30px;
+  align-items: center;
+  gap: 2.4rem;
+  width: 55%;
+  padding: 4rem 2.4rem;
   margin: 0 auto;
-
+  margin-bottom: 10%;
   h2 {
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
   }
 
   form {
     @include ver-centering;
+    width: 100%;
     flex-direction: column;
     justify-content: space-evenly;
 
     .container1 {
       @include hor-centering;
       flex-direction: row;
+      width: 95%;
+      gap: 2.4rem;
+      div {
+        width: 100%;
+      }
     }
 
     .message {
-      input {
-        width: 860px;
-        height: 120px;
+      width: 95%;
+      textarea {
+        width: 100%;
+        resize: none;
+        color: $dark-gray-color;
+        border: 0.2rem solid $light-gray-color;
+        border-radius: $border-radius-sm;
+        padding: 1.6rem;
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        max-height: 40rem;
+        height: 30rem;
+        font-family: sans-serif;
+        &:focus {
+          border: none;
+          outline: 1px solid $primary-color;
+        }
       }
     }
   }
 
   input {
-    @include border;
+    margin: 0 auto;
+    margin-bottom: 1.6rem;
+    padding: 2.4rem;
 
-    &[type="text"] {
-      height: $inpHeight;
-      width: $inpWidth;
-      margin: 10px 10px;
-    }
     &::placeholder {
       @include placeholder;
     }
@@ -68,39 +94,53 @@
   .check {
     display: flex;
     justify-content: flex-start;
-    margin-top: 20px;
+    margin-top: 2rem;
   }
+}
 
-  .btn {
-    input {
-      &[type="submit"] {
-        height: $btnHeight;
-        width: $btnWidth;
-        margin-top: 20px;
-        background-color: $primary-color;
-        border: none;
-        border-radius: $border-radius;
-        color: $white-color;
-        font-weight: $font-weight;
-        text-transform: uppercase;
-
-        &:hover {
-          color: $white-color;
-          background-color: $black-color;
+@media only screen and (max-width: 992px) {
+  .card-section {
+    margin: 4rem 0;
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .card {
+        padding: 3rem 1rem;
+        width: 35%;
+        img {
+          width: 5rem;
         }
       }
-
-      &:active {
-        border: 1px solid $primary-color;
+    }
+  }
+  .contact-section {
+    width: 75%;
+    form {
+      .container1 {
+        flex-direction: column;
+        gap: 0;
       }
     }
   }
 }
-
-// .map-section {
-//     iframe {
-//         width: 100%;
-//         height: 600px;
-//         margin-top: 80px;
-//     }
-// }
+@media only screen and (max-width: 600px) {
+  .card-section {
+    .container {
+      .card {
+        width: 66%;
+      }
+    }
+  }
+  .contact-section {
+    width: 92%;
+    form {
+      .container1,
+      .message {
+        width: 100%;
+        textarea {
+          height: 20rem;
+        }
+      }
+    }
+  }
+}

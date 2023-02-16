@@ -43,6 +43,7 @@
         font-family: $font;
         border-radius: $border-radius-sm;
         cursor: pointer;
+        transition: 0.3s all;
         &:hover {
           background-color: $black-color;
           color: $white-color;

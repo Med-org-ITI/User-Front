@@ -1,77 +1,151 @@
 <section class="card-section">
-    <div class="container">
-        <div class="card">
-            <div>
-                <img src="../../../assets/Images/email.png">
-            </div>
-            <h2>Email Address</h2>
-            <p>website@gmail.com</p>
-        </div>
-
-        <div class="card">
-            <div>
-                <img src="../../../assets/Images/phone.png">
-            </div>
-            <h2>Phone Number</h2>
-            <p>01234567890</p>
-        </div>
-
-        <div class="card">
-            <div>
-                <img src="../../../assets/Images/address.png">
-            </div>
-            <h2>Office Address</h2>
-            <p>Sheikh Zayed, Ismailia</p>
-        </div>
+  <div class="container">
+    <div class="card">
+      <div>
+        <img src="../../../assets/Images/email.png" />
+      </div>
+      <h2>Email Address</h2>
+      <p>website@gmail.com</p>
     </div>
+
+    <div class="card">
+      <div>
+        <img src="../../../assets/Images/phone.png" />
+      </div>
+      <h2>Phone Number</h2>
+      <p>01234567890</p>
+    </div>
+
+    <div class="card">
+      <div>
+        <img src="../../../assets/Images/address.png" />
+      </div>
+      <h2>Office Address</h2>
+      <p>Sheikh Zayed, Ismailia</p>
+    </div>
+  </div>
 </section>
 
 <section class="contact-section">
-    <h2>Get in touch</h2>
-    <form method="post" [formGroup]="myContactForm">
-        <div class="container1">
-            <div>
-                <input formControlName="fName" type="text" placeholder="Enter your name" class="form-control"
-                    [(ngModel)]="fName">
-                <div *ngIf="!fNameValid && fName" style="color: red;">
-                    First name must be more than or equal 4 letters
-                </div>
-                <br>
-                <input formControlName="lName" type="text" placeholder="Enter email address" class="form-control"
-                    [(ngModel)]="lName">
-                <div *ngIf="!lNameValid && lName" style="color: red;">
-                    Last name must be more than or equal 4 letters
-                </div>
-                <br>
-            </div>
-            <div>
-                <input formControlName="email" type="text" placeholder="Enter email address" class="form-control"
-                    [(ngModel)]="email">
-                <div *ngIf="!emailValid && email" style="color: red;">
-                    Email must be written in email form
-                </div>
-                <br>
-                <input formControlName="city" type="text" placeholder="Enter your city" class="form-control"
-                    [(ngModel)]="city">
-                <div *ngIf="!cityValid && city" style="color: red;">
-                    city must be more than or equal 4 letters
-                </div>
-                <br>
-            </div>
-        </div>
-        <div class="message">
-            <input formControlName="message" type="text" placeholder="Enter your message" class="form-control"
-                [(ngModel)]="message">
-        </div>
-    </form>
-    <div class="check">
-        <input type="checkbox">
-        <p> Save my name, email, and website in this browser for the next time I comment.</p>
+  <h2>Get in touch</h2>
+  <form method="post" [formGroup]="myContactForm">
+    <div class="container1">
+      <div>
+        <input
+          formControlName="fName"
+          type="text"
+          placeholder="Enter your first name"
+          class="input"
+          [ngClass]="
+            !fNameValid && myContactForm.controls['fName'].value
+              ? 'input-invalid'
+              : myContactForm.controls['fName'].value
+              ? 'input-valid'
+              : ''
+          "
+        />
+        <p
+          *ngIf="!fNameValid && myContactForm.controls['fName'].value"
+          style="color: red"
+        >
+          First name should be more than or equal 4 letters
+        </p>
+        <br />
+        <input
+          formControlName="email"
+          type="text"
+          placeholder="Enter your email"
+          class="input"
+          [ngClass]="
+            !emailValid && myContactForm.controls['email'].value
+              ? 'input-invalid'
+              : myContactForm.controls['email'].value
+              ? 'input-valid'
+              : ''
+          "
+        />
+        <p
+          *ngIf="!emailValid && myContactForm.controls['email'].value"
+          style="color: red"
+        >
+          Email is not valid
+        </p>
+      </div>
+      <div>
+        <input
+          formControlName="lName"
+          type="text"
+          placeholder="Enter your last name"
+          class="input"
+          [ngClass]="
+            !lNameValid && myContactForm.controls['lName'].value
+              ? 'input-invalid'
+              : myContactForm.controls['lName'].value
+              ? 'input-valid'
+              : ''
+          "
+        />
+        <p
+          *ngIf="!lNameValid && myContactForm.controls['lName'].value"
+          style="color: red"
+        >
+          Last name should be more than or equal 4 letters
+        </p>
+        <br />
+        <input
+          formControlName="city"
+          type="text"
+          placeholder="Enter your city"
+          class="input"
+          [ngClass]="
+            !cityValid && myContactForm.controls['city'].value
+              ? 'input-invalid'
+              : myContactForm.controls['city'].value
+              ? 'input-valid'
+              : ''
+          "
+        />
+        <p
+          *ngIf="!cityValid && myContactForm.controls['city'].value"
+          style="color: red"
+        >
+          City should be more than or equal 4 letters
+        </p>
+        <br />
+      </div>
     </div>
+    <div class="message">
+      <textarea
+        placeholder="Enter your message"
+        formControlName="message"
+        rows="10 "
+        [ngClass]="
+          !messageValid && myContactForm.controls['message'].value
+            ? 'input-invalid'
+            : myContactForm.controls['message'].value
+            ? 'input-valid'
+            : ''
+        "
+      ></textarea>
+      <p
+        *ngIf="!messageValid && myContactForm.controls['message'].value"
+        style="color: red"
+      >
+        First name should be more than or equal 20 letters
+      </p>
+    </div>
+  </form>
+  <!-- <div class="check">
+    <input type="checkbox" />
+    <p>
+      Save my name, email, and website in this browser for the next time I
+      comment.
+    </p>
+  </div> -->
 
-    <div class="btn">
-        <input type="submit" value="Get a Free Service" (click)="AddCon()">
-    </div>
+  <div class="contact-btn-container">
+    <button class="btn">Get a Free Service</button>
+  </div>
 </section>
 
 <!-- <section class="map-section">
