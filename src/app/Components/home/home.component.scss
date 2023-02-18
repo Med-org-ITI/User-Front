@@ -1,6 +1,8 @@
 @import "swiper/scss";
 @import "swiper/scss/navigation";
 @import "swiper/scss/pagination";
+@import "../../../sass/components/btn";
+@import "../../../sass/abstract/mixins";
 
 .banner-section {
   margin-bottom: 95vh;
@@ -10,9 +12,26 @@
   height: 100%;
   position: absolute;
   top: 0;
-  &-slide img {
+
+  &-slide .slide-container {
     width: 100%;
     height: 100%;
+    position: relative;
+    .slide-content {
+      position: absolute;
+      top: 45%;
+      left: 16.5%;
+      div {
+        @include ver-centering;
+        gap: 0.4rem;
+        margin-bottom: 1.6rem;
+        color: $primary-color;
+      }
+      h2 {
+        margin-bottom: 2.4rem;
+        font-size: 3.2rem;
+      }
+    }
   }
   &-button {
     &-next,
@@ -27,14 +46,20 @@
   }
 
   &-pagination-bullet-active {
-    background-color: white;
+    background-color: $primary-color;
   }
   &-pagination-bullet {
     width: 1.6rem;
     height: 1.6rem;
+    // width: 8rem;
+    // height: 1.6rem;
+    // border-radius: 20px;
   }
 }
 .news-section {
+  h2 {
+    display: inline-block;
+  }
 }
 
 @media only screen and (max-width: 768px) {

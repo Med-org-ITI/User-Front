@@ -6,7 +6,7 @@
     [pagination]="{ clickable: true }"
     [scrollbar]="{ draggable: true }"
     [loop]="true"
-    [autoplay]="{ delay: 2500, disableOnInteraction: false }"
+    [autoplay]="{ delay: 2500, disableOnInteraction: true }"
     [coverflowEffect]="{
       slideShadows: true,
       rotate: 15,
@@ -16,20 +16,80 @@
     }"
   >
     <ng-template swiperSlide>
-      <img src="/assets/Images/slider/1.jpg" />
+      <div
+        class="slide-container"
+        style="
+          background: url('/assets/Images/slider/1.jpg');
+          background-size: cover;
+        "
+      >
+        <div class="slide-content">
+          <div>
+            <span class="material-symbols-outlined icon"> vital_signs </span>
+            <span>100% geniune Medicine</span>
+          </div>
+          <h2>WELCOME TO OUR SHOP</h2>
+          <button class="btn slider-btn">Shop Now</button>
+        </div>
+      </div>
       <!-- <div></div>  add background-image on div and put the text inside the div-->
     </ng-template>
-    <ng-template swiperSlide
-      ><img src="/assets/Images/slider/2.jpg"
-    /></ng-template>
-    <ng-template swiperSlide
-      ><img src="/assets/Images/slider/3.jpg"
-    /></ng-template>
-    <ng-template swiperSlide
-      ><img src="/assets/Images/slider/4.jpg"
-    /></ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="slide-container"
+        style="
+          background: url('/assets/Images/slider/2.jpg');
+          background-size: cover;
+        "
+      >
+        <div class="slide-content">
+          <div>
+            <span class="material-symbols-outlined icon"> vital_signs </span>
+            <span>100% geniune Medicine</span>
+          </div>
+          <h2>WELCOME TO OUR SHOP</h2>
+          <button class="btn slider-btn">Shop Now</button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="slide-container"
+        style="
+          background: url('/assets/Images/slider/3.jpg');
+          background-size: cover;
+        "
+      >
+        <div class="slide-content">
+          <div>
+            <span class="material-symbols-outlined icon"> vital_signs </span>
+            <span>100% geniune Medicine</span>
+          </div>
+          <h2>WELCOME TO OUR SHOP</h2>
+          <button class="btn slider-btn">Shop Now</button>
+        </div>
+      </div>
+    </ng-template>
+    <ng-template swiperSlide>
+      <div
+        class="slide-container"
+        style="
+          background: url('/assets/Images/slider/4.jpg');
+          background-size: cover;
+        "
+      >
+        <div class="slide-content">
+          <div>
+            <span class="material-symbols-outlined icon"> vital_signs </span>
+            <span>100% geniune Medicine</span>
+          </div>
+          <h2>WELCOME TO OUR SHOP</h2>
+          <button class="btn slider-btn">Shop Now</button>
+        </div>
+      </div>
+    </ng-template>
   </swiper>
 </section>
 <section class="news-section">
-  <h2>hello world</h2>
+  <h2 class="news__header">hello world</h2>
 </section>

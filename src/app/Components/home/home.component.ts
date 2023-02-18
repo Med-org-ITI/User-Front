@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewEncapsulation, HostListener } from '@angular/core';
 import { SharedService } from 'src/app/Services/sendData.service';
 import SwiperCore, {
   Navigation,
@@ -30,5 +30,15 @@ export class HomeComponent {
   }
   ngOnDestroy() {
     this.sharedService.emitChange(true);
+  }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event: Event) {
+    const currentScroll = window.pageYOffset;
+    const news = document.querySelector('.news__header') as HTMLElement;
+    if (currentScroll > 520) {
+      news.style.marginTop = '12rem';
+    } else {
+      news.style.marginTop = '0';
+    }
   }
 }
