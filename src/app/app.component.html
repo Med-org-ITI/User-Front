@@ -1,7 +1,8 @@
-<app-header></app-header>
+<app-header [isNotHome]="showCrumb"></app-header>
 <!-- image need to be edited to a background, and adding a gradient on it and decreasing the height -->
-<div class="header-image__container">
+<div class="header-image__container" *ngIf="showCrumb">
   <img src="../assets/Images/background.jpg" />
 </div>
+
 <router-outlet></router-outlet>
 <app-footer></app-footer>

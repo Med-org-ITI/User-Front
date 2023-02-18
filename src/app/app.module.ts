@@ -2,8 +2,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
+import { SwiperModule } from 'swiper/angular';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { RegisterComponent } from './Components/register/register.component';
@@ -12,6 +13,7 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { ItemDetailsComponent } from './Components/item-details/item-details.component';
+import { HomeComponent } from './Components/home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import { ItemDetailsComponent } from './Components/item-details/item-details.com
     LoginComponent,
     ErrorComponent,
     ItemDetailsComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { ItemDetailsComponent } from './Components/item-details/item-details.com
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

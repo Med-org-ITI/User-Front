@@ -1,0 +1,35 @@
+<section class="banner-section">
+  <swiper
+    [slidesPerView]="1"
+    [spaceBetween]="10"
+    [navigation]="true"
+    [pagination]="{ clickable: true }"
+    [scrollbar]="{ draggable: true }"
+    [loop]="true"
+    [autoplay]="{ delay: 2500, disableOnInteraction: false }"
+    [coverflowEffect]="{
+      slideShadows: true,
+      rotate: 15,
+      stretch: 15,
+      depth: 5,
+      modifier: 5
+    }"
+  >
+    <ng-template swiperSlide>
+      <img src="/assets/Images/slider/1.jpg" />
+      <!-- <div></div>  add background-image on div and put the text inside the div-->
+    </ng-template>
+    <ng-template swiperSlide
+      ><img src="/assets/Images/slider/2.jpg"
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="/assets/Images/slider/3.jpg"
+    /></ng-template>
+    <ng-template swiperSlide
+      ><img src="/assets/Images/slider/4.jpg"
+    /></ng-template>
+  </swiper>
+</section>
+<section class="news-section">
+  <h2>hello world</h2>
+</section>

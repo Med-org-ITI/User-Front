@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ViewChild, HostListener, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,6 +6,7 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  @Input() isNotHome: any;
   showOverlay = false;
   @ViewChild('sideMenu') sideMenu: any;
 
@@ -20,5 +21,17 @@ export class HeaderComponent {
     (this.sideMenu.nativeElement as HTMLElement).classList.add(
       'mobile-side-menu__active'
     );
+  }
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll($event: Event) {
+    const currentScroll = window.pageYOffset;
+    const menu = document.querySelector('.header-nav-section') as HTMLElement;
+    if (currentScroll > 520) {
+      menu.classList.add('scroll-down');
+      if (!this.isNotHome) menu.classList.remove('nav-home');
+    } else {
+      menu.classList.remove('scroll-down');
+      if (!this.isNotHome) menu.classList.add('nav-home');
+    }
   }
 }
