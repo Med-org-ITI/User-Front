@@ -106,7 +106,7 @@
         left: 1.6rem;
         cursor: $cursor;
         &:hover {
-          color: darken($primary-color, 5);
+          color: darken($primary-color, 10);
         }
       }
     }
@@ -165,17 +165,6 @@
         width: 80%;
         padding-bottom: 3.2rem;
         display: block;
-
-        .img-container {
-          img {
-          }
-        }
-        &-description {
-          // margin-bottom: ;
-        }
-        &-more {
-          // position: absolute;
-        }
       }
     }
   }

@@ -1,0 +1,72 @@
+<!-- NOTE  OVERLAY -->
+<div *ngIf="toggleOverlay">
+  <div class="overlay" (click)="toggleClose()"></div>
+  <div class="div-overlay" *ngIf="toggleProduct">
+    <div class="img">
+      <img src="/assets/Images/shop/shop1.png" />
+    </div>
+    <div>
+      <h2>Digital Stethoscope</h2>
+      <h1>$149.00</h1>
+      <hr />
+      <p>Categories: Parts Car Seat Cover</p>
+      <hr />
+      <div class="order">
+        <ul>
+          <li>
+            <div class="cart-plus-minus">
+              <div>-</div>
+              <input type="text" value="00" name="qtybutton" />
+              <div>+</div>
+            </div>
+          </li>
+          <li class="order--btn">
+            <button>Add to Cart</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="div-cart" *ngIf="!toggleProduct">
+    <div class="img">
+      <img src="/assets/Images/shop/shop1.png" />
+    </div>
+    <div>
+      <h4>Digital Stethoscope</h4>
+      <div class="icon">
+        <span class="material-symbols-outlined"> verified </span>
+        <p>Successfully added to your Cart</p>
+      </div>
+      <div>
+        <button class="btn1">View cart</button>
+        <button class="btn2">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- NOTE  CONTENT -->
+<section>
+  <div class="shop-container">
+    <div class="items-wrapper">
+      <div class="item" *ngFor="let _ of [].constructor(10)">
+        <div class="item__img">
+          <img src="/assets/Images/shop/shop1.png" alt="title" />
+        </div>
+        <div class="item__content">
+          <h4>Digital Stethoscope</h4>
+          <p>$149.00</p>
+        </div>
+        <div class="item__hover">
+          <div (click)="addOverlay(true)">
+            <span class="material-symbols-outlined"> visibility </span>
+          </div>
+          <div (click)="addOverlay()">
+            <span class="material-symbols-outlined"> shopping_cart </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-filters"></div>
+  </div>
+</section>

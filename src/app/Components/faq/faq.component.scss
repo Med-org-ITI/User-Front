@@ -1,0 +1,153 @@
+@import "../../../sass/abstract/variables";
+@import "../../../sass/abstract/mixins";
+@import "../../../sass//components/btn";
+
+.faq-section {
+  font-family: $font;
+  margin: 8rem 0;
+
+  .faq-container {
+    display: flex;
+    justify-content: space-evenly;
+
+    .container-faq {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 33%;
+      .faq-contact {
+        margin-top: 8rem;
+        @include centering;
+        flex-direction: column;
+        h1 {
+          margin-bottom: 2.4rem;
+        }
+        a {
+          display: inline-block;
+          text-decoration: none;
+        }
+      }
+
+      .faq-q {
+        border: solid $border-color;
+        border-radius: $border-radius;
+        width: 100%;
+        padding-top: 1.6rem;
+        padding-bottom: 1.6rem;
+        details {
+          color: $black-color;
+          font-size: 2.4rem;
+          @include ver-centering;
+
+          summary {
+            padding: 0.8rem 2.1rem;
+            display: flex;
+            justify-content: space-between;
+            transition: height 2s ease;
+            cursor: $cursor;
+
+            &::after {
+              content: "\002B";
+            }
+
+            &::-webkit-details-marker {
+              display: none;
+            }
+          }
+
+          &[open] {
+            summary {
+              &::after {
+                content: "\002D";
+              }
+            }
+
+            div {
+              padding: 0.8rem 1.6rem;
+              color: $dark-gray-color;
+              font-size: $faq-size;
+              font-weight: 200px;
+              line-height: 2.5rem;
+            }
+          }
+        }
+      }
+
+      hr {
+        margin: 2rem 0;
+        border: 1px solid $border-color;
+      }
+    }
+  }
+}
+
+.reviews-section {
+  font-family: sans-serif;
+
+  .reviews-container {
+    background-color: $light-gray-color;
+    height: 37rem;
+    @include ver-centering;
+    justify-content: space-evenly;
+
+    div {
+      span {
+        font-size: 7.5rem;
+        color: $primary-color;
+        margin: 1.5rem 1.8rem;
+      }
+
+      h2 {
+        font-size: 3rem;
+        text-align: center;
+        margin-bottom: 0.8rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        text-align: center;
+        color: $dark-gray-color;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .faq-section {
+    .faq-container {
+      .container-faq {
+        width: 50%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .faq-section {
+    .faq-container {
+      .container-faq {
+        width: 66%;
+      }
+    }
+  }
+  .faq-img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .faq-section {
+    .faq-container {
+      .container-faq {
+        width: 85%;
+      }
+    }
+  }
+  .reviews-section {
+    .reviews-container {
+      flex-wrap: wrap;
+      padding-bottom: 2.4rem;
+      div {
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+}

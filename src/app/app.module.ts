@@ -14,6 +14,10 @@ import { LoginComponent } from './Components/login/login.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { ItemDetailsComponent } from './Components/item-details/item-details.component';
 import { HomeComponent } from './Components/home/home.component';
+import { PrivacyComponent } from './Components/privacy/privacy.component';
+import { TermsComponent } from './Components/terms/terms.component';
+import { FAQComponent } from './Components/faq/faq.component';
+import { ShopComponent } from './Components/shop/shop.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +29,10 @@ import { HomeComponent } from './Components/home/home.component';
     ErrorComponent,
     ItemDetailsComponent,
     HomeComponent,
+    PrivacyComponent,
+    TermsComponent,
+    FAQComponent,
+    ShopComponent,
   ],
   imports: [
     BrowserModule,

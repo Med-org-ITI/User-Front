@@ -1,0 +1,43 @@
+@import "../../../sass/abstract/variables";
+
+.terms-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .container {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: space-around;
+    line-height: 2.8rem;
+    font-family: $font;
+
+    .contain {
+      width: 75%;
+      h1 {
+        margin-bottom: 5rem;
+        font-size: 4rem;
+        line-height: 1.2;
+      }
+
+      .list {
+        ol {
+          li {
+            margin-bottom: 2.4rem;
+            line-height: 1.5;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .terms-section {
+    .container {
+      .contain {
+        width: 85%;
+        margin: 0 auto;
+      }
+    }
+  }
+}

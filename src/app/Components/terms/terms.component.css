@@ -1,0 +1,22 @@
+.terms-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.terms-section .container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-around;
+  line-height: 1.8rem;
+  font-family: sans-serif;
+}
+.terms-section .container .contain {
+  width: 850px;
+}
+.terms-section .container .contain h1 {
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+.terms-section .container .contain .list ol li {
+  margin-bottom: 10px;
+}/*# sourceMappingURL=terms.component.css.map */

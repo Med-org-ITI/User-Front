@@ -36,7 +36,7 @@ export class HomeComponent {
     const currentScroll = window.pageYOffset;
     const news = document.querySelector('.news__header') as HTMLElement;
     if (currentScroll > 520) {
-      news.style.marginTop = '12rem';
+      news.style.marginTop = '14rem';
     } else {
       news.style.marginTop = '0';
     }
