@@ -38,6 +38,11 @@
                 &::placeholder {
                     @include placeholder;
                 }
+
+                &:focus {
+                    outline: none;
+                    border: 1px solid $primary-color;
+                }
             }
         }
 

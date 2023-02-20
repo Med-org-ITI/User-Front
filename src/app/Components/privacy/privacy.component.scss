@@ -41,12 +41,12 @@
         display: flex;
         justify-content: center;
         margin-top: 50px;
-        
+
         p {
             width: 400px;
             margin: 0 30px 30px 0;
         }
-        
+
         h2 {
             margin-left: 0.7rem;
             margin-bottom: 15px;
@@ -54,10 +54,109 @@
 
         .cards-icon {
             display: flex;
-            
+
             span {
                 color: $primary-color;
                 font-size: 35px;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .privacy-section {
+        margin-left: 1.3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 130%;
+
+            .contain {
+
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .cards {
+        margin-left: 8.5rem;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: wrap;
+
+        p {
+            width: 80%;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .cards-icon {
+            display: flex;
+
+            span {
+                color: $primary-color;
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .privacy-section {
+        margin-left: 1.3rem;
+        display: flex;
+
+        flex-direction: column;
+        justify-content: space-around;
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 112%;
+
+            .contain {
+
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .cards {
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        flex-wrap: nowrap;
+
+        p {
+            width: 80%;
+        }
+
+        h2 {
+            margin-bottom: 40px;
+            font-size: 30px;
+        }
+
+        .cards-icon {
+            display: flex;
+
+            span {
+                color: $primary-color;
+                font-size: 30px;
             }
         }
     }

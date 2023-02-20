@@ -1,0 +1,35 @@
+.shop-section .container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.shop-section .container .container--contain {
+  display: flex;
+  flex-direction: column;
+}
+.shop-section .container .container--contain .contain {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  height: 19rem;
+  cursor: pointer;
+}
+.shop-section .container .container--contain .contain div {
+  position: relative;
+  border-radius: 8px;
+}
+.shop-section .container .container--contain .contain div img {
+  width: 13rem;
+}
+.shop-section .container .container--contain .contain div div h4 {
+  margin: 1rem 0 1rem;
+}
+.shop-section .container .container--contain .contain div div p {
+  color: #5c727d;
+}
+.shop-section .container .container--contain .contain div div p:hover {
+  color: #0A9A73;
+}
+.shop-section .container .container--contain .contain div:hover .container--contain {
+  box-shadow: 0 2px 2px rgb(220, 220, 220);
+}/*# sourceMappingURL=card.component.css.map */

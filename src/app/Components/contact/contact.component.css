@@ -63,6 +63,10 @@
   font-size: 15px;
   padding: 15px;
 }
+.contact-section input:focus {
+  outline: none;
+  border: 1px solid #0A9A73;
+}
 .contact-section .check {
   display: flex;
   justify-content: flex-start;

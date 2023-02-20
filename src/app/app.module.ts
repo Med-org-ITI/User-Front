@@ -13,6 +13,11 @@ import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { TermsComponent } from './Components/terms/terms.component';
 import { FAQComponent } from './Components/faq/faq.component';
 import { ShopComponent } from './Components/shop/shop.component';
+import { ProductsComponent } from './Components/products/products.component';
+import { CardComponent } from './Components/card/card.component';
+import { HomeComponent } from './Components/home/home.component';
+import { FeedbackComponent } from './Components/feedback/feedback.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -25,13 +30,18 @@ import { ShopComponent } from './Components/shop/shop.component';
     TermsComponent,
     FAQComponent,
     ShopComponent,
+    ProductsComponent,
+    CardComponent,
+    HomeComponent,
+    FeedbackComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

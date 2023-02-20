@@ -1,0 +1,37 @@
+@import '../../../sass/abstract/variables';
+
+.categories-title {
+    border: 1px solid $border-color;
+    width: 360px;
+    padding: 20px;
+    border-radius: 2px;
+    margin-bottom: 50px;
+
+
+    h3 {
+        padding: 20px 0;
+    }
+
+    select {
+        overflow: auto;
+        outline: none;
+    }
+
+    .categories-filter {
+        border: none;
+
+        option {
+            padding: 10px;
+            margin-bottom: 10px;
+
+            &:hover {
+                color: $primary-color;
+            }
+
+            &:active {
+                color: $primary-color;
+                border: none;
+            }
+        }
+    }
+}

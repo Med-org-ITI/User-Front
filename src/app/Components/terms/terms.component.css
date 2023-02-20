@@ -13,10 +13,42 @@
 .terms-section .container .contain {
   width: 850px;
 }
-.terms-section .container .contain h1 {
+.terms-section .container .contain h2 {
   margin-bottom: 50px;
   font-size: 40px;
 }
 .terms-section .container .contain .list ol li {
   margin-bottom: 10px;
+}
+
+@media (max-width: 600px) {
+  .terms-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .terms-section .container .contain {
+    width: 350px;
+  }
+  .terms-section .container .contain h2 {
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
+  .terms-section .container .contain .list ol li {
+    margin-left: 30px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .terms-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .terms-section .container .contain {
+    width: 600px;
+  }
+  .terms-section .container .contain h2 {
+    margin-bottom: 40px;
+    font-size: 30px;
+  }
 }/*# sourceMappingURL=terms.component.css.map */

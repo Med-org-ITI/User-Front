@@ -1,0 +1,314 @@
+@import '../../../sass/abstract/variables';
+@import '../../../sass/abstract/mixins';
+
+.card-section {
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 80px;
+
+    .card-header{
+        display: flex;
+        justify-content: center;
+        font-weight: $font-weight;
+        margin-bottom: 50px;
+        font-size: $faq-size;
+    }
+    
+    .card-images {
+        gap: 30px;
+        display: flex;
+        justify-content: center;
+        .img {
+            div {
+                img {
+                    width: 20px;
+                    margin-bottom: 54px;
+                    cursor: $cursor;
+                }
+            }
+        }
+    }
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-bottom: 30px;
+    
+        .cards-style{
+            border: 1px solid $border-color;
+        }
+    }
+}
+
+.shop-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12rem;
+    font-family: $font;
+    margin-top: 5rem;
+    background-color: $form-color;
+    height: 35rem;
+    width: 100%;
+    
+    .shop {
+        .shop-word {
+            .shop-header {
+                font-size: 1.5rem;
+                width: 35rem;
+                font-weight: $font-weight;
+                margin-bottom: 1.5rem;
+            }
+
+            .shop-para {
+                line-height: 1.8rem;
+                width: 35rem;
+                margin-bottom: 1.5rem;
+            }
+
+            .shop-icon {
+                display: flex;
+                justify-content: flex-start;
+                gap: 8rem;
+                margin-bottom: 1.4rem;
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    gap: 1.2rem;
+
+                    span {
+                        color: $primary-color;
+                        font-size: 2.2rem;
+                    }
+                }
+            }
+        }
+        .shop-btn {
+            button {
+                background-color: $primary-color;
+                border: none;
+                width: $btnWidth;
+                height: $btnHeight;
+                color: $white-color;
+                font-weight: $font-weight;
+                font-size: $faq-size;
+                cursor: $cursor;
+                border-radius: $border-radius;
+                margin-top: 1.3rem;
+
+                &:hover {
+                    background-color: $black-color;
+                }
+            }
+        }
+    }
+}
+
+.feedback-section {
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    .feedback-header {
+        display: flex;
+        justify-content: center;
+    }
+
+    .feedback-images {
+        display: flex;
+        justify-content: center;
+        gap: 20rem;
+
+        img {
+            height: 20px;
+        }
+    }
+}
+
+//cards
+@media (max-width: 600px){
+    .card-images{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .img {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+//testimonial
+
+@media (min-width: 601px) and (max-width: 992px) {
+
+    .testimonial-quotes {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .cards {
+            width: 50%;
+        }
+    }
+
+    .card-images {
+        display: flex;
+        flex-direction: column;
+
+        .img {
+            display: flex;
+            justify-content: space-evenly;
+
+            img {
+                height: 30rem;
+            }
+        }
+    }   
+        .cards {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            flex-wrap: wrap;
+    
+            .cards-style {
+                width: 40%;
+            }
+        }
+    }
+
+
+//shop 
+
+@media (max-width: 600px) {
+    .shop-section {
+        // gap: 2rem;
+        margin-top: 5rem;
+        height: 35rem;
+
+        .shop-img {
+            display: none;
+        }
+        
+        .shop {
+            .shop-word {
+                .shop-header {
+                    font-size: 1rem;
+                    width: 16rem;
+                    margin-bottom: 1.6rem;
+                    text-align: center;
+                }
+    
+                .shop-para {
+                    width: 14rem;
+                    margin-bottom: 2.5rem;
+                    text-align: center;
+                    margin: auto auto;
+                    // display: none;
+                }
+    
+                .shop-icon {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 0.8rem;
+                    margin-top: 1.5rem;
+    
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+    
+                        span {
+                            color: $primary-color;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .shop-btn {
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 10rem;
+                    height: 2.6rem;
+                    font-size: 1rem;
+                    margin-top: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1200px){
+    .shop-section {
+        gap: 2rem;
+        margin-top: 5rem;
+        height: 30rem;
+        
+        .shop-img {
+            img {
+                width: 17rem;
+            }
+        }
+        
+        .shop {
+            .shop-word {
+                .shop-header {
+                    font-size: 1rem;
+                    width: 25rem;
+                    margin-bottom: 1.6rem;
+                    text-align: center;
+                }
+    
+                .shop-para {
+                    width: 24rem;
+                    margin-bottom: 2rem;
+                    text-align: center;
+                }
+    
+                .shop-icon {
+                    display: flex;
+                    justify-content: center;
+                    gap: 3rem;
+                    margin-bottom: 1.4rem;
+    
+                    .icon {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+    
+                        span {
+                            color: $primary-color;
+                            font-size: 1.2rem;
+                        }
+                    }
+                }
+            }
+            .shop-btn {
+                display: flex;
+                justify-content: center;
+                button {
+                    width: 10rem;
+                    height: 3rem;
+                    font-size: 1.2rem;
+                    margin-top: 1.4rem;
+                }
+            }
+        }
+    }
+}

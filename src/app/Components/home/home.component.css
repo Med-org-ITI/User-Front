@@ -1,0 +1,248 @@
+.card-section {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+}
+.card-section .card-header {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+.card-section .card-images {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+.card-section .card-images .img div img {
+  width: 20px;
+  margin-bottom: 54px;
+  cursor: pointer;
+}
+.card-section .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.card-section .cards .cards-style {
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.shop-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  font-family: sans-serif;
+  margin-top: 5rem;
+  background-color: rgb(244, 244, 244);
+  height: 35rem;
+  width: 100%;
+}
+.shop-section .shop .shop-word .shop-header {
+  font-size: 1.5rem;
+  width: 35rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.shop-section .shop .shop-word .shop-para {
+  line-height: 1.8rem;
+  width: 35rem;
+  margin-bottom: 1.5rem;
+}
+.shop-section .shop .shop-word .shop-icon {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8rem;
+  margin-bottom: 1.4rem;
+}
+.shop-section .shop .shop-word .shop-icon .icon {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.shop-section .shop .shop-word .shop-icon .icon span {
+  color: #0A9A73;
+  font-size: 2.2rem;
+}
+.shop-section .shop .shop-btn button {
+  background-color: #0A9A73;
+  border: none;
+  width: 180px;
+  height: 60px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  margin-top: 1.3rem;
+}
+.shop-section .shop .shop-btn button:hover {
+  background-color: black;
+}
+
+.feedback-section {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.feedback-section .feedback-header {
+  display: flex;
+  justify-content: center;
+}
+.feedback-section .feedback-images {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+}
+.feedback-section .feedback-images img {
+  height: 20px;
+}
+
+@media (max-width: 600px) {
+  .card-images {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .card-images .img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-images .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 992px) {
+  .testimonial-quotes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .testimonial-quotes .cards {
+    width: 50%;
+  }
+  .card-images {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-images .img {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card-images .img img {
+    height: 30rem;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .cards .cards-style {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .shop-section {
+    margin-top: 5rem;
+    height: 35rem;
+  }
+  .shop-section .shop-img {
+    display: none;
+  }
+  .shop-section .shop .shop-word .shop-header {
+    font-size: 1rem;
+    width: 16rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+  .shop-section .shop .shop-word .shop-para {
+    width: 14rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    margin: auto auto;
+  }
+  .shop-section .shop .shop-word .shop-icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon span {
+    color: #0A9A73;
+    font-size: 1.2rem;
+  }
+  .shop-section .shop .shop-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .shop-section .shop .shop-btn button {
+    width: 10rem;
+    height: 2.6rem;
+    font-size: 1rem;
+    margin-top: 1.4rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1200px) {
+  .shop-section {
+    gap: 2rem;
+    margin-top: 5rem;
+    height: 30rem;
+  }
+  .shop-section .shop-img img {
+    width: 17rem;
+  }
+  .shop-section .shop .shop-word .shop-header {
+    font-size: 1rem;
+    width: 25rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+  .shop-section .shop .shop-word .shop-para {
+    width: 24rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .shop-section .shop .shop-word .shop-icon {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 1.4rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon span {
+    color: #0A9A73;
+    font-size: 1.2rem;
+  }
+  .shop-section .shop .shop-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .shop-section .shop .shop-btn button {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+  }
+}/*# sourceMappingURL=home.component.css.map */

@@ -1,0 +1,28 @@
+.categories-title {
+  border: 1px solid rgb(220, 220, 220);
+  width: 360px;
+  padding: 20px;
+  border-radius: 2px;
+  margin-bottom: 50px;
+}
+.categories-title h3 {
+  padding: 20px 0;
+}
+.categories-title select {
+  overflow: auto;
+  outline: none;
+}
+.categories-title .categories-filter {
+  border: none;
+}
+.categories-title .categories-filter option {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.categories-title .categories-filter option:hover {
+  color: #0A9A73;
+}
+.categories-title .categories-filter option:active {
+  color: #0A9A73;
+  border: none;
+}/*# sourceMappingURL=products.component.css.map */

@@ -242,4 +242,42 @@
 }
 .shop-section .container .container--contain .contain div .product-hover ul li a {
   color: black;
+}
+
+@media (max-width: 768px) {
+  .shop-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-section .container .container--contain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .shop-section .container .container--contain .contain div {
+    width: 50%;
+  }
+  .shop-section .container .aside {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .container .container--contain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .container .container--contain .contain div {
+    width: 50%;
+  }
+  .container .aside {
+    display: flex;
+    justify-content: space-evenly;
+  }
 }/*# sourceMappingURL=shop.component.css.map */

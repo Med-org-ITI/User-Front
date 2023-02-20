@@ -1,0 +1,173 @@
+@import '../../../sass/abstract/variables';
+@import '../../../sass/abstract/mixins';
+
+.checkout-section {
+    font-family: $font;
+    display: flex;
+    margin: 0 auto;
+    width: 75%;
+    height: 4rem;
+    background-color: $form-color;
+    margin-top: 6rem;
+    margin-bottom: 3.5rem;
+
+    .checkout-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 1.2rem;
+
+        h4:first-child {
+            margin-left: 2rem;
+        }
+
+        h4:last-child {
+            color: $primary-color;
+            cursor: $cursor;
+        }
+    }
+}
+
+.billing-section {
+    font-family: $font;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 75%;
+    margin-bottom: 4.5rem;
+
+    .billing-header {
+        margin-bottom: 1.5rem;
+        height: 1.6rem;
+        border-left: 2px solid $primary-color;
+
+        h3 {
+            margin-left: 0.7rem;
+        }
+    }
+
+    .billing-form {
+        border: 1px solid $border-color;
+
+        form {
+            .form-header {
+                margin: 1.6rem 0 1rem 1.6rem;
+            }
+
+            .billing-input {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                position: relative;
+
+                div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    input {
+                        width: 46%;
+                        height: 60px;
+                        margin: 0.4rem;
+                        border: 1px solid $border-color;
+
+                        &:focus {
+                            outline: none;
+                            border: 1px solid $primary-color;
+                        }
+
+                        &::placeholder {
+                            @include placeholder;
+                        }
+                    }
+
+                    &:last-child {
+                        display: flex;
+                        justify-content: center;
+
+                        input {
+                            width: 93.1%;
+                            margin-bottom: 2rem;
+                        }
+                    }
+
+                    p {
+                        display: block;
+                    }
+                }
+            }
+            .billing-btn {
+                button {
+                    background-color: $primary-color;
+                    border: none;
+                    width: $btnWidth;
+                    height: $btnHeight;
+                    color: $white-color;
+                    font-weight: $font-weight;
+                    font-size: $faq-size;
+                    margin: 0 0 1.5rem 2.4rem;
+                    cursor: $cursor;
+                    border-radius: $border-radius;
+
+                    &:hover {
+                        background-color: black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .checkout-section {
+        .checkout-header {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+
+    .billing-section {
+        .billing-form {
+            form {
+                .billing-input {
+                    div {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+    
+                        input {
+                            width: 90%;
+                            margin-bottom: 0.2rem;
+                        }
+
+                        &:nth-child(4) {
+                            input {
+                                width: 90%;
+                                margin-bottom: 0.2rem;
+                            }
+                        }
+                        &:last-child {
+    
+                            input {
+                                width: 90%;
+                                margin-bottom: 0.2rem;
+                            }
+                        }
+                    }
+                }
+                .billing-btn {
+                    button {
+                        width: 8rem;
+                        height: 3rem;
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}

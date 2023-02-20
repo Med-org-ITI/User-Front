@@ -39,6 +39,10 @@
   font-size: 15px;
   padding: 15px;
 }
+.register-section form .form-group input:focus {
+  outline: none;
+  border: 1px solid #0A9A73;
+}
 .register-section form .check {
   margin: 30px;
   display: flex;

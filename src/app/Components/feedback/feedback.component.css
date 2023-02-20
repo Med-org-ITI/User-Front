@@ -1,0 +1,110 @@
+@charset "UTF-8";
+.testimonials-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: sans-serif;
+}
+.testimonials-section .testimonial-header {
+  margin: 2rem 0;
+  font-size: 20px;
+}
+.testimonials-section .testimonial-quotes {
+  display: flex;
+}
+.testimonials-section .testimonial-quotes .quote {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 1rem;
+  min-width: 15rem;
+  max-width: 22rem;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+}
+.testimonials-section .testimonial-quotes .quote blockquote {
+  display: block;
+  border-radius: 0.5rem;
+  position: relative;
+  background-color: rgb(244, 244, 244);
+  padding: 1.5rem 3rem;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+}
+.testimonials-section .testimonial-quotes .quote blockquote::before, .testimonials-section .testimonial-quotes .quote blockquote::after {
+  font-family: "FontAwesome";
+  content: "“";
+  position: absolute;
+  font-size: 3rem;
+  opacity: 0.5;
+  font-style: normal;
+}
+.testimonials-section .testimonial-quotes .quote blockquote::before {
+  top: 1rem;
+  left: 1.5rem;
+}
+.testimonials-section .testimonial-quotes .quote blockquote::after {
+  content: "”";
+  right: 1.2rem;
+  bottom: 0;
+}
+.testimonials-section .testimonial-quotes .quote blockquote .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 1.5rem solid transparent;
+  border-top: 1.5rem solid rgb(244, 244, 244);
+  margin: 0;
+  position: absolute;
+}
+.testimonials-section .testimonial-quotes .quote .author {
+  position: absolute;
+  top: 100%;
+  width: 60%;
+  padding: 0.5rem 1rem;
+  color: black;
+  margin: 0;
+  text-transform: uppercase;
+}
+.testimonials-section .testimonial-quotes .quote .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+.testimonials-section .testimonial-quotes .quote .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 0.2rem;
+}
+.testimonials-section .testimonial-quotes .quote img {
+  max-width: 100%;
+  vertical-align: middle;
+  border-radius: 50%;
+  margin: 2.5rem 0 0 0.7rem;
+}
+
+@media (max-width: 600px) {
+  .testimonial-quotes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media (min-width: 601px) and (max-width: 992px) {
+  .testimonial-quotes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .testimonial-quotes .quote {
+    width: 50%;
+  }
+}/*# sourceMappingURL=feedback.component.css.map */
