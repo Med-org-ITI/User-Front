@@ -10,8 +10,8 @@
 }
 .checkout-section .checkout-header {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: flex-start;
   gap: 1.2rem;
 }
 .checkout-section .checkout-header h4:first-child {
@@ -46,9 +46,9 @@
 }
 .billing-section .billing-form form .billing-input {
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
   position: relative;
 }
 .billing-section .billing-form form .billing-input div {

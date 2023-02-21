@@ -108,9 +108,8 @@
 @media (max-width: 600px) {
 
     .testimonial-quotes {
-        display: flex;
+        @include hor-centering;
         flex-direction: column;
-        justify-content: center;
     }
 }
 
@@ -118,8 +117,7 @@
 @media (min-width: 601px) and (max-width: 992px) {
 
     .testimonial-quotes {
-        display: flex;
-        justify-content: center;
+        @include hor-centering;
         width: 100%;
         flex-wrap: wrap;
 
