@@ -424,11 +424,66 @@ i {
   justify-content: center;
 }
 
-.zft {
-  background-color: #F2F6F7;
+.con {
+  background-color: #f2f6f7;
   padding-top: 10px;
   margin-top: 40px;
   margin-bottom: 20px;
   padding-bottom: 50px;
   width: 100%;
+}
+
+@media (max-width: 767px) {
+  .row {
+    display: block;
+    text-align: center;
+  }
+  .features {
+    display: block;
+    width: 100%;
+  }
+  .card {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .card .container {
+    justify-content: center;
+    text-align: center;
+  }
+  .card img {
+    width: 15%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .FAQ {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .FAQ .faq-container {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+  .FAQ img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container-chooseUs {
+    display: block;
+    width: 100%;
+  }
+  .choose-container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .testimonials {
+    display: block;
+    width: 100%;
+  }
 }/*# sourceMappingURL=about.component.css.map */
