@@ -12,6 +12,7 @@ import { FAQComponent } from './Components/faq/faq.component';
 import { ShopComponent } from './Components/shop/shop.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { AboutComponent } from './Components/about/about.component';
+import { CartComponent } from './Components/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'terms', component: TermsComponent },
   { path: 'faq', component: FAQComponent },
   { path: 'checkout', component: CheckoutComponent },
+  { path: 'cart', component: CartComponent },
   { path: '**', component: ErrorComponent },
 ];
 

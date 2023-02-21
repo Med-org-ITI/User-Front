@@ -1,0 +1,55 @@
+<div class="cartBox">
+  <h1 class="text-danger">shopping cart</h1>
+  <div class="headCart">
+    <p class="lead">
+      you have <label class="text-danger">1</label>item in your cart
+    </p>
+    <span class="text-danger card-header">clear shopping cart</span>
+  </div>
+  <table class="table">
+    <thead class="thead">
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Price</th>
+        <th style="width: 25%">Quantity</th>
+        <th>Title</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="img"><img src="/assets/images/1.png" /></td>
+
+        <td>title</td>
+        <td>Price</td>
+        <td>
+          <div class="quantity">
+            <button class="btn-quantity">+</button>
+            <input class="form-control" type="number" min="1" />
+            <button class="btn-quantity">-</button>
+          </div>
+        </td>
+
+        <td>200 L.E</td>
+
+        <td>
+          <button class="btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th class="total">Total : 15000</th>
+        <th><button class="btn-success">Order now</button></th>
+      </tr>
+    </tfoot>
+  </table>
+  <div class="alert-success">
+    <strong>WELL DONE!</strong>Your order is successfuly send
+  </div>
+</div>
