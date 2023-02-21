@@ -1,0 +1,213 @@
+<section class="checkout-section">
+  <div class="checkout-header">
+    <h4>Returning customer?</h4>
+    <h4 routerLink="/login">Click here to login</h4>
+  </div>
+</section>
+
+<section class="billing-section">
+  <div class="billing-header">
+    <h3>Billing Details</h3>
+  </div>
+  <div class="billing-form">
+    <form method="post" [formGroup]="myCheckoutForm">
+      <div class="form-content">
+        <div class="form-header">
+          <h4>Personal Information</h4>
+        </div>
+        <div class="billing-input">
+          <div>
+            <div class="input-container">
+              <input
+                formControlName="firstName"
+                type="text"
+                placeholder="First name"
+                class="input"
+                [ngClass]="
+                  !firstNameValid && myCheckoutForm.controls['firstName'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['firstName'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="
+                  !firstNameValid && myCheckoutForm.controls['firstName'].value
+                "
+                style="color: red"
+              >
+                First name should be more than or equal 4 letters
+              </p>
+            </div>
+            <div class="input-container">
+              <input
+                formControlName="lastName"
+                type="text"
+                placeholder="Last name"
+                class="input"
+                [ngClass]="
+                  !lastNameValid && myCheckoutForm.controls['lastName'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['lastName'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="
+                  !lastNameValid && myCheckoutForm.controls['lastName'].value
+                "
+                style="color: red"
+              >
+                Last name should be more than or equal 4 letters
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="input-container">
+              <input
+                formControlName="email"
+                type="text"
+                placeholder="Email address"
+                class="input"
+                [ngClass]="
+                  !emailValid && myCheckoutForm.controls['email'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['email'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="!emailValid && myCheckoutForm.controls['email'].value"
+                style="color: red"
+              >
+                Email is not valid
+              </p>
+            </div>
+            <div class="input-container">
+              <input
+                formControlName="phone"
+                type="text"
+                placeholder="Phone number"
+                class="input"
+                [ngClass]="
+                  !phoneValid && myCheckoutForm.controls['phone'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['phone'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="!phoneValid && myCheckoutForm.controls['phone'].value"
+                style="color: red"
+              >
+                Phone is not valid
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <div class="input-container">
+              <input
+                formControlName="address"
+                type="text"
+                placeholder="Address"
+                class="input"
+                [ngClass]="
+                  !addressValid && myCheckoutForm.controls['address'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['address'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="
+                  !addressValid && myCheckoutForm.controls['address'].value
+                "
+                style="color: red"
+              >
+                Address is not valid
+              </p>
+            </div>
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="Town/City"
+                class="input"
+                [ngClass]="
+                  !cityValid && myCheckoutForm.controls['city'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['city'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="!cityValid && myCheckoutForm.controls['city'].value"
+                style="color: red"
+              >
+                Address is not valid
+              </p>
+            </div>
+          </div>
+          <div>
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="State"
+                class="input"
+                [ngClass]="
+                  !stateValid && myCheckoutForm.controls['state'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['state'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="!stateValid && myCheckoutForm.controls['state'].value"
+                style="color: red"
+              >
+                State is not valid
+              </p>
+            </div>
+            <div class="input-container">
+              <input
+                type="text"
+                placeholder="Zip"
+                class="input"
+                [ngClass]="
+                  !zipValid && myCheckoutForm.controls['zip'].value
+                    ? 'input-invalid'
+                    : myCheckoutForm.controls['zip'].value
+                    ? 'input-valid'
+                    : ''
+                "
+              />
+              <p
+                *ngIf="!zipValid && myCheckoutForm.controls['zip'].value"
+                style="color: red"
+              >
+                zip is not valid
+              </p>
+            </div>
+          </div>
+          <div>
+            <textarea
+              placeholder="Leave Us A Note.... "
+              formControlName="message"
+              rows="10 "
+            ></textarea>
+          </div>
+        </div>
+        <div class="billing-btn">
+          <button (click)="AddCheck()" class="btn">Place Order</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>

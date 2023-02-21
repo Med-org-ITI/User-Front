@@ -18,6 +18,9 @@ import { PrivacyComponent } from './Components/privacy/privacy.component';
 import { TermsComponent } from './Components/terms/terms.component';
 import { FAQComponent } from './Components/faq/faq.component';
 import { ShopComponent } from './Components/shop/shop.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { AboutComponent } from './Components/about/about.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,6 +36,8 @@ import { ShopComponent } from './Components/shop/shop.component';
     TermsComponent,
     FAQComponent,
     ShopComponent,
+    CheckoutComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

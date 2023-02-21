@@ -1,0 +1,489 @@
+@charset "UTF-8";
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap");
+* {
+  background: transparent;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.header {
+  background-image: url("../../../assets/images/14.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 50vh;
+}
+
+.header img {
+  width: 100%;
+  height: 30vh;
+}
+
+.page-title {
+  font-weight: 700;
+  line-height: 1.3;
+  text-align: left;
+  padding-left: 40px;
+  padding-top: 150px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.para {
+  margin-top: 20px;
+}
+
+.material-symbols-outlined {
+  display: flex;
+  color: #0a9a73;
+  margin-right: 20px;
+}
+
+.symbol {
+  margin-top: 30px;
+}
+
+.icon-cont {
+  display: flex;
+  margin-top: 10px;
+}
+
+.mobile-icon {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 30px;
+  background-color: #f2f6f7;
+}
+
+.features {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  display: block;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  width: 10%;
+  padding: 4%;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 5px solid #0a9a73;
+}
+
+/* Add some padding inside the card container */
+.card img {
+  width: 40%;
+  border: 1px solid var(--border-color-8);
+  margin-bottom: 30px;
+  display: block;
+}
+
+.card-title {
+  margin-bottom: 30px;
+}
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+figure.snip {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  margin: 10px;
+  min-width: 400px;
+  max-width: 480px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+figure.snip * {
+  box-sizing: border-box;
+}
+
+figure.snip img {
+  float: right;
+  max-width: 40%;
+  vertical-align: middle;
+  border-radius: 0 8px 8px 0;
+}
+
+figure.snip figcaption {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 8px 0 0 8px;
+}
+
+figure.snip blockquote {
+  position: relative;
+  padding: 25px 50px 25px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  text-align: left;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+}
+
+figure.snip blockquote:before,
+figure.snip blockquote:after {
+  font-family: "FontAwesome";
+  content: "“";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+
+figure.snip blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+
+figure.snip blockquote:after {
+  content: "”";
+  right: 20px;
+  bottom: 0px;
+}
+
+figure.snip.arrow {
+  top: 30px;
+  left: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #ffffff;
+  margin: 0;
+  position: absolute;
+}
+
+figure.snip .author {
+  position: absolute;
+  top: 100%;
+  width: 60%;
+  padding: 10px 15px;
+  color: #ffffff;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+figure.snip .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+
+figure.snip .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
+}
+
+figure.snip1157 {
+  font-family: "Raleway", Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
+  min-width: 220px;
+  max-width: 310px;
+  width: 100%;
+  color: #333;
+  text-align: left;
+  box-shadow: none !important;
+}
+
+figure.snip1157 * {
+  box-sizing: border-box;
+  transition: all 0.35s cubic-bezier(0.25, 0.5, 0.5, 0.9);
+}
+
+figure.snip1157 img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  margin: 40px 0 0 10px;
+}
+
+figure.snip1157 blockquote {
+  display: block;
+  border-radius: 8px;
+  position: relative;
+  background-color: #fafafa;
+  padding: 25px 50px 30px 50px;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.6em;
+  font-style: italic;
+}
+
+figure.snip1157 blockquote:before,
+figure.snip1157 blockquote:after {
+  font-family: "FontAwesome";
+  content: "“";
+  position: absolute;
+  font-size: 50px;
+  opacity: 0.3;
+  font-style: normal;
+}
+
+figure.snip1157 blockquote:before {
+  top: 25px;
+  left: 20px;
+}
+
+figure.snip1157 blockquote:after {
+  content: "”";
+  right: 20px;
+  bottom: 0;
+}
+
+figure.snip1157 .arrow {
+  top: 100%;
+  width: 0;
+  height: 0;
+  border-left: 0 solid transparent;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #fafafa;
+  margin: 0;
+  position: absolute;
+}
+
+figure.snip1157 .author {
+  position: absolute;
+  bottom: 45px;
+  padding: 0 10px 0 120px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  transform: translateY(50%);
+}
+
+figure.snip1157 .author h5 {
+  opacity: 0.8;
+  margin: 0;
+  font-weight: 800;
+}
+
+figure.snip1157 .author h5 span {
+  font-weight: 400;
+  text-transform: none;
+  padding-left: 5px;
+}
+
+/* Demo purposes only */
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #212121;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: wrap;
+  margin: 0;
+  height: 100%;
+}
+
+.heading {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/*  FAQ */
+body {
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+.faq-q {
+  border: solid rgb(231, 228, 228);
+  border-radius: 1px;
+}
+
+.faq-container {
+  width: 40%;
+  margin-left: 50px;
+}
+
+.faq-container h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #000;
+  text-align: center;
+}
+
+details {
+  background-color: #fff;
+  color: #000;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+summary {
+  padding: 0.5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: height 1s ease;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary:after {
+  content: "+";
+}
+
+details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+
+details[open] summary:after {
+  content: "×";
+}
+
+details[open] div {
+  padding: 0.5em 1em;
+}
+
+.FAQ {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+hr {
+  margin: 20px 0;
+  border: 1px solid gray;
+}
+
+.choose-container {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
+  border: 1px;
+  padding: 30px;
+  width: 20%;
+  background-color: #fff;
+}
+
+.icon-choose {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+i {
+  font-size: 50px;
+  color: #0a9a73;
+  margin-right: 20px;
+}
+
+.container-chooseUs {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.con {
+  background-color: #f2f6f7;
+  padding-top: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+@media (max-width: 767px) {
+  .row {
+    display: block;
+    text-align: center;
+  }
+  .features {
+    display: block;
+    width: 100%;
+  }
+  .card {
+    width: 90%;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .card .container {
+    justify-content: center;
+    text-align: center;
+  }
+  .card img {
+    width: 15%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  .FAQ {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
+  .FAQ .faq-container {
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+  }
+  .FAQ img {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container-chooseUs {
+    display: block;
+    width: 100%;
+  }
+  .choose-container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .testimonials {
+    display: block;
+    width: 100%;
+  }
+}/*# sourceMappingURL=about.component.css.map */

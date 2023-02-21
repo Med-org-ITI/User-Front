@@ -10,8 +10,12 @@ import { TermsComponent } from './Components/terms/terms.component';
 import { HomeComponent } from './Components/home/home.component';
 import { FAQComponent } from './Components/faq/faq.component';
 import { ShopComponent } from './Components/shop/shop.component';
+import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { AboutComponent } from './Components/about/about.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'login', component: LoginComponent },
@@ -20,6 +24,7 @@ const routes: Routes = [
   { path: 'privacy', component: PrivacyComponent },
   { path: 'terms', component: TermsComponent },
   { path: 'faq', component: FAQComponent },
+  { path: 'checkout', component: CheckoutComponent },
   { path: '**', component: ErrorComponent },
 ];
 
