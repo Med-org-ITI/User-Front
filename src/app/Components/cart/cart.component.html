@@ -4,7 +4,7 @@
     <p class="lead">
       you have <label class="text-danger">1</label>item in your cart
     </p>
-    <span class="text-danger card-header">clear shopping cart</span>
+    <span class="text-danger card-header">Clear Shopping Cart</span>
   </div>
   <table class="table">
     <thead class="thead">
@@ -19,22 +19,75 @@
     </thead>
     <tbody>
       <tr>
-        <td data-label="img"><img src="/assets/images/1.png" /></td>
+        <td data-label="img"><img src="/assets/Images/items/1.png" /></td>
 
         <td>title</td>
         <td>Price</td>
         <td>
           <div class="quantity">
             <button class="btn-quantity">+</button>
-            <input class="form-control" type="number" min="1" />
+            <input
+              class="form-control quantity-value"
+              type="number"
+              min="1"
+              [defaultValue]="1"
+            />
             <button class="btn-quantity">-</button>
           </div>
         </td>
 
         <td>200 L.E</td>
 
+        <td class="">
+          <button class="btn btn-delete">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="img"><img src="/assets/Images/items/1.png" /></td>
+
+        <td>title</td>
+        <td>Price</td>
         <td>
-          <button class="btn-danger">Delete</button>
+          <div class="quantity">
+            <button class="btn-quantity">+</button>
+            <input
+              class="form-control quantity-value"
+              type="number"
+              min="1"
+              [defaultValue]="1"
+            />
+            <button class="btn-quantity">-</button>
+          </div>
+        </td>
+
+        <td>200 L.E</td>
+
+        <td class="">
+          <button class="btn btn-delete">Delete</button>
+        </td>
+      </tr>
+      <tr>
+        <td data-label="img"><img src="/assets/Images/items/1.png" /></td>
+
+        <td>title</td>
+        <td>Price</td>
+        <td>
+          <div class="quantity">
+            <button class="btn-quantity">+</button>
+            <input
+              class="form-control quantity-value"
+              type="number"
+              min="1"
+              [defaultValue]="1"
+            />
+            <button class="btn-quantity">-</button>
+          </div>
+        </td>
+
+        <td>200 L.E</td>
+
+        <td class="">
+          <button class="btn btn-delete">Delete</button>
         </td>
       </tr>
     </tbody>
@@ -45,11 +98,11 @@
         <th></th>
         <th></th>
         <th class="total">Total : 15000</th>
-        <th><button class="btn-success">Order now</button></th>
+        <th><button class="btn btn-order">Order now</button></th>
       </tr>
     </tfoot>
   </table>
-  <div class="alert-success">
-    <strong>WELL DONE!</strong>Your order is successfuly send
-  </div>
+  <!-- <div class="alert-success">
+    <strong>WELL DONE! </strong>Your order is successfuly send
+  </div> -->
 </div>
