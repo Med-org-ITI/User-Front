@@ -58,7 +58,6 @@ export class RegisterComponent {
       // this.myService.AddUser(user).subscribe();
       console.log(this.myRegisterationForm.value);
     }
-
   }
 
   reset(){
