@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class REQService {
   constructor(public user: HttpClient) {}
-
+  AuthURL = 'http://localhost:8000/auth';
   BaseURL = 'http://localhost:3000/users';
   ConURL = 'http://localhost:3000/contacts';
 
   AddUser(newUser: any) {
-    return this.user.post(this.BaseURL, newUser);
+    return this.user.post(this.AuthURL + '/signup', newUser);
   }
 
   AddContact(newContact: any) {

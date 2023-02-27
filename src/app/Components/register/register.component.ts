@@ -1,3 +1,4 @@
+import { CustomValidators } from './../../../validator/confirmed.validator';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { REQService } from 'src/app/Services/req.service';
@@ -8,41 +9,41 @@ import { REQService } from 'src/app/Services/req.service';
   styleUrls: ['./register.component.scss'],
 })
 export class RegisterComponent {
-  firstName = '';
-  secondName = '';
+  name = '';
   city: any;
   email: any;
   password: any;
+  confirmPassword: any;
 
   constructor(public myService: REQService) {}
 
-  myRegisterationForm = new FormGroup({
-    firstName: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-    ]),
-    secondName: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-    ]),
-    city: new FormControl('', [Validators.required, Validators.minLength(4)]),
-    email: new FormControl('', [
-      Validators.required,
-      Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
-    ]),
-    password: new FormControl('', [
-      Validators.required,
-      Validators.maxLength(16),
-      Validators.minLength(6),
-    ]),
-  });
+  myRegisterationForm = new FormGroup(
+    {
+      name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      city: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      email: new FormControl('', [
+        Validators.required,
+        Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$'),
+      ]),
+      password: new FormControl('', [
+        Validators.required,
+        Validators.maxLength(16),
+        Validators.minLength(6),
+      ]),
+      confirmPassword: new FormControl('', [Validators.required]),
+    },
+    CustomValidators.MatchValidator('password', 'confirmPassword')
+  );
 
-  get fNameValid() {
-    return this.myRegisterationForm.controls['firstName'].valid;
+  get passwordMatchError() {
+    return (
+      this.myRegisterationForm.getError('mismatch') &&
+      this.myRegisterationForm.get('confirmPassword')?.touched
+    );
   }
 
-  get lNameValid() {
-    return this.myRegisterationForm.controls['secondName'].valid;
+  get nameValid() {
+    return this.myRegisterationForm.controls['name'].valid;
   }
 
   get cityValid() {
@@ -56,33 +57,36 @@ export class RegisterComponent {
   get passwordValid() {
     return this.myRegisterationForm.controls['password'].valid;
   }
+  get confirmPasswordValid() {
+    return this.myRegisterationForm.controls['confirmPassword'].valid;
+  }
 
-  Add() {
+  signup() {
     let user = {
-      fName: this.myRegisterationForm.controls['firstName'],
-      secondName: this.myRegisterationForm.controls['secondName'],
-      city: this.myRegisterationForm.controls['city'],
-      email: this.myRegisterationForm.controls['email'],
-      password: this.myRegisterationForm.controls['password'],
+      name: this.myRegisterationForm.controls['name'].value,
+      city: this.myRegisterationForm.controls['city'].value,
+      email: this.myRegisterationForm.controls['email'].value,
+      password: this.myRegisterationForm.controls['password'].value,
+      passwordConfirm:
+        this.myRegisterationForm.controls['confirmPassword'].value,
     };
+    console.log(user);
 
     if (
-      this.fNameValid &&
-      this.lNameValid &&
+      this.nameValid &&
       this.cityValid &&
       this.emailValid &&
       this.passwordValid
     ) {
-      // this.myService.AddUser(user).subscribe();
-      console.log(this.myRegisterationForm.value);
+      this.myService.AddUser(user).subscribe();
+      console.log('sent');
     }
   }
-
-  reset() {
-    this.firstName = '';
-    this.secondName = '';
-    this.city = '';
-    this.email = '';
-    this.password = '';
-  }
+  // reset() {
+  //   this.name = '';
+  //   this.city = '';
+  //   this.email = '';
+  //   this.password = '';
+  //   this.confirmPassword = '';
+  // }
 }
