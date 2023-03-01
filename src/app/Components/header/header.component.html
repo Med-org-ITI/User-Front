@@ -36,7 +36,15 @@
     </div>
   </div>
 </section>
-<!-- 
+
+<!-- <div class="bread-container">
+  <ul>
+    <li *ngFor="let bread of breadcrumbs">
+      <a routerLink="{{ bread?.path }}" (click)="updateBreadcrumb(bread)">{{bread?.name}}</a>
+    </li>
+  </ul>
+</div> -->
+
 <section class="header-section">
   <div class="container">
     <div>
@@ -46,11 +54,11 @@
         <li><a routerLink="/register">Sign up</a></li>
         <li><a routerLink="/contact">Contact Us</a></li>
         <li><a routerLink="/checkout">Checkout</a></li>
+        <li><a routerLink="/shopPage">Shop-page</a></li>
       </ul>
     </div>
   </div>
 </section>
- -->
 
 <div class="side-menu" #sideMenu>
   <div class="menu-container">

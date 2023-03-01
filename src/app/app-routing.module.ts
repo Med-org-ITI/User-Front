@@ -8,22 +8,23 @@ import { FAQComponent } from './Components/faq/faq.component';
 import { ShopComponent } from './Components/shop/shop.component';
 import { HomeComponent } from './Components/home/home.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
+import { ShopPageComponent } from './Components/shop-page/shop-page.component';
 
-const routes: Routes = 
-[
-  {path: "register", component: RegisterComponent},
-  {path: "contact", component: ContactComponent},
-  {path: "privacy", component: PrivacyComponent},
-  {path: "shop", component: ShopComponent},
-  {path: "terms", component: TermsComponent},
-  {path: "faq", component: FAQComponent},
-  {path: "home", component: HomeComponent},
-  {path: "", component: HomeComponent},
-  {path: "checkout", component: CheckoutComponent}
+const routes: Routes = [
+  { path: 'register', component: RegisterComponent },
+  { path: 'contact', component: ContactComponent },
+  { path: 'privacy', component: PrivacyComponent },
+  { path: 'shop', component: ShopComponent },
+  { path: 'terms', component: TermsComponent },
+  { path: 'faq', component: FAQComponent },
+  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'shopPage', component: ShopPageComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

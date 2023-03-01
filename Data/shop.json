@@ -1,0 +1,58 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Digital Stethoscope",
+      "price": 9.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/1.png"
+    },
+    {
+      "id": 2,
+      "name": "Thermometer Gun",
+      "price": 14.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/2.png"
+    },
+    {
+      "id": 3,
+      "name": "Cosmetic Containers",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/3.png"
+    },
+    {
+      "id": 4,
+      "name": "Cosmetic Containers",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/4.png"
+    },
+    {
+      "id": 5,
+      "name": "Blue Hand Gloves",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/5.png"
+    },
+    {
+      "id": 6,
+      "name": "Thermometer Gun",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/6.png"
+    },
+    {
+      "id": 7,
+      "name": "Digital Stethoscope",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/7.png"
+    },
+    {
+      "id": 8,
+      "name": "Thermometer Gun",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/8.png"
+    },
+    {
+      "id": 9,
+      "name": "Cosmetic Containers",
+      "price": 19.99,
+      "img": "https://tunatheme.com/tf/html/vicodin-preview/vicodin/img/product/9.png"
+    }
+  ]
+}

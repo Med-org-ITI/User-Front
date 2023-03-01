@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ShopService } from 'src/app/Services/shop.service';
 
 @Component({
   selector: 'app-shop',
@@ -15,6 +16,5 @@ export class ShopComponent {
   addOverlay(isProduct?:boolean):void{
     isProduct?this.toggleProduct=true:this.toggleProduct=false;
   this.toggleOverlay=true;  
-  
  }
 }
