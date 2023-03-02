@@ -1,0 +1,29 @@
+<div *ngIf="showOverlay">
+  <div class="overlay" (click)="hideCart()"></div>
+</div>
+<div #sideCart class="side-cart">
+  <h2 class="side-cart__header">Cart</h2>
+  <div class="side-cart__items" *ngIf="cart?.items.length > 0">
+    <div class="side-cart__item" *ngFor="let prod of cart?.items">
+      <img class="side-cart__item-image" [src]="prod?.itemId.image" alt="" />
+      <div class="side-cart__item-details">
+        <h4 class="side-cart__item-title">{{ prod?.itemId.title }}</h4>
+        <p class="side-cart__item-price">
+          {{ prod?.quantity }} x {{ prod?.price }}
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="side-cart__total">
+    <h4>Subtotal:</h4>
+    <h4>{{ cart?.total }}</h4>
+  </div>
+  <div class="side-cart__controls">
+    <div class="btn btn-cart" routerLink="/cart" (click)="hideCart()">
+      VIEW CART
+    </div>
+    <div class="btn btn-checkout" routerLink="/checkout" (click)="hideCart()">
+      CHECKOUT
+    </div>
+  </div>
+</div>

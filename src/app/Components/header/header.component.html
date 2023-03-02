@@ -28,7 +28,11 @@
       <div class="container1--cart">
         <div>
           <span class="material-symbols-outlined"> person </span>
-          <span class="material-symbols-outlined" *ngIf="isLogged">
+          <span
+            class="material-symbols-outlined"
+            *ngIf="isLogged"
+            (click)="showCart()"
+          >
             shopping_cart
           </span>
         </div>
@@ -82,7 +86,11 @@
       <div class="container1--cart">
         <div>
           <span class="material-symbols-outlined"> person </span>
-          <span class="material-symbols-outlined" *ngIf="isLogged">
+          <span
+            class="material-symbols-outlined"
+            *ngIf="isLogged"
+            (click)="showCart()"
+          >
             shopping_cart
           </span>
         </div>
@@ -131,7 +139,9 @@
           <h4>My Account</h4>
         </div>
         <div>
-          <span class="material-symbols-outlined"> shopping_cart </span>
+          <span class="material-symbols-outlined" (click)="showCart()">
+            shopping_cart
+          </span>
           <h4>Shopping Cart</h4>
         </div>
       </div>

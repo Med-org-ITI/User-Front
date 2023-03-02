@@ -1,3 +1,4 @@
+import { CartService } from 'src/app/Services/cart.service';
 import { ProductsService } from './../../Services/products.service';
 import { Component } from '@angular/core';
 
@@ -10,9 +11,14 @@ export class ShopComponent {
   products: any = [];
   selectedProduct: any;
   quantity = 1;
-  constructor(public myService: ProductsService) {}
+  pages: any;
+  constructor(
+    public productsService: ProductsService,
+    private cartService: CartService
+  ) {}
   ngOnInit() {
-    this.myService.getAll().subscribe((data: any) => {
+    this.productsService.getAll(1).subscribe((data: any) => {
+      this.pages = data?.paginationResult;
       this.products = data?.data;
     });
   }
@@ -32,10 +38,25 @@ export class ShopComponent {
     this.toggleOverlay = false;
   }
   addOverlay(item: any, isProduct?: boolean): void {
-    isProduct ? (this.toggleProduct = true) : (this.toggleProduct = false);
+    if (isProduct) {
+      this.toggleProduct = true;
+    } else {
+      this.toggleProduct = false;
+      this.cartService.addToCart(item._id, item.price, 1).subscribe();
+    }
     this.toggleOverlay = true;
     this.selectedProduct = item;
     this.quantity = 1;
+  }
+  addToCart() {
+    this.toggleOverlay = false;
+    this.cartService
+      .addToCart(
+        this.selectedProduct._id,
+        this.selectedProduct.price,
+        this.quantity
+      )
+      .subscribe();
   }
   increase() {
     if (this.quantity < this.selectedProduct?.quantity) {
@@ -46,5 +67,11 @@ export class ShopComponent {
     if (this.quantity > 1) {
       this.quantity--;
     }
+  }
+  paginate(page: number) {
+    this.productsService.getAll(page).subscribe((data: any) => {
+      this.pages = data?.paginationResult;
+      this.products = data?.data;
+    });
   }
 }

@@ -1,0 +1,112 @@
+@import "../../../sass/abstract/variables";
+@import "../../../sass/abstract/mixins";
+@import "../../../sass//components/btn";
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: black;
+  opacity: 0.3;
+}
+
+.side-cart {
+  position: fixed;
+  height: 100vh;
+  width: 25vw;
+  background-color: #fff;
+  z-index: 10;
+  right: 0;
+  top: 0;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  transform: translateX(25vw);
+  transition: 0.3s all;
+  border-left: 2px $primary-color solid;
+  border-bottom: 2px $primary-color solid;
+  border-top: 2px $primary-color solid;
+  padding: 8rem 2.4rem;
+  &__active {
+    transform: translateX(0);
+  }
+  &__items {
+    margin: 2.4rem 0;
+    border-right: 2px solid $light-gray2-color;
+    border-top: 2px solid $light-gray2-color;
+    border-bottom: 2px solid $light-gray2-color;
+  }
+  &__item {
+    display: flex;
+    gap: 1.6rem;
+    padding: 2rem 0;
+    &:not(:last-child) {
+      border-bottom: 2px solid $light-gray2-color;
+    }
+    &-image {
+      width: 25%;
+    }
+    &-details {
+      margin-top: 1.6rem;
+    }
+    &-title {
+      margin-bottom: 0.8rem;
+    }
+    &-price {
+      color: $primary-color;
+    }
+  }
+  &__total {
+    margin-top: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+  }
+  &__controls {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    .btn-checkout {
+      background-color: #333;
+      &:hover {
+        background-color: darken(#333, 10);
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1366px) {
+  .side-cart {
+    width: 33vw;
+    transform: translateX(33vw);
+    &__active {
+      transform: translateX(0);
+    }
+  }
+}
+@media only screen and (max-width: 992px) {
+  .side-cart {
+    width: 37vw;
+    transform: translateX(37vw);
+    &__active {
+      transform: translateX(0);
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .side-cart {
+    width: 50vw;
+    transform: translateX(50vw);
+    &__active {
+      transform: translateX(0);
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .side-cart {
+    width: 85vw;
+    transform: translateX(85vw);
+    &__active {
+      transform: translateX(0);
+    }
+  }
+}

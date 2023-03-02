@@ -1,3 +1,4 @@
+import { SharedService } from './../../Services/sendData.service';
 import { Component, ViewChild, HostListener, Input } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
   isLogged = localStorage.getItem('isLogged') || false;
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private sharedService: SharedService) {}
   @Input() isNotHome: any;
   showOverlay = false;
   @ViewChild('sideMenu') sideMenu: any;
@@ -46,5 +47,9 @@ export class HeaderComponent {
         location.reload();
       });
     }, 300);
+  }
+  showCart() {
+    this.hideMenu();
+    this.sharedService.emitChange('cart');
   }
 }

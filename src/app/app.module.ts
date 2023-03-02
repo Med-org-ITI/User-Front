@@ -22,6 +22,7 @@ import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { AboutComponent } from './Components/about/about.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { ToTopComponent } from './components/to-top/to-top.component';
+import { SideCartComponent } from './Components/side-cart/side-cart.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { ToTopComponent } from './components/to-top/to-top.component';
     AboutComponent,
     CartComponent,
     ToTopComponent,
+    SideCartComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-<section class="checkout-section">
+<section class="checkout-section" *ngIf="!isLogged">
   <div class="checkout-header">
     <h4>Returning customer?</h4>
     <h4 routerLink="/login">Click here to login</h4>
@@ -138,6 +138,7 @@
                 type="text"
                 placeholder="Town/City"
                 class="input"
+                formControlName="city"
                 [ngClass]="
                   !cityValid && myCheckoutForm.controls['city'].value
                     ? 'input-invalid'
@@ -159,6 +160,7 @@
               <input
                 type="text"
                 placeholder="State"
+                formControlName="state"
                 class="input"
                 [ngClass]="
                   !stateValid && myCheckoutForm.controls['state'].value
@@ -179,6 +181,7 @@
               <input
                 type="text"
                 placeholder="Zip"
+                formControlName="zip"
                 class="input"
                 [ngClass]="
                   !zipValid && myCheckoutForm.controls['zip'].value

@@ -8,8 +8,8 @@ export class ProductsService {
   constructor(public products: HttpClient) {}
   itemsURL = 'http://localhost:8000/items';
 
-  getAll() {
-    return this.products.get(this.itemsURL);
+  getAll(page?: number) {
+    return this.products.get(`${this.itemsURL}?page=${page}`);
   }
   getItem(id: string) {
     const httpOptions = {

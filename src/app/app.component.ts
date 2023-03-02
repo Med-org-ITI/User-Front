@@ -11,7 +11,9 @@ export class AppComponent {
   ngOnInit() {
     this.sharedService.changeEmitted$.subscribe((text) => {
       setTimeout(() => {
-        this.showCrumb = text;
+        if (text == false || text == true) {
+          this.showCrumb = text;
+        }
       });
     });
   }

@@ -1,6 +1,7 @@
+import { OrdersService } from './../../Services/orders.service';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { CHECKOUTService } from 'src/app/Services/checkout.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-checkout',
@@ -16,8 +17,8 @@ export class CheckoutComponent {
   state: any;
   zip: any;
   message: any;
-
-  constructor(public myService: CHECKOUTService) {}
+  isLogged = localStorage.getItem('isLogged');
+  constructor(public myService: OrdersService, private router: Router) {}
 
   myCheckoutForm = new FormGroup({
     firstName: new FormControl('', [
@@ -86,6 +87,7 @@ export class CheckoutComponent {
   }
 
   AddCheck() {
+    console.log('hey');
     let check = {
       fistName: this.myCheckoutForm.controls['firstName'],
       lastName: this.myCheckoutForm.controls['lastName'],
@@ -96,6 +98,7 @@ export class CheckoutComponent {
       zip: this.myCheckoutForm.controls['zip'],
       message: this.myCheckoutForm.controls['message'],
     };
+
     if (
       this.firstNameValid &&
       this.lastNameValid &&
@@ -106,8 +109,15 @@ export class CheckoutComponent {
       this.zipValid &&
       this.messageValid
     ) {
-      // this.myService.AddContact(contact).subscribe();
-      console.log(this.myCheckoutForm.value);
+      this.myService.checkout().subscribe({
+        next: () => {
+          alert('Order processed sucessfully, you will be redirected');
+          setTimeout(() => {
+            this.router.navigate(['/']);
+          }, 500);
+        },
+        error(err) {},
+      });
     }
   }
 }
