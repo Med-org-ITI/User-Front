@@ -18,7 +18,6 @@ import { CardComponent } from './Components/card/card.component';
 import { HomeComponent } from './Components/home/home.component';
 import { FeedbackComponent } from './Components/feedback/feedback.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
-import { BreadcrumbComponent } from './Components/breadcrumb/breadcrumb.component';
 import { ShopPageComponent } from './Components/shop-page/shop-page.component';
 
 @NgModule({
@@ -37,7 +36,6 @@ import { ShopPageComponent } from './Components/shop-page/shop-page.component';
     HomeComponent,
     FeedbackComponent,
     CheckoutComponent,
-    BreadcrumbComponent,
     ShopPageComponent,
   ],
   imports: [

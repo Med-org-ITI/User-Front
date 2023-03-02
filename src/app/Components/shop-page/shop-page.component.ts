@@ -9,8 +9,6 @@ import { ShopService } from 'src/app/Services/shop.service';
 export class ShopPageComponent {
   products: any[] = [];
 
-  selectedProductId: any;
-
   constructor(public myService: ShopService) {}
 
   ngOnInit(): void {
@@ -21,18 +19,6 @@ export class ShopPageComponent {
     this.myService.DisplayProduct().subscribe((res: any) => {
       this.products = res;
     });
-  }
-
-  // onSelect(productId: number) {
-  //  return this.selectedProductId = productId;
-  // }
-
-  // onSelect(productId: number) {
-  //   return this.products.filter(product => product.productId == productId)
-  // }
-
-  onSelect(productId: number) {
-    this.myService.getProductById(productId);
   }
 
   toggleOverlay = false;

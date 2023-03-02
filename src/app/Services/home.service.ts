@@ -1,17 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-// import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
-export class ShopService {
-  constructor(public product: HttpClient) {}
+export class HomeService {
+  constructor(public products: HttpClient) {}
 
-  ProductURL = 'http://localhost:3000/products';
+  HomeProductURL = 'http://localhost:3000/HomeProducts';
 
-  DisplayProduct() {
-    return this.product.get(this.ProductURL);
+  DispalyHomeProducts() {
+    return this.products.get(this.HomeProductURL);
   }
 
   // getProductById(id: number) {

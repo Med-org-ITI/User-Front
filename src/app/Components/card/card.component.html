@@ -1,15 +1,27 @@
-<section class="shop-section">
-    <div class="container">
-        <div class="container--contain">
-            <div class="contain">
-                <div routerLink="/shop">
-                    <img src="../../../assets/Images/Shop/shop4.png">
-                    <div class="words">
-                        <h4>Digital Stethoscope</h4>
-                        <p>$149.00</p>
-                    </div>
-                </div>
-            </div>
+<!-- <section class="shop-section">
+  <div class="container">
+    <div class="container--contain" *ngFor="let product of homeProducts">
+    <div class="contain">
+      <div routerLink="/shop" class="product">
+        <img src="{{ product.img }}" />
+        <div class="words">
+          <h4>{{ product.name }}</h4>
+          <p>{{ product.price }}</p>
         </div>
+      </div>
     </div>
+  </div>
+</div>
+</section> -->
+
+<section class="shop-section">
+  <div class="container">
+    <div *ngFor="let product of homeProducts" class="container-contain">
+      <div class="product" routerLink="/shopPage">
+        <img src="{{ product.img }}" alt="{{ product.name }}" />
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.price | currency }}</p>
+      </div>
+    </div>
+  </div>
 </section>

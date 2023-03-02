@@ -105,7 +105,18 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
+        .testimonial-quotes {
+            @include hor-centering;
+            width: 100%;
+            flex-wrap: wrap;
+        .quote {
+            width: 20%;
+        }
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
 
     .testimonial-quotes {
         @include hor-centering;
