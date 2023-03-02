@@ -1,0 +1,261 @@
+<div class="profile-container">
+    <div class="tab">
+        <ul class="tab_item">
+            <li id="profile" [class.color]="id==='profile'" (click)="tabChange('profile')">Profile Data</li>
+            <li id="orders" [class.color]="id==='orders'" (click)="tabChange('orders')">My Orders</li>
+            <li id="products" [class.color]="id==='products'" (click)="tabChange('products')">My Products</li>
+
+        </ul>
+        <div class="tab_content">
+            <div class="tab_content_value" *ngIf="id==='profile'">
+                <div class="profile">
+                    <div class="edit-icon" (click)="edit()" *ngIf="!isEdit">
+                        <i class="fa-solid fa-pen"></i>
+                    </div>
+                    <div class="profile__img">
+                        <div class="profile__img__container">
+                            <img src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                alt="">
+                            <div class="profile__img__container__upload-icon" *ngIf="isEdit">
+                                <!-- <i class="fa-solid fa-camera"></i> -->
+                                <input type="file">
+                                <i class="fas fa-camera"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="profile__data">
+                        <div class="profile__container">
+                            <form>
+                                <div class="row">
+                                    <div class="column">
+                                        <div>
+                                            <label for="firstname">First Name</label>
+                                            <div class="input-box">
+                                                <i class="fa-solid fa-user icon"></i>
+                                                <input type="text" name="firstname" value="Dalida" [readonly]="!isEdit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div>
+                                            <label for="lastname">Last Name</label>
+                                            <div class="input-box">
+                                                <i class="fa-solid fa-user icon"></i>
+                                                <input type="text" name="lastname" value="Ahmed" [readonly]="!isEdit">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="column">
+                                        <div>
+                                            <label for="email">Email</label>
+                                            <div class="input-box">
+                                                <i class="fas fa-envelope icon"></i>
+                                                <!-- <i class="far fa-envelope icon"></i> -->
+                                                <input type="email" name="email" value="dalidaahmed@gmail.com"
+                                                    [readonly]="!isEdit">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div>
+                                            <label for="password">Password</label>
+                                            <div class="input-box">
+                                                <i class="fas fa-lock icon"></i>
+                                                <input type="password" name="password" value="123445"
+                                                    [readonly]="isEdit">
+                                                <span class="edit-password" *ngIf="isEdit" (click)="addOverlay()">
+                                                    <i class="fa-solid fa-pen"></i>
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="button-container">
+                                    <button type="submit" class="button-container__save" (click)="edit()"
+                                        *ngIf="isEdit">Save</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- ####################### Modal|Overlay (Change Password) ######################### -->
+                       
+                        <div class="change-pass-container" *ngIf="toggleOverlay">
+                            <div class="overlay" (click)="toggleClose()"></div>
+                            <div class="div-overlay">
+                                <h3>Change Password</h3>
+                                <form>
+                                    <div>
+                                        <label for="current-password">Current password</label>
+                                        <div class="input-box">
+                                            <!-- <i class="fas fa-lock icon"></i> -->
+                                            <input type="password" id="current-password">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="new-password">New password</label>
+                                        <div class="input-box">
+                                            <input type="password" id="new-password">
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="confirm-password">Confirm new password</label>
+                                        <div class="input-box">
+                                            <input type="password" id="confirm-password">
+                                        </div>
+                                    </div>
+
+                                    <div class="button-container">
+                                        <button type="submit" class="button-container__save-change">Save
+                                            Changes</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ####################### My Orders (Tab Content) ######################### -->
+
+            <div class="tab_content_value" *ngIf="id==='orders'">
+                <div class="orders">
+                    <table class="orders__table">
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-th="Order">1</td>
+                                <td data-th="Date">Jun 22, 2019</td>
+                                <td data-th="Status">Pending</td>
+                                <td data-th="Total">$3000</td>
+                                <td data-th="Action">View</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Order">2</td>
+                                <td data-th="Date">Nov 22, 2019</td>
+                                <td data-th="Status">Approved</td>
+                                <td data-th="Total">$200</td>
+                                <td data-th="Action">View</td>
+                            </tr>
+                            <tr>
+                                <td data-th="Order">3</td>
+                                <td data-th="Date">Jan 12, 2020</td>
+                                <td data-th="Status">On Hold</td>
+                                <td data-th="Total">$990</td>
+                                <td data-th="Action">View</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ####################### My Products (Tab Content) ######################### -->
+
+            <div class="tab_content_value" *ngIf="id==='products'">
+                <div class="products">
+                    <table class="products__table">
+                        <thead>
+                            <tr>
+                                <th width="120px">Product</th>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Edit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-th="Product">
+                                    <img src="https://images.pexels.com/photos/4099861/pexels-photo-4099861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                                </td>
+                                <td data-th="Name">Bi-Alcofan</td>
+                                <td data-th="Price">16 LE</td>
+                                <td data-th="Edit">
+                                    <span>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                        <!-- <i class="fa-solid fa-pen"></i> -->
+                                    </span>
+                                </td>
+                                <td data-th="Delete">
+                                    <span>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        
+                            <tr>
+                                <td data-th="Product">
+                                    <img src="https://i-cf65.ch-static.com/content/dam/cf-consumer-healthcare/panadol/en_eg/Products/455x455-en%20eg_new.jpg?auto=format">
+                                </td>
+                                <td data-th="Name">Panadol Extra</td>
+                                <td data-th="Price">35 LE</td>
+                                <td data-th="Edit">
+                                    <span>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+                                </td>
+                                <td data-th="Delete">
+                                    <span>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td data-th="Product">
+                                    <img src="https://www.aversi.ge/uploads/matimg/d088fa26ac2ed46a30f51f055a1672b2.png">
+                                </td>
+                                <td data-th="Name">Augmentin</td>
+                                <td data-th="Price">99 LE</td>
+                                <td data-th="Edit">
+                                    <span>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+                                </td>
+                                <td data-th="Delete">
+                                    <span>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                            
+                            
+                            <tr>
+                                <td data-th="Product">
+                                    <img src="https://media.gemini.media/img/large/2022/6/16/2022_6_16_15_43_47_711.jpg">
+                                </td>
+                                <td data-th="Name">Brufen</td>
+                                <td data-th="Price">30 LE</td>
+                                <td data-th="Edit">
+                                    <span>
+                                        <i class="fa-solid fa-pen-to-square"></i>
+                                    </span>
+                                </td>
+                                <td data-th="Delete">
+                                    <span>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,12 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ErrorComponent } from './Components/error/error.component';
 import { ItemDetailsComponent } from './Components/item-details/item-details.component';
+import { ProfileComponent } from './Components/profile/profile.component';
+// import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+// import {DialogBodyComponent} from './dialog-body/dialog-body.component';
+// import {MatButtonModule} from '@angular/material/button';
+// import {MatDialogModule} from '@angular/material/dialog';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +28,7 @@ import { ItemDetailsComponent } from './Components/item-details/item-details.com
     LoginComponent,
     ErrorComponent,
     ItemDetailsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,

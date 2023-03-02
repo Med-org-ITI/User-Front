@@ -1,8 +1,66 @@
+.input {
+  height: 6rem;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding-left: 1.6rem;
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.input:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.9rem 3.8rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: #0a9a73;
+}
+.btn:hover {
+  background-color: #05523d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 1.9rem 1.5rem;
+  }
+}
+.container {
+  width: 128rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1580px) {
+  .container {
+    width: 90%;
+  }
+}
+section {
+  padding: 4.8rem 0;
+}
+
+.input-valid {
+  outline-color: #4ade80 !important;
+}
+
+.input-invalid {
+  outline-color: #f87171 !important;
+}
+
 .register-section {
-  margin-top: 80px;
+  margin-top: 3%;
+  margin-bottom: 9%;
 }
 .register-section h2 {
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 .register-section form {
   display: flex;
@@ -10,62 +68,46 @@
   align-items: center;
   border: 1px solid rgb(220, 220, 220);
   flex-direction: column;
-  margin-top: 50px;
-  width: 700px;
-  padding: 30px;
+  margin-top: 5rem;
+  width: 45%;
+  padding: 3rem;
   margin: 0 auto;
   background-color: rgb(244, 244, 244);
-  border-radius: 8px;
+  border-radius: 0.8rem;
 }
 .register-section form .form-group {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 0 5%;
 }
 .register-section form .form-group input {
-  margin: 6px;
-}
-.register-section form .form-group input[type=text] {
-  height: 60px;
-  width: 420px;
-  border-radius: 8px;
-  border: 1px solid rgb(220, 220, 220);
-  box-shadow: 0 2px 2px rgb(220, 220, 220);
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+  padding: 2.4rem;
 }
 .register-section form .form-group input::-moz-placeholder {
-  font-size: 15px;
-  padding: 15px;
+  font-size: 1.5rem;
 }
 .register-section form .form-group input::placeholder {
-  font-size: 15px;
-  padding: 15px;
+  font-size: 1.5rem;
+}
+.register-section form .form-group .form__names {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.register-section form .form-group .form__names div {
+  width: 100%;
 }
 .register-section form .check {
-  margin: 30px;
+  margin: 3rem;
   display: flex;
   justify-content: center;
 }
-.register-section form .btn {
-  display: flex;
-  justify-content: center;
-}
-.register-section form .btn input[type=button] {
-  height: 60px;
-  width: 180px;
-  background-color: #0A9A73;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin: 30px 0;
-  cursor: pointer;
-}
-.register-section form .btn input[type=button]:hover {
-  color: white;
-  background-color: black;
-}
-.register-section form .btn input:active {
-  border: 1px solid #0A9A73;
+.register-section .register-btn-container {
+  text-align: center;
+  margin-bottom: 2.4rem;
 }
 .register-section .terms-con {
   display: flex;
@@ -73,11 +115,12 @@
   flex-direction: column;
 }
 .register-section .terms-con p {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .register-section .terms-con ul {
   display: flex;
   justify-content: space-around;
+  gap: 0.5rem;
 }
 .register-section .terms-con ul li {
   list-style: none;
@@ -88,5 +131,24 @@
   text-decoration: none;
 }
 .register-section .terms-con ul li a:hover {
-  color: #0A9A73;
+  color: #0a9a73;
+}
+
+@media only screen and (max-width: 992px) {
+  .register-section form {
+    width: 65%;
+  }
+  .form__names {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .register-section form {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .register-section form {
+    width: 92%;
+  }
 }/*# sourceMappingURL=register.component.css.map */

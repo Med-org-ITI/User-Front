@@ -1,0 +1,143 @@
+.input {
+  height: 6rem;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding-left: 1.6rem;
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.input:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.9rem 3.8rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: #0a9a73;
+}
+.btn:hover {
+  background-color: #05523d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 1.9rem 1.5rem;
+  }
+}
+.container {
+  width: 128rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1580px) {
+  .container {
+    width: 90%;
+  }
+}
+section {
+  padding: 4.8rem 0;
+}
+
+.input-valid {
+  outline-color: #4ade80 !important;
+}
+
+.input-invalid {
+  outline-color: #f87171 !important;
+}
+
+.login {
+  margin-bottom: 25rem;
+}
+
+.login-btn {
+  padding: 1.9rem 3.8rem;
+}
+
+.login__header {
+  font-size: 4.2rem;
+  line-height: 1.3;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 8rem;
+  margin-bottom: 1.6rem;
+}
+.login__header--sub {
+  display: block;
+}
+
+.login__header--small {
+  color: #5c727d;
+  text-align: center;
+  margin-bottom: 8rem;
+}
+
+.login__options {
+  display: flex;
+  justify-content: space-between;
+  width: 62%;
+  margin: 0 auto;
+}
+
+.login__form {
+  flex: 1;
+}
+.login__form input {
+  width: 90%;
+}
+
+.login__create {
+  flex: 1;
+  text-align: center;
+}
+
+.forgot {
+  display: inline-block;
+  margin: 3.2rem 0;
+  color: #5c727d;
+  text-decoration: none;
+  font-size: 1.4rem;
+  font-weight: 400;
+  transition: 0.3s color;
+}
+.forgot:hover {
+  color: #0a9a73;
+}
+
+.create__header {
+  margin-bottom: 2.4rem;
+  font-size: 1.9rem;
+}
+
+.create__description {
+  color: #5c727d;
+  line-height: 1.3;
+  margin-bottom: 3.2rem;
+  padding: 0 3.2rem;
+}
+
+@media only screen and (max-width: 992px) {
+  .login__options {
+    flex-direction: column;
+  }
+  .login__form {
+    margin-bottom: 4.8rem;
+  }
+  .form__login-container {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login__options {
+    width: 85%;
+  }
+}/*# sourceMappingURL=login.component.css.map */
