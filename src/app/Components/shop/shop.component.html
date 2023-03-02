@@ -3,21 +3,21 @@
   <div class="overlay" (click)="toggleClose()"></div>
   <div class="div-overlay" *ngIf="toggleProduct">
     <div class="img">
-      <img src="/assets/Images/shop/shop1.png" />
+      <img [src]="selectedProduct.image" />
     </div>
     <div>
-      <h2>Digital Stethoscope</h2>
-      <h1>$149.00</h1>
+      <h2>{{ selectedProduct.title }}</h2>
+      <h1>${{ selectedProduct.price }}</h1>
       <hr />
       <p>Categories: Parts Car Seat Cover</p>
       <hr />
       <div class="order">
-        <ul>
+        <ul class="order_list">
           <li>
             <div class="cart-plus-minus">
-              <div>-</div>
-              <input type="text" value="00" name="qtybutton" />
-              <div>+</div>
+              <div (click)="decrease()">&minus;</div>
+              <span class="item-controls__quantity-value">{{ quantity }}</span>
+              <div (click)="increase()">+</div>
             </div>
           </li>
           <li class="order--btn">
@@ -29,10 +29,10 @@
   </div>
   <div class="div-cart" *ngIf="!toggleProduct">
     <div class="img">
-      <img src="/assets/Images/shop/shop1.png" />
+      <img [src]="selectedProduct.image" />
     </div>
     <div>
-      <h4>Digital Stethoscope</h4>
+      <h4>{{ selectedProduct.title }}</h4>
       <div class="icon">
         <span class="material-symbols-outlined"> verified </span>
         <p>Successfully added to your Cart</p>
@@ -49,24 +49,37 @@
 <section>
   <div class="shop-container">
     <div class="items-wrapper">
-      <div class="item" *ngFor="let _ of [].constructor(10)">
-        <div class="item__img">
-          <img src="/assets/Images/shop/shop1.png" alt="title" />
-        </div>
-        <div class="item__content">
-          <h4>Digital Stethoscope</h4>
-          <p>$149.00</p>
+      <div class="item" *ngFor="let prod of products">
+        <div [routerLink]="'/item/' + prod._id">
+          <div class="item__img">
+            <img [src]="prod.image" alt="title" />
+          </div>
+          <div class="item__content">
+            <h4>{{ prod.title }}</h4>
+            <p>${{ prod.price }}</p>
+          </div>
         </div>
         <div class="item__hover">
-          <div (click)="addOverlay(true)">
+          <div (click)="addOverlay(prod, true)">
             <span class="material-symbols-outlined"> visibility </span>
           </div>
-          <div (click)="addOverlay()">
+          <div (click)="addOverlay(prod)">
             <span class="material-symbols-outlined"> shopping_cart </span>
           </div>
         </div>
       </div>
     </div>
-    <div class="shop-filters"></div>
+    <div class="shop-filters">
+      <h3>Product Categories</h3>
+      <ul class="shop-filters__list">
+        <li
+          class="shop-filters__list-item"
+          *ngFor="let cate of categories"
+          [ngClass]="currentCate === cate ? 'active' : ''"
+        >
+          <button (click)="currentCate = cate">{{ cate }}</button>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>

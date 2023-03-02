@@ -5,18 +5,22 @@
   <div class="container">
     <div class="item-container">
       <div class="item__image-container">
-        <img src="/assets/Images/items/1_med.png" />
+        <img [src]="item?.image" />
       </div>
       <div class="item-info">
         <div class="item-info__details">
-          <h2 class="item-info__details-name">Hand Sanitizer</h2>
-          <h3 class="item-info__details-price">$49.00</h3>
+          <h2 class="item-info__details-name">{{ item?.title }}</h2>
+          <h3 class="item-info__details-price">${{ item?.price }}</h3>
           <p class="item-info__details-category">
             Categories: <span> Sanitizer, Safety-kit</span>
           </p>
           <div class="item-info__expiration">
-            <h4>Expiry/date: <span>6/2023</span></h4>
-            <h4>Amount: <span>6</span></h4>
+            <h4>
+              Expiry/date: <span>{{ item?.expiryDate.substring(0, 7) }}</span>
+            </h4>
+            <h4>
+              Amount: <span>{{ item?.quantity }}</span>
+            </h4>
           </div>
           <div class="item-controls">
             <div class="item-controls__quantity">
@@ -74,21 +78,7 @@
       <div>
         <h2 class="item-description__head">Lorem ipsum dolor sit amet elit.</h2>
         <p class="item-description__info">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Sed ut
-          perspiciatis unde omnis iste natus error sit voluptatem, totam rem
-          aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-          voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-          consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
-          Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+          {{ item?.description }}
         </p>
       </div>
     </div>

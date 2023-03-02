@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { REQService } from 'src/app/Services/req.service';
-
+import { AuthService } from 'src/app/Services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  constructor(public myService: REQService) {}
+  loginError = '';
+  constructor(public myService: AuthService, private router: Router) {}
 
   get emailValid() {
     return this.loginForm.controls['email'].valid;
@@ -28,4 +29,22 @@ export class LoginComponent {
       Validators.required,
     ]),
   });
+  login() {
+    const user = {
+      email: this.loginForm.controls['email'].value,
+      password: this.loginForm.controls['password'].value,
+    };
+    this.myService.Login(user).subscribe(
+      (data: any) => {
+        localStorage.setItem('isLogged', data.token);
+        localStorage.setItem('userId', data.data._id);
+        setTimeout(() => {
+          this.router.navigate(['/']).then(() => {
+            location.reload();
+          });
+        }, 300);
+      },
+      ({ error }) => (this.loginError = error.message)
+    );
+  }
 }

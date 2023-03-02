@@ -19,8 +19,8 @@
 .div-overlay {
   @include ver-centering;
   justify-content: space-evenly;
-  width: 50%;
-  height: 45%;
+  width: 55%;
+  height: 50%;
   background-color: $white-color;
   opacity: 1;
   position: fixed;
@@ -33,17 +33,21 @@
   left: 0;
   right: 0;
   z-index: 10;
-
+  border-radius: 4px;
   .img {
-    width: 30%;
-    height: 100%;
+    width: 50%;
+    min-width: 20rem;
+    height: 95%;
+    flex: 1;
     img {
       height: 100%;
-      width: 100%;
+      width: 95%;
     }
   }
 
   div {
+    padding-right: 1.6rem;
+    width: 50%;
     h2 {
       margin-bottom: 2rem;
     }
@@ -56,7 +60,6 @@
     }
 
     hr {
-      width: 36rem;
       margin-bottom: 3rem;
       border-color: $border-color;
     }
@@ -82,6 +85,8 @@
 
           .cart-plus-minus {
             @include centering;
+            gap: 2.4rem;
+            color: $dark-gray-color;
           }
 
           div {
@@ -219,8 +224,9 @@
     flex-wrap: wrap;
     .item {
       width: 30%;
+      // NOTE  border may be removed here
       border: 1px solid $light-gray-color;
-      border-radius: $border-radius-sm;
+      border-radius: 8px;
       cursor: $cursor;
       box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
       transition: 0.3s box-shadow;
@@ -228,7 +234,10 @@
       // box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
       &__img {
         width: 100%;
+        padding: 1rem;
+        border-radius: 8px;
         img {
+          border-radius: 2px;
           width: 100%;
         }
       }
@@ -287,17 +296,67 @@
   .shop-filters {
     border: 2px solid $light-gray2-color;
     width: 20%;
-    height: 166vh;
+    height: 60vh;
+    padding: 4rem;
+    h3 {
+      font-weight: bold;
+      font-size: 2.4rem;
+      margin-bottom: 4rem;
+    }
+    &__list {
+      list-style: none;
+      &-item {
+        button {
+          border: none;
+          background-color: transparent;
+          font-size: 1.8rem;
+          margin-bottom: 1.6rem;
+          color: $dark-gray-color;
+          cursor: $cursor;
+          transition: color 0.3s;
+          padding: 0.8rem 0.8rem;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+      }
+      .active {
+        width: 75%;
+        border-radius: 2px;
+        button {
+          text-align: start;
+          width: 100%;
+          background-color: $primary-color;
+          color: #fff;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
   }
 }
 
 @media only screen and (max-width: 1366px) {
+  .div-overlay {
+    width: 66%;
+  }
   .shop-container {
     .items-wrapper {
       width: 66%;
     }
     .shop-filters {
       width: 26%;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .div-overlay {
+    .order_list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.4rem;
     }
   }
 }
@@ -331,7 +390,31 @@
     }
   }
 }
+@media only screen and (max-width: 768px) {
+  .div-overlay {
+    width: 85%;
+  }
+}
 @media only screen and (max-width: 600px) {
+  .div-cart {
+    width: 85%;
+  }
+  .div-overlay {
+    padding: 2.4rem 0;
+    flex-direction: column;
+    height: 80%;
+    gap: 0.8rem;
+    .img {
+      padding: 0.8rem;
+      width: 70%;
+      height: 40%;
+      text-align: center;
+    }
+    div {
+      width: 60%;
+    }
+  }
+
   .shop-container {
     .items-wrapper {
       width: 95%;
@@ -343,6 +426,24 @@
     }
     .shop-filters {
       width: 95%;
+    }
+  }
+}
+
+@media only screen and (max-width: 468px) {
+  .div-cart {
+    height: 25%;
+    width: 90%;
+    div {
+      gap: 1.6rem;
+      // flex-direction: column;
+    }
+  }
+}
+@media only screen and (max-width: 379px) {
+  .div-cart {
+    div {
+      flex-direction: column;
     }
   }
 }

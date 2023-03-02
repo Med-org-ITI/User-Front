@@ -1,4 +1,5 @@
 <section class="register-section">
+  <p class="signup-error">{{ signUpMsg }}</p>
   <form method="post" [formGroup]="myRegisterationForm">
     <div>
       <h2>Register Your Account</h2>
@@ -19,7 +20,7 @@
       />
       <p
         *ngIf="!emailValid && myRegisterationForm.controls['email'].value"
-        style="color: red"
+        style="color: #f87171"
       >
         Email is not valid
       </p>
@@ -43,7 +44,7 @@
             *ngIf="
               !passwordValid && myRegisterationForm.controls['password'].value
             "
-            style="color: red"
+            style="color: #f87171"
           >
             6 < Password < 16
           </p>
@@ -62,7 +63,7 @@
                 : ''
             "
           />
-          <p *ngIf="passwordMatchError" style="color: red">
+          <p *ngIf="passwordMatchError" style="color: #f87171">
             Password does not match
           </p>
         </div>
@@ -86,7 +87,7 @@
           />
           <p
             *ngIf="!nameValid && myRegisterationForm.controls['name'].value"
-            style="color: red"
+            style="color: #f87171"
           >
             name should be more than or equal 4 letters
           </p>
@@ -107,7 +108,7 @@
           />
           <p
             *ngIf="!cityValid && myRegisterationForm.controls['city'].value"
-            style="color: red"
+            style="color: #f87171"
           >
             City should be more than or equal 4 letters
           </p>
@@ -123,6 +124,7 @@
         class="image-input"
         name="profileImage"
         accept="image/png, image/jpg, image/gif, image/jpeg"
+        #profilePic
       />
     </div>
 
@@ -133,7 +135,12 @@
       </div> -->
 
       <div class="register-btn-container">
-        <button class="btn" (click)="signup()">CREATE ACCOUNT</button>
+        <button
+          class="btn"
+          (click)="signup($event, profilePic.files ? profilePic.files[0] : '')"
+        >
+          CREATE ACCOUNT
+        </button>
       </div>
       <div class="terms-con">
         <p>By creating an account, you agree to our:</p>

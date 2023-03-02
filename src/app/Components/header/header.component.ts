@@ -1,11 +1,14 @@
 import { Component, ViewChild, HostListener, Input } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent {
+  isLogged = localStorage.getItem('isLogged') || false;
+
+  constructor(private router: Router) {}
   @Input() isNotHome: any;
   showOverlay = false;
   @ViewChild('sideMenu') sideMenu: any;
@@ -33,5 +36,15 @@ export class HeaderComponent {
       menu.classList.remove('scroll-down');
       if (!this.isNotHome) menu.classList.add('nav-home');
     }
+  }
+  logout() {
+    localStorage.removeItem('isLogged');
+    localStorage.removeItem('userId');
+    location.reload();
+    setTimeout(() => {
+      this.router.navigate(['/']).then(() => {
+        location.reload();
+      });
+    }, 300);
   }
 }

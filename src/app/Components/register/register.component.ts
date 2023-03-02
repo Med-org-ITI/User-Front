@@ -1,8 +1,8 @@
 import { CustomValidators } from './../../../validator/confirmed.validator';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { REQService } from 'src/app/Services/req.service';
-
+import { AuthService } from 'src/app/Services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -14,8 +14,9 @@ export class RegisterComponent {
   email: any;
   password: any;
   confirmPassword: any;
-
-  constructor(public myService: REQService) {}
+  profilePic: any;
+  signUpMsg = '';
+  constructor(public myService: AuthService, private router: Router) {}
 
   myRegisterationForm = new FormGroup(
     {
@@ -61,16 +62,23 @@ export class RegisterComponent {
     return this.myRegisterationForm.controls['confirmPassword'].valid;
   }
 
-  signup() {
+  signup(e: Event, profileImage: any) {
     let user = {
       name: this.myRegisterationForm.controls['name'].value,
-      city: this.myRegisterationForm.controls['city'].value,
+      address: this.myRegisterationForm.controls['city'].value,
       email: this.myRegisterationForm.controls['email'].value,
       password: this.myRegisterationForm.controls['password'].value,
       passwordConfirm:
         this.myRegisterationForm.controls['confirmPassword'].value,
+      profileImage,
     };
-    console.log(user);
+    const fd = new FormData();
+    fd.append('name', user.name + '');
+    fd.append('address', user.address + '');
+    fd.append('email', user.email + '');
+    fd.append('password', user.password + '');
+    fd.append('passwordConfirm', user.passwordConfirm + '');
+    fd.append('profileImage', user.profileImage);
 
     if (
       this.nameValid &&
@@ -78,8 +86,16 @@ export class RegisterComponent {
       this.emailValid &&
       this.passwordValid
     ) {
-      this.myService.AddUser(user).subscribe();
-      console.log('sent');
+      this.myService.AddUser(fd).subscribe(
+        (data) => {
+          this.signUpMsg =
+            'Account is created sucessfully you will be redirected';
+          setTimeout(() => {
+            this.router.navigate(['/']);
+          }, 1500);
+        },
+        ({ error }) => (this.signUpMsg = error.errors[0].msg)
+      );
     }
   }
   // reset() {

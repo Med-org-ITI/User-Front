@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { REQService } from 'src/app/Services/req.service';
+import { AuthService } from 'src/app/Services/auth.service';
 
 @Component({
   selector: 'app-contact',
@@ -14,7 +14,7 @@ export class ContactComponent {
   city: any;
   message: any;
 
-  constructor(public myService: REQService) {}
+  constructor(public myService: AuthService) {}
 
   myContactForm = new FormGroup({
     fName: new FormControl('', [Validators.required, Validators.minLength(4)]),
