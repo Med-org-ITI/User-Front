@@ -1,0 +1,56 @@
+@import "../../../sass/abstract/mixins";
+@import "../../../sass/abstract/variables";
+
+.news-section {
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+    margin-top: 6rem;
+    .container-content {
+      padding: 3.8rem;
+      border: 1px solid $border-color;
+
+      h2 {
+        width: 65rem;
+        font-size: 2.8rem;
+      }
+
+      .content-para {
+        p {
+          width: 65rem;
+          color: $dark-gray-color;
+          line-height: 2.5rem;
+          font-size: 1.7rem;
+          margin: 2rem 0;
+        }
+      }
+    }
+
+    .content-points {
+      h3 {
+        margin: 2.5rem 0 1.8rem;
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+
+        p {
+          display: inline-block;
+          margin-left: 1.2rem;
+          color: $dark-gray-color;
+        }
+
+        span {
+          color: $primary-color;
+        }
+      }
+    }
+    .container-img {
+      img {
+        width: 40rem;
+      }
+    }
+  }
+}

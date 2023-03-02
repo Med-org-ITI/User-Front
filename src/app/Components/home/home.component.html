@@ -90,60 +90,57 @@
     </ng-template>
   </swiper>
 </section>
+
 <!--  NOTE  News -->
-<section class="news-section">
-  <div class="news__header"></div>
-  <div class="news__wrapper">
-    <div class="news__card">
-      <div class="img-container">
-        <img src="https://picsum.photos/1000/600" alt="title" />
-      </div>
-      <div class="news__card-text">
-        <h4 class="news__card-title">Our Latest Upgrades</h4>
-        <p class="news__card-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-          accusamus nihil dignissimos error maiores qui blanditiis sint eligendi
-          impedit nobis!
-        </p>
-        <a class="news__card-more">
-          Learn More
-          <span class="material-symbols-outlined"> arrow_right_alt </span>
-        </a>
-      </div>
-    </div>
-    <div class="news__card">
-      <div class="img-container">
-        <img src="https://picsum.photos/1000/600" alt="title" />
-      </div>
-      <div class="news__card-text">
-        <h4 class="news__card-title">Our Latest Upgrades</h4>
-        <p class="news__card-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-          accusamus nihil dignissimos error maiores qui blanditiis sint eligendi
-          impedit nobis!
-        </p>
-        <a class="news__card-more">
-          Learn More
-          <span class="material-symbols-outlined"> arrow_right_alt </span>
-        </a>
-      </div>
-    </div>
-    <div class="news__card">
-      <div class="img-container">
-        <img src="https://picsum.photos/1000/600" alt="title" />
-      </div>
-      <div class="news__card-text">
-        <h4 class="news__card-title">Our Latest Upgrades</h4>
-        <p class="news__card-description">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae
-          accusamus nihil dignissimos error maiores qui blanditiis sint eligendi
-          impedit nobis!
-        </p>
-        <a class="news__card-more">
-          Learn More
-          <span class="material-symbols-outlined"> arrow_right_alt </span>
-        </a>
+<section>
+  <app-news-cards></app-news-cards>
+</section>
+
+<section>
+  <app-home-second></app-home-second>
+</section>
+
+<!-- NOTE About -->
+<section class="service-section">
+  <div class="service">
+    <div class="container">
+      <div class="row">
+        <div class="img-row">
+          <img src="../../../assets/Images/items/1.png" alt="Image" />
+        </div>
+        <div class="content-row">
+          <div class="content">
+            <div class="first-content">
+              <h3 class="about-head">About Us</h3>
+              <h1 class="header">
+                Your faithful partners <br />
+                Medical Goods
+              </h1>
+              <p>
+                Over 39,000 people work for us in more than 70 countries all
+                over the This breadth of global coverage, combined with
+                specialist services
+              </p>
+            </div>
+            <div class="first-content">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur.
+              </p>
+            </div>
+            <div class="btn-about">
+              <button>about us</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+</section>
+<section class="feedback-section">
+  <app-feedback></app-feedback>
 </section>

@@ -82,6 +82,7 @@
 }
 
 .container1--cart {
+  position: relative;
   @include ver-centering;
   p {
     text-transform: uppercase;
@@ -375,4 +376,35 @@
       transform: translateX(0);
     }
   }
+}
+
+.dropdown {
+  position: absolute;
+  top: 90%;
+  left: -40%;
+  z-index: 1;
+  display: none;
+  width: 15rem;
+
+  ul {
+    li {
+      padding: 1.3rem 2rem 1rem;
+      list-style: none;
+      background-color: $white-color;
+      box-shadow: $box-shadow;
+
+      a {
+        color: $dark-gray-color;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.open {
+  display: block;
 }

@@ -1,38 +1,103 @@
+.input {
+  height: 6rem;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding-left: 1.6rem;
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.input:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.9rem 3.8rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: #0a9a73;
+}
+.btn:hover {
+  background-color: #05523d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 1.9rem 1.5rem;
+  }
+}
+.container {
+  width: 128rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1580px) {
+  .container {
+    width: 90%;
+  }
+}
+section {
+  padding: 4.8rem 0;
+}
+
+.input-valid {
+  outline-color: #4ade80 !important;
+}
+
+.input-invalid {
+  outline-color: #f87171 !important;
+}
+
 .card-section {
-  margin: 100px 0px;
+  margin: 6rem 0;
 }
 .card-section .container {
   display: flex;
   justify-content: center;
+  gap: 3.2rem;
 }
 .card-section .container .card {
   display: flex;
   align-items: center;
   border: 1px solid rgb(220, 220, 220);
+  border-color: #e4ecf2;
   flex-direction: column;
-  padding: 60px;
-  width: 20%;
-  margin: 1rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  padding: 6rem;
+  width: 25%;
 }
 .card-section .container .card h2 {
-  margin: 25px 0;
+  margin: 2.5rem 0;
 }
 
 .contact-section {
   border: 1px solid rgb(220, 220, 220);
   display: flex;
   justify-content: center;
+  border-top: 4px solid #0a9f77;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   flex-direction: column;
-  width: 900px;
-  padding: 30px;
+  align-items: center;
+  gap: 2.4rem;
+  width: 55%;
+  padding: 4rem 2.4rem;
   margin: 0 auto;
+  margin-bottom: 10%;
 }
 .contact-section h2 {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .contact-section form {
   display: flex;
   align-items: center;
+  width: 100%;
   flex-direction: column;
   justify-content: space-evenly;
 }
@@ -40,50 +105,85 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
+  width: 95%;
+  gap: 2.4rem;
 }
-.contact-section form .message input {
-  width: 860px;
-  height: 120px;
+.contact-section form .container1 div {
+  width: 100%;
+}
+.contact-section form .message {
+  width: 95%;
+}
+.contact-section form .message textarea {
+  width: 100%;
+  resize: none;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding: 1.6rem;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-height: 40rem;
+  height: 30rem;
+  font-family: sans-serif;
+}
+.contact-section form .message textarea:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
 }
 .contact-section input {
-  border: 1px solid rgb(220, 220, 220);
-}
-.contact-section input[type=text] {
-  height: 60px;
-  width: 420px;
-  margin: 10px 10px;
-  box-shadow: 0 2px 2px rgb(220, 220, 220);
-  border-radius: 8px;
+  margin: 0 auto;
+  margin-bottom: 1.6rem;
+  padding: 2.4rem;
 }
 .contact-section input::-moz-placeholder {
-  font-size: 15px;
-  padding: 15px;
+  font-size: 1.5rem;
 }
 .contact-section input::placeholder {
-  font-size: 15px;
-  padding: 15px;
+  font-size: 1.5rem;
 }
 .contact-section .check {
   display: flex;
   justify-content: flex-start;
-  margin-top: 20px;
+  margin-top: 2rem;
 }
-.contact-section .btn input[type=submit] {
-  height: 60px;
-  width: 180px;
-  margin-top: 20px;
-  background-color: #0A9A73;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
+
+@media only screen and (max-width: 992px) {
+  .card-section {
+    margin: 4rem 0;
+  }
+  .card-section .container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-section .container .card {
+    padding: 3rem 1rem;
+    width: 35%;
+  }
+  .card-section .container .card img {
+    width: 5rem;
+  }
+  .contact-section {
+    width: 75%;
+  }
+  .contact-section form .container1 {
+    flex-direction: column;
+    gap: 0;
+  }
 }
-.contact-section .btn input[type=submit]:hover {
-  color: white;
-  background-color: black;
-}
-.contact-section .btn input:active {
-  border: 1px solid #0A9A73;
+@media only screen and (max-width: 600px) {
+  .card-section .container .card {
+    width: 66%;
+  }
+  .contact-section {
+    width: 92%;
+  }
+  .contact-section form .container1,
+  .contact-section form .message {
+    width: 100%;
+  }
+  .contact-section form .container1 textarea,
+  .contact-section form .message textarea {
+    height: 20rem;
+  }
 }/*# sourceMappingURL=contact.component.css.map */

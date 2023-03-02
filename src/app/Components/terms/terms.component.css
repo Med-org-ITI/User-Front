@@ -4,19 +4,28 @@
   justify-content: space-around;
 }
 .terms-section .container {
-  margin-top: 80px;
+  margin-top: 8rem;
   display: flex;
   justify-content: space-around;
-  line-height: 1.8rem;
+  line-height: 2.8rem;
   font-family: sans-serif;
 }
 .terms-section .container .contain {
-  width: 850px;
+  width: 75%;
 }
 .terms-section .container .contain h1 {
-  margin-bottom: 50px;
-  font-size: 40px;
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  line-height: 1.2;
 }
 .terms-section .container .contain .list ol li {
-  margin-bottom: 10px;
+  margin-bottom: 2.4rem;
+  line-height: 1.5;
+}
+
+@media only screen and (max-width: 600px) {
+  .terms-section .container .contain {
+    width: 85%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=terms.component.css.map */

@@ -41,4 +41,5 @@ export class HomeComponent {
       news.style.marginTop = '0';
     }
   }
+
 }

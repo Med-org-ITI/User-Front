@@ -1,6 +1,26 @@
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.9rem 3.8rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: #0a9a73;
+}
+.btn:hover {
+  background-color: #05523d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 1.9rem 1.5rem;
+  }
+}
 .faq-section {
   font-family: sans-serif;
-  margin: 80px 0;
+  margin: 8rem 0;
 }
 .faq-section .faq-container {
   display: flex;
@@ -8,38 +28,39 @@
 }
 .faq-section .faq-container .container-faq {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  width: 33%;
 }
 .faq-section .faq-container .container-faq .faq-contact {
-  margin-top: 80px;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.faq-section .faq-container .container-faq .faq-contact input {
-  background-color: #0A9A73;
-  color: white;
-  border: none;
-  height: 60px;
-  width: 180px;
-  margin-top: 25px;
-  font-size: 20px;
-  cursor: pointer;
+.faq-section .faq-container .container-faq .faq-contact h1 {
+  margin-bottom: 2.4rem;
+}
+.faq-section .faq-container .container-faq .faq-contact a {
+  display: inline-block;
+  text-decoration: none;
 }
 .faq-section .faq-container .container-faq .faq-q {
   border: solid rgb(220, 220, 220);
-  border-radius: 8px;
-  width: 600px;
+  border-radius: 0.8rem;
+  width: 100%;
+  padding-top: 1.6rem;
+  padding-bottom: 1.6rem;
 }
 .faq-section .faq-container .container-faq .faq-q details {
   color: black;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   display: flex;
   align-items: center;
 }
 .faq-section .faq-container .container-faq .faq-q details summary {
-  padding: 0.5em 1.3rem;
+  padding: 0.8rem 2.1rem;
   display: flex;
   justify-content: space-between;
   transition: height 2s ease;
@@ -55,14 +76,14 @@
   content: "-";
 }
 .faq-section .faq-container .container-faq .faq-q details[open] div {
-  padding: 0.5em 1em;
+  padding: 0.8rem 1.6rem;
   color: #5c727d;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 200px;
-  line-height: 25px;
+  line-height: 2.5rem;
 }
 .faq-section .faq-container .container-faq hr {
-  margin: 20px 0;
+  margin: 2rem 0;
   border: 1px solid rgb(220, 220, 220);
 }
 
@@ -70,23 +91,51 @@
   font-family: sans-serif;
 }
 .reviews-section .reviews-container {
-  background-color: rgb(220, 220, 220);
-  height: 370px;
+  background-color: #e4ecf2;
+  height: 37rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 .reviews-section .reviews-container div span {
-  font-size: 75px;
-  color: #0A9A73;
-  margin: 15px 18px;
+  font-size: 7.5rem;
+  color: #0a9a73;
+  margin: 1.5rem 1.8rem;
 }
 .reviews-section .reviews-container div h2 {
-  font-size: 30px;
+  font-size: 3rem;
   text-align: center;
+  margin-bottom: 0.8rem;
 }
 .reviews-section .reviews-container div p {
-  font-size: 18px;
+  font-size: 1.8rem;
   text-align: center;
   color: #5c727d;
+}
+
+@media only screen and (max-width: 992px) {
+  .faq-section .faq-container .container-faq {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .faq-section .faq-container .container-faq {
+    width: 66%;
+  }
+  .faq-img {
+    display: none;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .faq-section .faq-container .container-faq {
+    width: 85%;
+  }
+  .reviews-section .reviews-container {
+    flex-wrap: wrap;
+    padding-bottom: 2.4rem;
+  }
+  .reviews-section .reviews-container div {
+    width: 50%;
+    text-align: center;
+  }
 }/*# sourceMappingURL=faq.component.css.map */

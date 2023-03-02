@@ -26,8 +26,20 @@
         <input type="text" placeholder="Search here..." />
       </div>
       <div class="container1--cart">
-        <div>
+        <div
+          class="icons"
+          (mouseenter)="isOpen = true"
+          (mouseleave)="isOpen = false"
+        >
           <span class="material-symbols-outlined"> person </span>
+          <div class="dropdown" [ngClass]="{ open: isOpen }">
+            <ul>
+              <li><a routerLink="/register">Sign up</a></li>
+              <li><a routerLink="/login">Login</a></li>
+              <li><a routerLink="/#">My Account</a></li>
+              <li><a routerLink="#">Log Out</a></li>
+            </ul>
+          </div>
           <span class="material-symbols-outlined"> shopping_cart </span>
         </div>
         <div>
@@ -64,17 +76,31 @@
           <li><a routerLink="/shop" routerLinkActive="active">Shop</a></li>
           <li><a routerLink="/item" routerLinkActive="active">Item</a></li>
           <li>
-            <a routerLink="/register" routerLinkActive="active">Sign up</a>
-          </li>
-          <li><a routerLink="/login" routerLinkActive="active">Login</a></li>
-          <li>
             <a routerLink="/contact" routerLinkActive="active">Contact Us</a>
           </li>
+          <!-- <li>
+            <a routerLink="/newsCards">Cards</a>
+          </li>
+          <li>
+            <a routerLink="/news/:id">News</a>
+          </li> -->
         </ul>
       </div>
       <div class="container1--cart">
-        <div>
+        <div
+          class="icons"
+          (mouseenter)="isOpen = true"
+          (mouseleave)="isOpen = false"
+        >
           <span class="material-symbols-outlined"> person </span>
+          <div class="dropdown" [ngClass]="{ open: isOpen }">
+            <ul>
+              <li><a routerLink="/register">Sign up</a></li>
+              <li><a routerLink="/login">Login</a></li>
+              <li><a routerLink="/#">My Account</a></li>
+              <li><a routerLink="#">Log Out</a></li>
+            </ul>
+          </div>
           <span class="material-symbols-outlined"> shopping_cart </span>
         </div>
         <div>

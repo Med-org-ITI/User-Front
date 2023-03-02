@@ -4,47 +4,62 @@
   justify-content: space-around;
 }
 .privacy-section .container {
-  margin-top: 80px;
+  margin-top: 8rem;
   display: flex;
   justify-content: space-around;
-  line-height: 1.8rem;
+  line-height: 2.9rem;
   font-family: sans-serif;
 }
 .privacy-section .container .contain {
-  width: 850px;
+  width: 80%;
 }
 .privacy-section .container .contain h1 {
-  margin-bottom: 50px;
-  font-size: 40px;
+  margin-bottom: 5rem;
+  font-size: 4rem;
 }
 .privacy-section .container .contain h2,
 .privacy-section .container .contain h5 {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 .privacy-section .container .contain p {
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 .privacy-section .container .contain span {
   color: white;
-  background-color: #0A9A73;
+  background-color: #0a9a73;
 }
 .privacy-section .cards {
   display: flex;
   justify-content: center;
-  margin-top: 50px;
+  margin: 0 auto;
+  margin-top: 5rem;
+  width: 80%;
 }
 .privacy-section .cards p {
-  width: 400px;
-  margin: 0 30px 30px 0;
+  margin: 0 3rem 3rem 0;
 }
 .privacy-section .cards h2 {
-  margin-left: 0.7rem;
-  margin-bottom: 15px;
+  margin-left: 1.1rem;
+  margin-bottom: 1.5rem;
 }
 .privacy-section .cards .cards-icon {
   display: flex;
 }
 .privacy-section .cards .cards-icon span {
-  color: #0A9A73;
-  font-size: 35px;
+  color: #0a9a73;
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .privacy-section .container .contain {
+    width: 90%;
+  }
+  .privacy-section .cards {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
 }/*# sourceMappingURL=privacy.component.css.map */

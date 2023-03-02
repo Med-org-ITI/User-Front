@@ -1,0 +1,11 @@
+<section class="shop-section">
+  <div class="container">
+    <div *ngFor="let product of homeProducts" class="container-contain">
+      <div class="product" routerLink="/shopPage">
+        <img src="{{ product.img }}" alt="{{ product.name }}" />
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.price | currency }}</p>
+      </div>
+    </div>
+  </div>
+</section>

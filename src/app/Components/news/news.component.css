@@ -1,0 +1,39 @@
+.news-section .container {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin-top: 6rem;
+}
+.news-section .container .container-content {
+  padding: 3.8rem;
+  border: 1px solid rgb(220, 220, 220);
+}
+.news-section .container .container-content h2 {
+  width: 65rem;
+  font-size: 2.8rem;
+}
+.news-section .container .container-content .content-para p {
+  width: 65rem;
+  color: #5c727d;
+  line-height: 2.5rem;
+  font-size: 1.7rem;
+  margin: 2rem 0;
+}
+.news-section .container .content-points h3 {
+  margin: 2.5rem 0 1.8rem;
+}
+.news-section .container .content-points div {
+  display: flex;
+  align-items: center;
+}
+.news-section .container .content-points div p {
+  display: inline-block;
+  margin-left: 1.2rem;
+  color: #5c727d;
+}
+.news-section .container .content-points div span {
+  color: #0a9a73;
+}
+.news-section .container .container-img img {
+  width: 40rem;
+}/*# sourceMappingURL=news.component.css.map */

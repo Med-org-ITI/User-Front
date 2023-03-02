@@ -1,0 +1,283 @@
+.shop-section {
+  margin-top: 5rem;
+}
+.shop-section .overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+.shop-section .div-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 45rem;
+  height: 22rem;
+  background-color: white;
+  opacity: 1;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.shop-section .div-overlay .img img {
+  width: 18rem;
+}
+.shop-section .div-overlay div h2 {
+  margin-bottom: 1.5rem;
+}
+.shop-section .div-overlay div h1 {
+  font-size: 1.3rem;
+  font-weight: sans-serif;
+  color: #0A9A73;
+  margin-bottom: 1.2rem;
+}
+.shop-section .div-overlay div hr {
+  width: 23rem;
+  margin-bottom: 1.3rem;
+  border-color: rgb(220, 220, 220);
+}
+.shop-section .div-overlay div p {
+  margin: 1.3rem 0;
+}
+.shop-section .div-overlay div .order {
+  display: flex;
+  align-items: center;
+}
+.shop-section .div-overlay div .order ul {
+  display: flex;
+}
+.shop-section .div-overlay div .order ul li {
+  margin-right: 1.2rem;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #5c727d;
+  font-weight: 700;
+  color: black;
+  font-size: 1.2rem;
+}
+.shop-section .div-overlay div .order ul li .cart-plus-minus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-section .div-overlay div .order ul li div {
+  height: 60px;
+  display: inline-block;
+  padding: 1.4rem 1rem;
+  cursor: pointer;
+}
+.shop-section .div-overlay div .order ul li div input {
+  width: 3.5rem;
+  text-align: center;
+  border: none;
+  border: 1px solid rgb(220, 220, 220);
+  padding: 1.3rem 1rem;
+  outline: #0A9A73;
+}
+.shop-section .div-overlay div .order ul li button {
+  width: 180px;
+  height: 60px;
+  background-color: #0A9A73;
+  border: none;
+  color: white;
+  font-weight: sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  cursor: pointer;
+}
+.shop-section .div-overlay div .order ul li button:hover {
+  background-color: black;
+}
+.shop-section .div-cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 26rem;
+  height: 12rem;
+  background-color: white;
+  opacity: 1;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.shop-section .div-cart .img img {
+  width: 9rem;
+}
+.shop-section .div-cart div h4 {
+  font-size: 1rem;
+}
+.shop-section .div-cart div .icon {
+  display: flex;
+}
+.shop-section .div-cart div .icon span {
+  color: #0A9A73;
+  display: flex;
+  align-items: center;
+  margin-right: 0.3rem;
+}
+.shop-section .div-cart div .icon p {
+  margin: 1.2rem 0;
+  display: inline-block;
+}
+.shop-section .div-cart div div {
+  display: flex;
+  justify-content: space-around;
+}
+.shop-section .div-cart div div button {
+  color: white;
+  width: 6.7rem;
+  border: none;
+  height: 2.4rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.shop-section .div-cart div div .btn1 {
+  background-color: #0A9A73;
+}
+.shop-section .div-cart div div .btn1:hover {
+  color: #0A9A73;
+  background-color: white;
+  border: 1px solid black;
+}
+.shop-section .div-cart div div .btn2 {
+  background-color: black;
+}
+.shop-section .div-cart div div .btn2:hover {
+  color: black;
+  background-color: white;
+  border: 1px solid #0A9A73;
+}
+.shop-section .container {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+.shop-section .container .container-contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.4rem;
+}
+.shop-section .container .container-contain .product {
+  border: 1px solid rgb(220, 220, 220);
+  position: relative;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.shop-section .container .container-contain .product img {
+  width: 15rem;
+  border-radius: 8px;
+}
+.shop-section .container .container-contain .product h4,
+.shop-section .container .container-contain .product p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.7rem 0;
+}
+.shop-section .container .container-contain .product p {
+  color: #5c727d;
+}
+.shop-section .container .container-contain .product p:hover {
+  color: #0A9A73;
+}
+.shop-section .container .container-contain .product:hover {
+  box-shadow: 0 2px 2px rgb(220, 220, 220);
+}
+.shop-section .container .container-contain .product:hover .product-hover {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  opacity: 0.9;
+}
+.shop-section .container .container-contain .product:hover .product-hover:hover {
+  box-shadow: 0 0 0 0;
+}
+.shop-section .container .container-contain .product:hover .product-hover:hover span:hover {
+  color: #0A9A73;
+}
+.shop-section .container .container-contain .product .product-hover {
+  height: 3rem;
+  width: 7rem;
+  background-color: white;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 50%;
+  display: none;
+}
+.shop-section .container .container-contain .product .product-hover ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-section .container .container-contain .product .product-hover ul li {
+  margin: 0.6rem;
+  list-style: none;
+}
+.shop-section .container .container-contain .product .product-hover ul li span {
+  font-size: 1.5rem;
+}
+.shop-section .container .container-contain .product .product-hover ul li a {
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .shop-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-section .container .container--contain {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .shop-section .container .container--contain .contain div {
+    width: 50%;
+  }
+  .shop-section .container .aside {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+@media (max-width: 768px) {
+  .shop-section .container {
+    display: flex;
+    flex-direction: column;
+  }
+  .shop-section .container .container-contain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .shop-section .container .container-contain .product {
+    display: flex;
+    justify-content: center;
+  }
+  .shop-section .container .aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=shop-page.component.css.map */

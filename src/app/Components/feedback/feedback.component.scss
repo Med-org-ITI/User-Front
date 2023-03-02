@@ -1,0 +1,136 @@
+@import "../../../sass/abstract/variables";
+@import "../../../sass/abstract/mixins";
+
+.testimonials-section {
+  @include centering;
+  flex-direction: column;
+  font-family: $font;
+  $font-weight: $font-weight;
+
+  .testimonial-header {
+    margin: 2rem 0;
+    font-size: $faq-size;
+  }
+
+  .testimonial-quotes {
+    display: flex;
+
+    .quote {
+      font-family: "Raleway", Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+      margin: 1rem;
+      min-width: 20rem;
+      max-width: 30rem;
+      width: 100%;
+      color: #333;
+      text-align: left;
+      box-shadow: none !important;
+
+      blockquote {
+        display: block;
+        border-radius: 0.5rem;
+        position: relative;
+        background-color: $form-color;
+        padding: 3.5rem 4rem;
+        font-size: 0.8em;
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.6em;
+        font-style: italic;
+
+        &::before,
+        &::after {
+          font-family: "FontAwesome";
+          content: "\201C";
+          position: absolute;
+          font-size: 3rem;
+          opacity: 0.5;
+          font-style: normal;
+          margin-bottom: 1.2rem;
+        }
+
+        &::before {
+          top: 1rem;
+          left: 1.5rem;
+        }
+
+        &::after {
+          content: "\201D";
+          right: 1.2rem;
+          bottom: 0;
+        }
+
+        .arrow {
+          top: 100%;
+          width: 0;
+          height: 0;
+          border-left: 0 solid transparent;
+          border-right: 1.5rem solid transparent;
+          border-top: 1.5rem solid $form-color;
+          margin: 0;
+          position: absolute;
+        }
+      }
+
+      .author {
+        position: absolute;
+        top: 100%;
+        width: 60%;
+        padding: 0.5rem 1rem;
+        color: $black-color;
+        margin: 0;
+        text-transform: uppercase;
+
+        h5 {
+          opacity: 0.8;
+          margin: 0;
+          font-weight: 800;
+
+          span {
+            font-weight: 400;
+            text-transform: none;
+            padding-left: 0.2rem;
+          }
+        }
+      }
+
+      img {
+        max-width: 100%;
+        vertical-align: middle;
+        border-radius: 50%;
+        margin: 2.5rem 0 0 0.7rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .testimonial-quotes {
+    @include hor-centering;
+    width: 100%;
+    flex-wrap: wrap;
+    .quote {
+      width: 20%;
+    }
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .testimonial-quotes {
+    @include hor-centering;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .testimonial-quotes {
+    @include hor-centering;
+    width: 100%;
+    flex-wrap: wrap;
+
+    .quote {
+      width: 50%;
+    }
+  }
+}

@@ -3,4 +3,33 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} /*# sourceMappingURL=styles.css.map */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 55%;
+  }
+}/*# sourceMappingURL=styles.css.map */

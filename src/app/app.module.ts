@@ -21,6 +21,11 @@ import { ShopComponent } from './Components/shop/shop.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { AboutComponent } from './Components/about/about.component';
 import { CartComponent } from './Components/cart/cart.component';
+import { HomeSecondComponent } from './Components/home-second/home-second.component';
+import { CardComponent } from './Components/card/card.component';
+import { FeedbackComponent } from './Components/feedback/feedback.component';
+import { NewsComponent } from './Components/news/news.component';
+import { NewsCardsComponent } from './Components/news-cards/news-cards.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +45,11 @@ import { CartComponent } from './Components/cart/cart.component';
     CheckoutComponent,
     AboutComponent,
     CartComponent,
+    HomeSecondComponent,
+    CardComponent,
+    FeedbackComponent,
+    NewsComponent,
+    NewsCardsComponent,
   ],
   imports: [
     BrowserModule,

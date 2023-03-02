@@ -34,4 +34,7 @@ export class HeaderComponent {
       if (!this.isNotHome) menu.classList.add('nav-home');
     }
   }
+
+  isOpen = false;
+  isOpen1 = false;
 }

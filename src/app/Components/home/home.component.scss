@@ -3,9 +3,10 @@
 @import "swiper/scss/pagination";
 @import "../../../sass/components/btn";
 @import "../../../sass/abstract/mixins";
+@import "../../../sass/abstract/variables";
 
 .banner-section {
-  margin-bottom: 88vh;
+  margin-bottom: 100vh;
 }
 .swiper {
   width: 100%;
@@ -54,6 +55,74 @@
     // width: 8rem;
     // height: 1.6rem;
     // border-radius: 20px;
+  }
+}
+
+// NOTE About
+
+.service-section {
+  margin-top: 10rem;
+  .service {
+    .container {
+      .row {
+        display: flex;
+        justify-content: center;
+        gap: 5rem;
+
+        .img-row {
+          img {
+            width: 40rem;
+          }
+        }
+      }
+      .content-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .content {
+          .first-content {
+            .header {
+              margin-top: 2rem;
+              font-size: 4.4rem;
+              line-height: 5.2rem;
+            }
+
+            p {
+              font-size: 1.7rem;
+              color: $dark-gray-color;
+              margin-top: 2.4rem;
+              width: 65rem;
+              line-height: 2.8rem;
+            }
+
+            .about-head {
+              color: $primary-color;
+            }
+          }
+        }
+
+        .btn-about {
+          button {
+            margin-top: 2.4rem;
+            width: 15rem;
+            height: 5.2rem;
+            background-color: $primary-color;
+            border: none;
+            color: $white-color;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            cursor: $cursor;
+
+            &:hover {
+              background-color: $white-color;
+              border: 1px solid $black-color;
+              color: $black-color;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
@@ -115,6 +184,12 @@
   }
 }
 
+//NOTE Feeddback
+
+.feedback-section {
+  margin-top: 6rem;
+}
+
 @media only screen and (max-width: 1400px) {
   .news-section {
     .news__wrapper {
@@ -167,6 +242,112 @@
         width: 80%;
         padding-bottom: 3.2rem;
         display: block;
+      }
+    }
+  }
+}
+
+//NOTE Service
+@media only screen and (max-width: 600px) {
+  .service-section {
+    margin-top: 100vh;
+    .service {
+      .container {
+        .row {
+          .img-row {
+            img {
+              display: none;
+            }
+          }
+          .content-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .content {
+              .first-content {
+                .header {
+                  margin-top: 2rem;
+                  font-size: 2.5rem;
+                  line-height: 4rem;
+                  width: 30rem;
+                }
+
+                p {
+                  font-size: 1.5rem;
+                  color: $dark-gray-color;
+                  margin-top: 2.4rem;
+                  width: 27rem;
+                  line-height: 2.5rem;
+                }
+
+                .about-head {
+                  font-size: 2.5rem;
+                }
+              }
+            }
+            .btn-about {
+              display: flex;
+              justify-content: center;
+              button {
+                margin-top: 2.2rem;
+                width: 12rem;
+                height: 4.5rem;
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .service-section {
+    margin-top: 100vh;
+    .service {
+      .container {
+        .row {
+          .img-row {
+            img {
+              width: 40rem;
+            }
+          }
+          .content-row {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .content {
+              .first-content {
+                p {
+                  display: none;
+                }
+                .header {
+                  margin-top: 2rem;
+                  font-size: 3.5rem;
+                  line-height: 4rem;
+                  width: 30rem;
+                }
+
+                .about-head {
+                  font-size: 3rem;
+                }
+              }
+            }
+            .btn-about {
+              display: flex;
+              justify-content: flex-start;
+              button {
+                margin-top: 2.2rem;
+                width: 15rem;
+                height: 5.5rem;
+                font-size: 1.3rem;
+              }
+            }
+          }
+        }
       }
     }
   }

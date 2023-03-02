@@ -1,3 +1,60 @@
+.input {
+  height: 6rem;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding-left: 1.6rem;
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.input:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.9rem 3.8rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: #0a9a73;
+}
+.btn:hover {
+  background-color: #05523d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 1.9rem 1.5rem;
+  }
+}
+.container {
+  width: 128rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1580px) {
+  .container {
+    width: 90%;
+  }
+}
+section {
+  padding: 4.8rem 0;
+}
+
+.input-valid {
+  outline-color: #4ade80 !important;
+}
+
+.input-invalid {
+  outline-color: #f87171 !important;
+}
+
 .checkout-section {
   font-family: sans-serif;
   display: flex;
@@ -18,12 +75,15 @@
   margin-left: 2rem;
 }
 .checkout-section .checkout-header h4:last-child {
-  color: #0A9A73;
+  color: #0a9a73;
   cursor: pointer;
+  transition: 0.3s color;
+}
+.checkout-section .checkout-header h4:last-child:hover {
+  color: #088261;
 }
 
 .billing-section {
-  font-family: sans-serif;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -32,17 +92,22 @@
 }
 .billing-section .billing-header {
   margin-bottom: 1.5rem;
-  height: 1.6rem;
-  border-left: 2px solid #0A9A73;
+  height: 2.4rem;
+  border-left: 2px solid #0a9a73;
 }
 .billing-section .billing-header h3 {
-  margin-left: 0.7rem;
+  margin-left: 0.8rem;
 }
 .billing-section .billing-form {
   border: 1px solid rgb(220, 220, 220);
 }
+.billing-section .billing-form form .form-content {
+  width: 66%;
+  margin: 0 auto;
+}
 .billing-section .billing-form form .form-header {
-  margin: 1.6rem 0 1rem 1.6rem;
+  margin: 2.4rem 0;
+  font-size: 2.4rem;
 }
 .billing-section .billing-form form .billing-input {
   display: flex;
@@ -51,56 +116,55 @@
   align-items: center;
   position: relative;
 }
+.billing-section .billing-form form .billing-input .input-container {
+  display: block;
+}
+.billing-section .billing-form form .billing-input .input-container input {
+  margin-bottom: 0;
+}
 .billing-section .billing-form form .billing-input div {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-.billing-section .billing-form form .billing-input div input {
-  width: 46%;
-  height: 60px;
-  margin: 0.4rem;
-  border: 1px solid rgb(220, 220, 220);
-}
-.billing-section .billing-form form .billing-input div input:focus {
-  outline: none;
-  border: 1px solid #0A9A73;
-}
-.billing-section .billing-form form .billing-input div input::-moz-placeholder {
-  font-size: 15px;
-  padding: 15px;
-}
-.billing-section .billing-form form .billing-input div input::placeholder {
-  font-size: 15px;
-  padding: 15px;
-}
-.billing-section .billing-form form .billing-input div:last-child {
-  display: flex;
-  justify-content: center;
-}
-.billing-section .billing-form form .billing-input div:last-child input {
-  width: 93.1%;
-  margin-bottom: 2rem;
+  gap: 1.6rem;
+  margin-bottom: 1.2rem;
 }
 .billing-section .billing-form form .billing-input div p {
   display: block;
+  margin-top: 0.8rem;
 }
-.billing-section .billing-form form .billing-btn button {
-  background-color: #0A9A73;
-  border: none;
-  width: 180px;
-  height: 60px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  margin: 0 0 1.5rem 2.4rem;
-  cursor: pointer;
-  border-radius: 8px;
-}
-.billing-section .billing-form form .billing-btn button:hover {
-  background-color: black;
+.billing-section .billing-form form .billing-btn {
+  margin-bottom: 2.4rem;
 }
 
+textarea {
+  width: 100%;
+  resize: none;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding: 1.6rem;
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem;
+  max-height: 30rem;
+  height: 20rem;
+  font-family: sans-serif;
+}
+textarea:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
+}
+
+@media (max-width: 992px) {
+  .billing-section .billing-form form .form-content {
+    width: 85%;
+  }
+}
+@media (max-width: 768px) {
+  .billing-section .billing-form form .form-content {
+    width: 90%;
+  }
+}
 @media (max-width: 600px) {
   .checkout-section .checkout-header {
     display: flex;
@@ -108,28 +172,19 @@
   }
 }
 @media (max-width: 600px) {
+  .checkout-section {
+    width: 85%;
+  }
+  .billing-section {
+    width: 85%;
+  }
   .billing-section .billing-form form .billing-input div {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
   .billing-section .billing-form form .billing-input div input {
-    width: 90%;
     margin-bottom: 0.2rem;
-  }
-  .billing-section .billing-form form .billing-input div:nth-child(4) input {
-    width: 90%;
-    margin-bottom: 0.2rem;
-  }
-  .billing-section .billing-form form .billing-input div:last-child input {
-    width: 90%;
-    margin-bottom: 0.2rem;
-  }
-  .billing-section .billing-form form .billing-btn button {
-    width: 8rem;
-    height: 3rem;
-    margin-top: 1rem;
-    font-size: 1rem;
   }
 }/*# sourceMappingURL=checkout.component.css.map */

@@ -13,6 +13,8 @@ import { ShopComponent } from './Components/shop/shop.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { AboutComponent } from './Components/about/about.component';
 import { CartComponent } from './Components/cart/cart.component';
+import { NewsComponent } from './Components/news/news.component';
+import { NewsCardsComponent } from './Components/news-cards/news-cards.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -27,11 +29,15 @@ const routes: Routes = [
   { path: 'faq', component: FAQComponent },
   { path: 'checkout', component: CheckoutComponent },
   { path: 'cart', component: CartComponent },
+  { path: 'news/:id', component: NewsComponent },
+  { path: 'newsCards', component: NewsCardsComponent },
   { path: '**', component: ErrorComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -1,0 +1,235 @@
+.card-section {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 80px;
+}
+.card-section .card-header {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+.card-section .card-images {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+.card-section .card-images .img div img {
+  width: 20px;
+  margin-bottom: 54px;
+  cursor: pointer;
+}
+.card-section .cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+.card-section .cards .cards-style {
+  border: 1px solid rgb(220, 220, 220);
+}
+
+.shop-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12rem;
+  font-family: sans-serif;
+  margin-top: 5rem;
+  background-color: #e4ecf2;
+  height: 50rem;
+  width: 100%;
+}
+.shop-section div img {
+  width: 320px;
+}
+.shop-section .shop .shop-word .shop-header {
+  font-size: 1.5rem;
+  width: 35rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.shop-section .shop .shop-word .shop-para {
+  line-height: 1.8rem;
+  width: 35rem;
+  margin-bottom: 1.5rem;
+}
+.shop-section .shop .shop-word .shop-icon {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8rem;
+  margin-bottom: 1.4rem;
+}
+.shop-section .shop .shop-word .shop-icon .icon {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.shop-section .shop .shop-word .shop-icon .icon span {
+  color: #0a9a73;
+  font-size: 2.2rem;
+}
+.shop-section .shop .shop-btn button {
+  background-color: #0a9a73;
+  border: none;
+  width: 18rem;
+  height: 6rem;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  cursor: pointer;
+  border-radius: 0.8rem;
+  margin-top: 1.3rem;
+}
+.shop-section .shop .shop-btn button:hover {
+  background-color: black;
+}
+
+.feedback-section {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+.feedback-section .feedback-header {
+  display: flex;
+  justify-content: center;
+}
+.feedback-section .feedback-images {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+}
+.feedback-section .feedback-images img {
+  height: 20px;
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .testimonial-quotes {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .testimonial-quotes .cards {
+    width: 50%;
+  }
+  .card-images {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-images .img {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .card-images .img img {
+    height: 30rem;
+  }
+  .cards {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .cards .cards-style {
+    width: 40%;
+  }
+}
+@media (max-width: 600px) {
+  .shop-section {
+    margin-top: 5rem;
+    height: 40rem;
+  }
+  .shop-section .shop-img {
+    display: none;
+  }
+  .shop-section .shop .shop-word .shop-header {
+    font-size: 1rem;
+    width: 25rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+  }
+  .shop-section .shop .shop-word .shop-para {
+    width: 24rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    margin: auto auto;
+  }
+  .shop-section .shop .shop-word .shop-icon {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon span {
+    color: #0a9a73;
+    font-size: 1.2rem;
+  }
+  .shop-section .shop .shop-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .shop-section .shop .shop-btn button {
+    width: 10rem;
+    height: 3.5rem;
+    font-size: 1rem;
+    margin-top: 1.4rem;
+  }
+}
+@media (min-width: 601px) and (max-width: 1200px) {
+  .shop-section {
+    gap: 7rem;
+    margin-top: 5rem;
+    height: 30rem;
+  }
+  .shop-section .shop-img img {
+    width: 17rem;
+  }
+  .shop-section .shop .shop-word .shop-header {
+    font-size: 1rem;
+    width: 25rem;
+    margin-bottom: 1.6rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .shop-section .shop .shop-word .shop-para {
+    width: 24rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .shop-section .shop .shop-word .shop-icon {
+    display: flex;
+    gap: 3rem;
+    margin-bottom: 1.4rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .shop-section .shop .shop-word .shop-icon .icon span {
+    color: #0a9a73;
+    font-size: 1.2rem;
+  }
+  .shop-section .shop .shop-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .shop-section .shop .shop-btn button {
+    width: 10rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-top: 1.4rem;
+  }
+}/*# sourceMappingURL=home-second.component.css.map */
