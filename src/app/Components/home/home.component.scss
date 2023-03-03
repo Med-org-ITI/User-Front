@@ -42,6 +42,9 @@
       width: 8rem;
       height: 8rem;
       border-radius: 100%;
+      &::after {
+        font-size: 12px;
+      }
     }
   }
 

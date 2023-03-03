@@ -4,26 +4,24 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class OrdersService {
-  constructor(public orderss: HttpClient) {}
-  ordersURL = 'http://localhost:8000/orders';
+export class UserService {
+  constructor(public user: HttpClient) {}
+  userURL = 'http://localhost:8000/users';
   httpOptions = {
     headers: new HttpHeaders({
       Authorization: 'Bearer ' + localStorage.getItem('isLogged'),
     }),
   };
-  checkout() {
-    return this.orderss.get(`${this.ordersURL}/user/create`, this.httpOptions);
+  getUser(id: string) {
+    return this.user.get(`${this.userURL}/${id}`, this.httpOptions);
   }
-  getUserOrders() {
-    return this.orderss.get(`${this.ordersURL}/users/anyth`, this.httpOptions);
-  }
+
   // getItem(id: string) {
   //   const httpOptions = {
   //     headers: new HttpHeaders({
   //       Authorization: 'Bearer ' + localStorage.getItem('isLogged'),
   //     }),
   //   };
-  //   return this.orderss.get(`${this.itemsURL}/${id}`, httpOptions);
+  //   return this.user.get(`${this.itemsURL}/${id}`, httpOptions);
   // }
 }

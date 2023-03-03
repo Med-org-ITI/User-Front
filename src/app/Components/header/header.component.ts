@@ -1,5 +1,6 @@
 import { SharedService } from './../../Services/sendData.service';
 import { Component, ViewChild, HostListener, Input } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
@@ -13,6 +14,10 @@ export class HeaderComponent {
   @Input() isNotHome: any;
   showOverlay = false;
   @ViewChild('sideMenu') sideMenu: any;
+
+  searchForm = new FormGroup({
+    query: new FormControl('', [Validators.required, Validators.minLength(1)]),
+  });
 
   hideMenu() {
     this.showOverlay = false;
@@ -51,5 +56,9 @@ export class HeaderComponent {
   showCart() {
     this.hideMenu();
     this.sharedService.emitChange('cart');
+  }
+  searchQuery() {
+    const query = this.searchForm.controls['query'].value;
+    this.router.navigate(['/shop'], { queryParams: { s: query } });
   }
 }

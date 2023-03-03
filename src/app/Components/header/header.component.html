@@ -22,8 +22,14 @@
         <img src="/assets/Images/logo.png" />
       </div>
       <div class="container1--search">
-        <span class="material-symbols-outlined"> search </span>
-        <input type="text" placeholder="Search here..." />
+        <form (submit)="searchQuery()" [formGroup]="searchForm">
+          <span class="material-symbols-outlined"> search </span>
+          <input
+            type="text"
+            placeholder="Search here..."
+            formControlName="query"
+          />
+        </form>
       </div>
       <div class="container1--cart">
         <div>
@@ -67,8 +73,8 @@
               >Home</a
             >
           </li>
+          <li><a routerLink="/about" routerLinkActive="active">About</a></li>
           <li><a routerLink="/shop" routerLinkActive="active">Shop</a></li>
-          <li><a routerLink="/item" routerLinkActive="active">Item</a></li>
           <li *ngIf="!isLogged">
             <a routerLink="/register" routerLinkActive="active">Sign up</a>
           </li>
@@ -122,8 +128,8 @@
           <li>
             <a routerLink="/">Home</a>
           </li>
+          <li><a routerLink="/about">About</a></li>
           <li><a routerLink="/shop">Shop</a></li>
-          <li><a routerLink="/item">Item</a></li>
           <li>
             <a routerLink="/register">Sign up</a>
           </li>

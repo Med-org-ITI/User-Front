@@ -1,0 +1,143 @@
+@import "../../../sass/abstract/variables";
+@import "../../../sass/abstract/mixins";
+
+.shop-section {
+  background-color: transparent;
+  .container {
+    grid-gap: 2.3rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    .container-contain {
+      border-radius: $border-radius;
+      .product {
+        border: 1px solid $border-color;
+        position: relative;
+        cursor: $cursor;
+
+        img {
+          width: 22rem;
+        }
+
+        h4,
+        p {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0.7rem 0;
+        }
+
+        p {
+          color: $primary-color;
+
+          &:hover {
+            color: $primary-color;
+          }
+        }
+
+        &:hover {
+          box-shadow: $box-shadow;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .shop-section {
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 12rem;
+
+      .container-contain {
+        border: 1px solid $border-color;
+        border-radius: $border-radius;
+
+        .product {
+          position: relative;
+          cursor: $cursor;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            margin: 0 0;
+          }
+
+          h4,
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 0.5rem;
+          }
+
+          &:hover {
+            box-shadow: $box-shadow;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+  .shop-section {
+    margin: 0 auto;
+
+    .container {
+      grid-gap: 3rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .container-contain {
+        .product {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 20rem;
+          }
+
+          h4,
+          p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.4rem 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 601px) and (max-width: 992px) {
+  .shop-section {
+    margin: 0 auto;
+    .container {
+      grid-gap: 3rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .container-contain {
+        .product {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 30rem;
+          }
+        }
+      }
+    }
+  }
+}

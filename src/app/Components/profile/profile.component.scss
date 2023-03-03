@@ -1,0 +1,625 @@
+@import "../../../sass/base/util";
+@import "../../../sass/abstract/mixins";
+@import "../../../sass/abstract/variables";
+@import "../../../sass/components/btn";
+@import "../../../sass/components/input";
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 30px auto;
+  .tab {
+    width: 75%;
+    &_item {
+      background-color: $white-color;
+      display: inline-block;
+      border-radius: 3px;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      li {
+        border-radius: 3px;
+        display: inline-block;
+        list-style-type: none;
+        color: $primary-color;
+        font-size: 16px;
+        padding: 0 24px;
+        font-weight: 600;
+        cursor: pointer;
+        text-align: center;
+        position: relative;
+        padding: 14px 50px;
+        border: 2px solid $primary-color;
+
+        &.color {
+          background-color: $primary-color;
+          color: $white-color;
+        }
+      }
+    }
+    &_content {
+      margin: 30px auto;
+      box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+      border-radius: 6px;
+      &_value {
+        font-weight: 600;
+        .profile {
+          width: 100%;
+          position: relative;
+          .edit-icon {
+            position: absolute;
+            color: #0a9a73;
+            font-size: 20px;
+            right: 4%;
+            top: 8%;
+            cursor: pointer;
+          }
+          &__img {
+            padding: 2%;
+            &__container {
+              position: relative;
+              width: 14rem;
+              height: 14rem;
+              margin: auto;
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+              }
+              &__upload-icon {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                right: 0px;
+                bottom: 0px;
+                border-radius: 50%;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px,
+                  rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+                background-color: $white-color;
+                line-height: 45px;
+                text-align: center;
+                overflow: hidden;
+
+                input[type="file"] {
+                  position: absolute;
+                  transform: scale(2);
+                  opacity: 0;
+                }
+                input[type="file"]::-webkit-file-upload-button {
+                  cursor: pointer;
+                }
+                .fa-camera {
+                  color: $primary-color;
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+          &__data {
+            padding-top: 1%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            // flex-wrap: wrap;
+          }
+          &__container {
+            width: 80%;
+            form {
+              .row {
+                display: flex;
+                justify-content: center;
+                gap: 20%;
+                .column {
+                  display: flex;
+                  justify-content: space-between;
+                  flex-direction: column;
+                  width: 100%;
+                  .input-box {
+                    position: relative;
+                    margin-bottom: 12%;
+                    input {
+                      margin-top: 3%;
+                      padding: 10px 10px 10px 39px;
+                      box-shadow: 0px 0px 2px 1px #eeeaea;
+                      outline: none;
+                      border: 1px solid #eeeaea;
+                      font-size: 14px;
+                      height: 45px;
+                      color: #0a9a73;
+                      width: 100%;
+                      border-radius: 2px;
+                    }
+                    .icon {
+                      position: absolute;
+                      color: #0a9a73;
+                      top: 45%;
+                      left: 4%;
+                      font-size: 14px;
+                    }
+                    .edit-password {
+                      position: absolute;
+                      color: #0a9a73;
+                      top: 45%;
+                      right: 4%;
+                      font-size: 14px;
+                      cursor: pointer;
+                    }
+                  }
+                }
+              }
+              .button-container {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                &__save {
+                  padding: 12px;
+                  width: 35%;
+                  margin: 12px 0px 30px;
+                  border-radius: 4px;
+                  border: none;
+                  outline: none;
+                  color: $white-color;
+                  background-color: $primary-color;
+                  font-weight: bold;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+          // ############################# Modal|Overlay (Change Password) ##############################
+
+          .change-pass-container {
+            margin-top: 80px;
+            .overlay {
+              height: 100vh;
+              width: 100vw;
+              position: fixed;
+              z-index: 5;
+              top: 0;
+              left: 0;
+              background-color: $black-color;
+              opacity: 0.7;
+            }
+            .div-overlay {
+              @include ver-centering;
+              flex-direction: column;
+              gap: 10%;
+              width: 30%;
+              height: 75%;
+              background-color: $white-color;
+              opacity: 1;
+              position: fixed;
+              margin: auto;
+              bottom: 0;
+              top: 0;
+              left: 0;
+              right: 0;
+              z-index: 10;
+              border-radius: 4px;
+              overflow-y: scroll;
+
+              h3 {
+                font-size: 1.6em;
+                border-bottom: 3px solid $primary-color;
+                border-radius: 3px;
+                padding-bottom: 10px;
+                margin-top: 12%;
+              }
+
+              form {
+                width: 65%;
+                .input-box {
+                  position: relative;
+                  margin-bottom: 12%;
+                  input {
+                    margin-top: 3%;
+                    padding: 10px 20px;
+                    box-shadow: 0px 0px 2px 1px #eeeaea;
+                    outline: none;
+                    border: 1px solid #eeeaea;
+                    font-size: 18px;
+                    height: 45px;
+                    width: 100%;
+                    border-radius: 2px;
+                  }
+                }
+                .button-container {
+                  display: flex;
+                  justify-content: center;
+                  width: 100%;
+                  &__save-change {
+                    padding: 14px;
+                    width: 60%;
+                    margin: 6px 0px 20px;
+                    border-radius: 4px;
+                    border: none;
+                    outline: none;
+                    color: $white-color;
+                    background-color: $primary-color;
+                    font-weight: bold;
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+          }
+        }
+        // ############################# My Orders ##############################
+
+        .orders {
+          &__table {
+            width: 100%;
+            border-collapse: collapse;
+            th,
+            td {
+              padding: 12px 15px;
+              border: 1px solid #ddd;
+              text-align: left;
+              font-size: 16px;
+            }
+            th {
+              background-color: #171b2a;
+              color: #fff;
+            }
+            tbody tr:nth-child(even) {
+              background-color: #f5f5f5ab;
+            }
+          }
+        }
+        // ############################# My Products ##############################
+
+        .products {
+          &__table {
+            width: 100%;
+            border-collapse: collapse;
+            th,
+            td {
+              padding: 12px 15px;
+              border: 1px solid #ddd;
+              text-align: center;
+              font-size: 16px;
+              text-transform: capitalize;
+            }
+            th {
+              background-color: #171b2a;
+              color: #fff;
+            }
+            tbody tr:nth-child(even) {
+              background-color: #f5f5f5ab;
+            }
+            td img {
+              width: 100px;
+              height: 100px;
+              object-fit: cover;
+              border-radius: 3px;
+              box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            }
+            td {
+              font-size: 1.8rem;
+            }
+            td:nth-child(4),
+            td:nth-child(5) {
+              text-align: center;
+              color: $primary-color;
+              font-size: 2rem;
+            }
+            td:nth-child(4) {
+              font-size: 2.2rem;
+            }
+            td:nth-child(4) span,
+            td:nth-child(5) span {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// ################################# Responsive ##################################
+// --------------------- Tabs ----------------------
+@media only screen and (max-width: 597px) {
+  .profile-container {
+    .tab {
+      &_item {
+        flex-direction: column;
+        li {
+          &:not(:last-child) {
+            border-bottom: none;
+          }
+          &:nth-child(1),
+          &:nth-child(2) {
+            border-right: 2px solid $primary-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// -------------------- Profile Data ---------------------
+@media only screen and (max-width: 600px) {
+  .profile-container {
+    width: 90%;
+    .tab {
+      width: 90%;
+      &_content {
+        &_value {
+          .profile {
+            &__data {
+              form {
+                .row {
+                  flex-direction: column;
+                  .column {
+                    .input-box {
+                      margin-bottom: 8%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 950px) {
+  .profile-container {
+    width: 100%;
+    .tab {
+      width: 95%;
+      &_content {
+        &_value {
+          .profile {
+            &__img {
+              padding: 4%;
+              &__container {
+                width: 12rem;
+                height: 12rem;
+                &__upload-icon {
+                  width: 35px;
+                  height: 35px;
+                  line-height: 40px;
+                  .fa-camera {
+                    font-size: 16px;
+                  }
+                }
+              }
+            }
+            &__data {
+              form {
+                .row {
+                  gap: 10%;
+                }
+              }
+            }
+          }
+        }
+      }
+      .profile__container {
+        width: 85%;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .profile-container {
+    .tab {
+      width: 95%;
+      &_content {
+        &_value {
+          .profile {
+            &__data {
+              form {
+                .row {
+                  gap: 10%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -------------------- Modal|Overlay change password  ---------------------
+@media only screen and (max-width: 1300px) {
+  .profile-container {
+    .tab {
+      &_content {
+        &_value {
+          .profile {
+            .change-pass-container {
+              .div-overlay {
+                width: 40%;
+                height: 70%;
+                gap: 12%;
+                form {
+                  width: 70%;
+                  .input-box {
+                    margin-bottom: 10%;
+                  }
+
+                  .button-container {
+                    &__save-change {
+                      width: 60%;
+                      margin: 6px 0px 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 900px) {
+  .profile-container {
+    .tab {
+      &_content {
+        &_value {
+          .profile {
+            .change-pass-container {
+              .div-overlay {
+                width: 50%;
+                height: 70%;
+                form {
+                  width: 80%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .profile-container {
+    .tab {
+      &_content {
+        &_value {
+          .profile {
+            .change-pass-container {
+              .div-overlay {
+                width: 60%;
+                height: 70vh;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .profile-container {
+    .tab {
+      &_content {
+        &_value {
+          .profile {
+            .change-pass-container {
+              .div-overlay {
+                width: 80%;
+                height: 70vh;
+                h3 {
+                  font-size: 1.4em;
+                }
+                form {
+                  .button-container {
+                    &__save-change {
+                      font-size: 12px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// -------------------- Orders Table ---------------------
+@media only screen and (max-width: 600px) {
+  .orders {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+    &__table {
+      thead {
+        display: none;
+      }
+      tbody,
+      tr,
+      td {
+        display: block;
+      }
+      tr {
+        margin-bottom: 20px;
+      }
+      th,
+      td {
+        text-align: left;
+      }
+      td:not(:first-child):before {
+        content: attr(data-th) ": ";
+        font-size: 15px;
+        font-weight: bold;
+        float: left;
+        width: 6.5em;
+      }
+      td:first-child {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        background-color: #171b2a;
+        color: $white-color;
+      }
+      th,
+      td::before {
+        color: #0a9a73;
+      }
+      tr,
+      td {
+        background-color: $white-color;
+      }
+    }
+  }
+}
+
+// -------------------- Products Table ------------------
+@media only screen and (max-width: 597px) {
+  .products {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+    &__table {
+      thead {
+        display: none;
+      }
+      tbody,
+      tr,
+      td {
+        display: block;
+      }
+      td {
+        display: block;
+      }
+      td:first-child {
+        display: flex;
+        justify-content: center;
+        border: none !important;
+        background-color: $white-color;
+      }
+      tr {
+        margin-bottom: 20px;
+      }
+      td:not(:first-child):before {
+        content: attr(data-th) ": ";
+        text-align: left;
+        font-size: 15px;
+        font-weight: bold;
+        width: 6.5em;
+        float: left;
+      }
+
+      th,
+      td::before {
+        color: #0a9a73;
+      }
+      tr,
+      td {
+        background-color: $white-color;
+      }
+    }
+  }
+}

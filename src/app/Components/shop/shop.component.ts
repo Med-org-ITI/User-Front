@@ -1,6 +1,7 @@
 import { CartService } from 'src/app/Services/cart.service';
 import { ProductsService } from './../../Services/products.service';
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
@@ -12,11 +13,19 @@ export class ShopComponent {
   selectedProduct: any;
   quantity = 1;
   pages: any;
+  param: string;
   constructor(
     public productsService: ProductsService,
-    private cartService: CartService
-  ) {}
+    private cartService: CartService,
+    private route: ActivatedRoute
+  ) {
+    this.route.queryParams.subscribe((params) => {
+      this.param = params['s'];
+    });
+  }
   ngOnInit() {
+    if (this.param) {
+    }
     this.productsService.getAll(1).subscribe((data: any) => {
       this.pages = data?.paginationResult;
       this.products = data?.data;

@@ -11,6 +11,10 @@ export class ProductsService {
   getAll(page?: number) {
     return this.products.get(`${this.itemsURL}?page=${page}`);
   }
+  getLatest(limit?: number) {
+    return this.products.get(`${this.itemsURL}?limit=${limit}`);
+  }
+
   getItem(id: string) {
     const httpOptions = {
       headers: new HttpHeaders({

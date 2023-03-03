@@ -21,8 +21,11 @@ import { ShopComponent } from './Components/shop/shop.component';
 import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { AboutComponent } from './Components/about/about.component';
 import { CartComponent } from './Components/cart/cart.component';
-import { ToTopComponent } from './components/to-top/to-top.component';
+import { ProfileComponent } from './Components/profile/profile.component';
 import { SideCartComponent } from './Components/side-cart/side-cart.component';
+import { ToTopComponent } from './Components/to-top/to-top.component';
+import { CardComponent } from './Components/card/card.component';
+import { FeedbackComponent } from './Components/feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +47,9 @@ import { SideCartComponent } from './Components/side-cart/side-cart.component';
     CartComponent,
     ToTopComponent,
     SideCartComponent,
+    ProfileComponent,
+    CardComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,

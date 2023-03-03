@@ -1,0 +1,541 @@
+.container {
+  width: 128rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 1580px) {
+  .container {
+    width: 90%;
+  }
+}
+section {
+  padding: 4.8rem 0;
+}
+
+.input-valid {
+  outline-color: #4ade80 !important;
+}
+
+.input-invalid {
+  outline-color: #f87171 !important;
+}
+
+.btn {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  color: #fff;
+  padding: 1.9rem 3.8rem;
+  font-size: 1.8rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s all;
+  background-color: #0a9a73;
+}
+.btn:hover {
+  background-color: #05523d;
+}
+
+@media only screen and (max-width: 1200px) {
+  .btn {
+    padding: 1.9rem 1.5rem;
+  }
+}
+.input {
+  height: 6rem;
+  color: #5c727d;
+  border: 0.2rem solid #e4ecf2;
+  border-radius: 0.2rem;
+  padding-left: 1.6rem;
+  font-size: 1.6rem;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.input:focus {
+  border: none;
+  outline: 1px solid #0a9a73;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 30px auto;
+}
+.profile-container .tab {
+  width: 75%;
+}
+.profile-container .tab_item {
+  background-color: white;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+.profile-container .tab_item li {
+  border-radius: 3px;
+  display: inline-block;
+  list-style-type: none;
+  color: #0a9a73;
+  font-size: 16px;
+  padding: 0 24px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  padding: 14px 50px;
+  border: 2px solid #0a9a73;
+}
+.profile-container .tab_item li:nth-child(1), .profile-container .tab_item li:nth-child(2) {
+  border-right: none;
+}
+.profile-container .tab_item li.color {
+  background-color: #0a9a73;
+  color: white;
+}
+.profile-container .tab_content {
+  margin: 30px auto;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border-radius: 6px;
+}
+.profile-container .tab_content_value {
+  font-weight: 600;
+}
+.profile-container .tab_content_value .profile {
+  width: 100%;
+  position: relative;
+}
+.profile-container .tab_content_value .profile .edit-icon {
+  position: absolute;
+  color: #0a9a73;
+  font-size: 20px;
+  right: 4%;
+  top: 8%;
+  cursor: pointer;
+}
+.profile-container .tab_content_value .profile__img {
+  padding: 2%;
+}
+.profile-container .tab_content_value .profile__img__container {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  margin: auto;
+}
+.profile-container .tab_content_value .profile__img__container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.profile-container .tab_content_value .profile__img__container__upload-icon {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  background-color: white;
+  line-height: 45px;
+  text-align: center;
+  overflow: hidden;
+}
+.profile-container .tab_content_value .profile__img__container__upload-icon input[type=file] {
+  position: absolute;
+  transform: scale(2);
+  opacity: 0;
+}
+.profile-container .tab_content_value .profile__img__container__upload-icon input[type=file]::-webkit-file-upload-button {
+  cursor: pointer;
+}
+.profile-container .tab_content_value .profile__img__container__upload-icon .fa-camera {
+  color: #0a9a73;
+  font-size: 18px;
+}
+.profile-container .tab_content_value .profile__data {
+  padding-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-container .tab_content_value .profile__container {
+  width: 80%;
+}
+.profile-container .tab_content_value .profile__container form .row {
+  display: flex;
+  justify-content: center;
+  gap: 20%;
+}
+.profile-container .tab_content_value .profile__container form .row .column {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100%;
+}
+.profile-container .tab_content_value .profile__container form .row .column .input-box {
+  position: relative;
+  margin-bottom: 12%;
+}
+.profile-container .tab_content_value .profile__container form .row .column .input-box input {
+  margin-top: 3%;
+  padding: 10px 10px 10px 39px;
+  box-shadow: 0px 0px 2px 1px #eeeaea;
+  outline: none;
+  border: 1px solid #eeeaea;
+  font-size: 14px;
+  height: 45px;
+  color: #0a9a73;
+  width: 100%;
+  border-radius: 2px;
+}
+.profile-container .tab_content_value .profile__container form .row .column .input-box .icon {
+  position: absolute;
+  color: #0a9a73;
+  top: 45%;
+  left: 4%;
+  font-size: 14px;
+}
+.profile-container .tab_content_value .profile__container form .row .column .input-box .edit-password {
+  position: absolute;
+  color: #0a9a73;
+  top: 45%;
+  right: 4%;
+  font-size: 14px;
+  cursor: pointer;
+}
+.profile-container .tab_content_value .profile__container form .button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.profile-container .tab_content_value .profile__container form .button-container__save {
+  padding: 12px;
+  width: 35%;
+  margin: 12px 0px 30px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0a9a73;
+  font-weight: bold;
+  cursor: pointer;
+}
+.profile-container .tab_content_value .profile .change-pass-container {
+  margin-top: 80px;
+}
+.profile-container .tab_content_value .profile .change-pass-container .overlay {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
+  width: 30%;
+  height: 75%;
+  background-color: white;
+  opacity: 1;
+  position: fixed;
+  margin: auto;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border-radius: 4px;
+  overflow-y: scroll;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay h3 {
+  font-size: 1.6em;
+  border-bottom: 3px solid #0a9a73;
+  border-radius: 3px;
+  padding-bottom: 10px;
+  margin-top: 12%;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay form {
+  width: 65%;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay form .input-box {
+  position: relative;
+  margin-bottom: 12%;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay form .input-box input {
+  margin-top: 3%;
+  padding: 10px 20px;
+  box-shadow: 0px 0px 2px 1px #eeeaea;
+  outline: none;
+  border: 1px solid #eeeaea;
+  font-size: 18px;
+  height: 45px;
+  width: 100%;
+  border-radius: 2px;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay form .button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.profile-container .tab_content_value .profile .change-pass-container .div-overlay form .button-container__save-change {
+  padding: 14px;
+  width: 60%;
+  margin: 6px 0px 20px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #0a9a73;
+  font-weight: bold;
+  cursor: pointer;
+}
+.profile-container .tab_content_value .orders__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.profile-container .tab_content_value .orders__table th, .profile-container .tab_content_value .orders__table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+}
+.profile-container .tab_content_value .orders__table th {
+  background-color: #171b2a;
+  color: #fff;
+}
+.profile-container .tab_content_value .orders__table tbody tr:nth-child(even) {
+  background-color: rgba(245, 245, 245, 0.6705882353);
+}
+.profile-container .tab_content_value .products__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.profile-container .tab_content_value .products__table th, .profile-container .tab_content_value .products__table td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.profile-container .tab_content_value .products__table th {
+  background-color: #171b2a;
+  color: #fff;
+}
+.profile-container .tab_content_value .products__table tbody tr:nth-child(even) {
+  background-color: rgba(245, 245, 245, 0.6705882353);
+}
+.profile-container .tab_content_value .products__table td img {
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 3px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.profile-container .tab_content_value .products__table td {
+  font-size: 1.8rem;
+}
+.profile-container .tab_content_value .products__table td:nth-child(4), .profile-container .tab_content_value .products__table td:nth-child(5) {
+  text-align: center;
+  color: #0a9a73;
+  font-size: 2rem;
+}
+.profile-container .tab_content_value .products__table td:nth-child(4) {
+  font-size: 2.2rem;
+}
+.profile-container .tab_content_value .products__table td:nth-child(4) span, .profile-container .tab_content_value .products__table td:nth-child(5) span {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 597px) {
+  .profile-container .tab_item {
+    flex-direction: column;
+  }
+  .profile-container .tab_item li:not(:last-child) {
+    border-bottom: none;
+  }
+  .profile-container .tab_item li:nth-child(1), .profile-container .tab_item li:nth-child(2) {
+    border-right: 2px solid #0a9a73;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .profile-container {
+    width: 90%;
+  }
+  .profile-container .tab {
+    width: 90%;
+  }
+  .profile-container .tab_content_value .profile__data form .row {
+    flex-direction: column;
+  }
+  .profile-container .tab_content_value .profile__data form .row .column .input-box {
+    margin-bottom: 8%;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .profile-container {
+    width: 100%;
+  }
+  .profile-container .tab {
+    width: 95%;
+  }
+  .profile-container .tab_content_value .profile__img {
+    padding: 4%;
+  }
+  .profile-container .tab_content_value .profile__img__container {
+    width: 12rem;
+    height: 12rem;
+  }
+  .profile-container .tab_content_value .profile__img__container__upload-icon {
+    width: 35px;
+    height: 35px;
+    line-height: 40px;
+  }
+  .profile-container .tab_content_value .profile__img__container__upload-icon .fa-camera {
+    font-size: 16px;
+  }
+  .profile-container .tab_content_value .profile__data form .row {
+    gap: 10%;
+  }
+  .profile-container .tab .profile__container {
+    width: 85%;
+  }
+}
+@media only screen and (max-width: 1320px) {
+  .profile-container .tab {
+    width: 95%;
+  }
+  .profile-container .tab_content_value .profile__data form .row {
+    gap: 10%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay {
+    width: 40%;
+    height: 70%;
+    gap: 12%;
+  }
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay form {
+    width: 70%;
+  }
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay form .input-box {
+    margin-bottom: 10%;
+  }
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay form .button-container__save-change {
+    width: 60%;
+    margin: 6px 0px 10px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay {
+    width: 50%;
+    height: 70%;
+  }
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay form {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 750px) {
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay {
+    width: 60%;
+    height: 70vh;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay {
+    width: 80%;
+    height: 70vh;
+  }
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay h3 {
+    font-size: 1.4em;
+  }
+  .profile-container .tab_content_value .profile .change-pass-container .div-overlay form .button-container__save-change {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .orders {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  .orders__table thead {
+    display: none;
+  }
+  .orders__table tbody, .orders__table tr, .orders__table td {
+    display: block;
+  }
+  .orders__table tr {
+    margin-bottom: 20px;
+  }
+  .orders__table th, .orders__table td {
+    text-align: left;
+  }
+  .orders__table td:not(:first-child):before {
+    content: attr(data-th) ": ";
+    font-size: 15px;
+    font-weight: bold;
+    float: left;
+    width: 6.5em;
+  }
+  .orders__table td:first-child {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background-color: #171b2a;
+    color: white;
+  }
+  .orders__table th, .orders__table td::before {
+    color: #0a9a73;
+  }
+  .orders__table tr, .orders__table td {
+    background-color: white;
+  }
+}
+@media only screen and (max-width: 597px) {
+  .products {
+    width: 80%;
+    margin: auto;
+    padding-top: 5%;
+  }
+  .products__table thead {
+    display: none;
+  }
+  .products__table tbody, .products__table tr, .products__table td {
+    display: block;
+  }
+  .products__table td {
+    display: block;
+  }
+  .products__table td:first-child {
+    display: flex;
+    justify-content: center;
+    border: none !important;
+    background-color: white;
+  }
+  .products__table tr {
+    margin-bottom: 20px;
+  }
+  .products__table td:not(:first-child):before {
+    content: attr(data-th) ": ";
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    width: 6.5em;
+    float: left;
+  }
+  .products__table th, .products__table td::before {
+    color: #0a9a73;
+  }
+  .products__table tr, .products__table td {
+    background-color: white;
+  }
+}/*# sourceMappingURL=profile.component.css.map */
