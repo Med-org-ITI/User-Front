@@ -67,7 +67,7 @@
       .row {
         display: flex;
         justify-content: center;
-        gap: 5rem;
+        // gap: 5rem;
 
         .img-row {
           img {
@@ -309,6 +309,7 @@
     .service {
       .container {
         .row {
+          gap: 10rem;
           .img-row {
             img {
               width: 40rem;
@@ -348,6 +349,29 @@
             }
           }
         }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-section {
+    .swiper {
+      &-button {
+        &-next,
+        &-prev {
+          // font-size: 1rem;
+          width: 5rem;
+          height: 5rem;
+          border-radius: 100%;
+        }
+        &-after {
+          font-size: 0.2rem;
+        }
+      }
+      &-pagination-bullet {
+        width: 1.2rem;
+        height: 1.2rem;
       }
     }
   }

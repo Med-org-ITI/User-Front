@@ -127,22 +127,25 @@
     img {
       display: none;
     }
-    ul {
-      @include ver-centering;
-      gap: 3.2rem;
-      li {
-        list-style: $list-style;
-        .active {
-          color: #2d3047;
-        }
-        a {
-          text-decoration: $text-decoration;
-          color: $white-color;
-          font-weight: $font-weight;
-          font-family: $font;
-          transition: 0.2s color;
-          &:hover {
+
+    div {
+      .nav-list {
+        @include ver-centering;
+        gap: 3.2rem;
+        li {
+          list-style: $list-style;
+          .active {
             color: #2d3047;
+          }
+          a {
+            text-decoration: $text-decoration;
+            color: rgb(32, 32, 32);
+            font-weight: $font-weight;
+            font-family: $font;
+            transition: 0.2s color;
+            &:hover {
+              color: #2d3047;
+            }
           }
         }
       }
@@ -185,7 +188,7 @@
       display: inline-block;
       content: url("/assets/Images/logo.png");
     }
-    ul {
+    .nav {
       gap: 4rem;
       li {
         a {
@@ -376,6 +379,20 @@
       transform: translateX(0);
     }
   }
+
+  .header-section {
+    .container {
+      div {
+        span {
+          display: block;
+
+          .nav-list {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
 
 .dropdown {
@@ -384,7 +401,7 @@
   left: -40%;
   z-index: 1;
   display: none;
-  width: 15rem;
+  width: 20rem;
 
   ul {
     li {

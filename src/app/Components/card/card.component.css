@@ -12,7 +12,7 @@
   cursor: pointer;
 }
 .shop-section .container .container-contain .product img {
-  width: 220px;
+  width: 22rem;
 }
 .shop-section .container .container-contain .product h4,
 .shop-section .container .container-contain .product p {
@@ -107,6 +107,6 @@
     align-items: center;
   }
   .shop-section .container .container-contain .product img {
-    width: 38rem;
+    width: 30rem;
   }
 }/*# sourceMappingURL=card.component.css.map */
