@@ -68,7 +68,7 @@
           </div>
         </div>
       </div>
-      <div class="shop-pagination">
+      <div class="shop-pagination" *ngIf="pages?.numberOfPages > 1">
         <div class="page" *ngIf="pages?.prev" (click)="paginate(pages?.prev)">
           {{ pages?.prev }}
         </div>

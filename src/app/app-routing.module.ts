@@ -14,6 +14,7 @@ import { CheckoutComponent } from './Components/checkout/checkout.component';
 import { AboutComponent } from './Components/about/about.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { ProfileComponent } from './Components/profile/profile.component';
+import { NewsComponent } from './Components/news/news.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'checkout', component: CheckoutComponent },
   { path: 'cart', component: CartComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'news/details', component: NewsComponent },
   { path: '**', component: ErrorComponent },
 ];
 

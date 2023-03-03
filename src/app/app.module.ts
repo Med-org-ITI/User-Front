@@ -26,6 +26,7 @@ import { SideCartComponent } from './Components/side-cart/side-cart.component';
 import { ToTopComponent } from './Components/to-top/to-top.component';
 import { CardComponent } from './Components/card/card.component';
 import { FeedbackComponent } from './Components/feedback/feedback.component';
+import { NewsComponent } from './Components/news/news.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { FeedbackComponent } from './Components/feedback/feedback.component';
     ProfileComponent,
     CardComponent,
     FeedbackComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
